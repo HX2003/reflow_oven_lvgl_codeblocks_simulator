@@ -6,7 +6,6 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "reflow_oven_ui.h"
 #include "reflow_oven_theme.h"
 
 /*********************
@@ -35,16 +34,19 @@ static lv_style_t style_box;
 static lv_style_t style_box_border;
 static lv_style_t style_btn;
 static lv_style_t style_btn_neutral;
-static lv_style_t style_btn_cancel;
+static lv_style_t style_btn_negative;
+static lv_style_t style_btn_positive;
 static lv_style_t style_btn_border;
 static lv_style_t style_cont;
 static lv_style_t style_title;
+static lv_style_t style_title_white;
 static lv_style_t style_label;
 static lv_style_t style_label_white;
 static lv_style_t style_back;
 static lv_style_t style_icon;
 static lv_style_t style_icon_label;
 static lv_style_t style_chart;
+static lv_style_t style_chart_series_bg;
 static lv_style_t style_chart_bg;
 static lv_style_t style_bar_bg;
 static lv_style_t style_bar_indic;
@@ -99,8 +101,11 @@ static void basic_init(void)
     lv_style_set_text_color(&style_box, LV_STATE_DEFAULT, REFLOW_OVEN_BLUE);
 
     lv_style_init(&style_title);
-    lv_style_set_text_color(&style_title, LV_STATE_DEFAULT, LV_COLOR_WHITE);
     lv_style_set_text_font(&style_title, LV_STATE_DEFAULT, theme.font_subtitle);
+
+    lv_style_init(&style_title_white);
+    lv_style_set_text_color(&style_title_white, LV_STATE_DEFAULT, LV_COLOR_WHITE);
+    lv_style_set_text_font(&style_title_white, LV_STATE_DEFAULT, theme.font_subtitle);
 
     lv_style_init(&style_label);
     lv_style_set_bg_opa(&style_label, LV_STATE_DEFAULT, LV_OPA_TRANSP);
@@ -130,15 +135,15 @@ static void basic_init(void)
     lv_style_set_radius(&style_btn_neutral, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE);
     lv_style_set_bg_opa(&style_btn_neutral, LV_STATE_DEFAULT, LV_OPA_COVER);
     lv_style_set_bg_color(&style_btn_neutral, LV_STATE_DEFAULT, REFLOW_OVEN_BLUE);
-    lv_style_set_bg_color(&style_btn_neutral, LV_STATE_FOCUSED, lv_color_darken(REFLOW_OVEN_BLUE, LV_OPA_20));
-    lv_style_set_bg_color(&style_btn_neutral, LV_STATE_PRESSED, lv_color_darken(REFLOW_OVEN_BLUE, LV_OPA_20));
+    lv_style_set_bg_color(&style_btn_neutral, LV_STATE_FOCUSED, lv_color_darken(REFLOW_OVEN_BLUE, LV_OPA_30));
+    lv_style_set_bg_color(&style_btn_neutral, LV_STATE_PRESSED, lv_color_darken(REFLOW_OVEN_BLUE, LV_OPA_30));
     lv_style_set_text_color(&style_btn_neutral, LV_STATE_DEFAULT, LV_COLOR_WHITE);
     lv_style_set_value_color(&style_btn_neutral, LV_STATE_DEFAULT, LV_COLOR_WHITE);
+    lv_style_set_shadow_color(&style_btn_neutral, LV_STATE_DEFAULT, REFLOW_OVEN_BLUE);
     lv_style_set_shadow_opa(&style_btn_neutral, LV_STATE_DEFAULT, LV_OPA_70);
-    lv_style_set_shadow_width(&style_btn_neutral, LV_STATE_DEFAULT, 10);
+    lv_style_set_shadow_width(&style_btn_neutral, LV_STATE_DEFAULT, 8);
     lv_style_set_shadow_opa(&style_btn_neutral, LV_STATE_PRESSED, 0);
     lv_style_set_shadow_opa(&style_btn_neutral, LV_STATE_FOCUSED, 0);
-    lv_style_set_shadow_ofs_x(&style_btn_neutral, LV_STATE_DEFAULT, -2);
     lv_style_set_shadow_ofs_y(&style_btn_neutral, LV_STATE_DEFAULT, 2);
     lv_style_set_transform_zoom(&style_btn_neutral, LV_STATE_PRESSED, 230);
     lv_style_set_transform_width(&style_btn_neutral, LV_STATE_PRESSED, LV_HOR_RES / 100);
@@ -150,21 +155,37 @@ static void basic_init(void)
     lv_style_set_transition_prop_2(&style_btn_neutral, LV_STATE_DEFAULT, LV_STYLE_TRANSFORM_HEIGHT);
     lv_style_set_transition_prop_3(&style_btn_neutral, LV_STATE_DEFAULT, LV_STYLE_BG_OPA);
 
-    lv_style_init(&style_btn_cancel);
-    lv_style_set_radius(&style_btn_cancel, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE);
-    lv_style_set_bg_opa(&style_btn_cancel, LV_STATE_DEFAULT, LV_OPA_COVER);
-    lv_style_set_bg_color(&style_btn_cancel, LV_STATE_FOCUSED, lv_color_darken(REFLOW_OVEN_RED, LV_OPA_20));
-    lv_style_set_bg_color(&style_btn_cancel, LV_STATE_PRESSED, lv_color_darken(REFLOW_OVEN_RED, LV_OPA_20));
-    lv_style_set_bg_color(&style_btn_cancel, LV_STATE_DEFAULT, REFLOW_OVEN_RED);
-    lv_style_set_text_color(&style_btn_cancel, LV_STATE_DEFAULT, LV_COLOR_WHITE);
-    lv_style_set_value_color(&style_btn_cancel, LV_STATE_DEFAULT, LV_COLOR_WHITE);
-    lv_style_set_shadow_opa(&style_btn_cancel, LV_STATE_DEFAULT, LV_OPA_70);
-    lv_style_set_shadow_width(&style_btn_cancel, LV_STATE_DEFAULT, 10);
-    lv_style_set_shadow_opa(&style_btn_cancel, LV_STATE_PRESSED, 0);
-    lv_style_set_shadow_opa(&style_btn_cancel, LV_STATE_FOCUSED, 0);
-    lv_style_set_shadow_ofs_x(&style_btn_cancel, LV_STATE_DEFAULT, -2);
-    lv_style_set_shadow_ofs_y(&style_btn_cancel, LV_STATE_DEFAULT, 2);
-    lv_style_set_transition_prop_3(&style_btn_cancel, LV_STATE_DEFAULT, LV_STYLE_BG_OPA);
+    lv_style_init(&style_btn_negative);
+    lv_style_set_radius(&style_btn_negative, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE);
+    lv_style_set_bg_opa(&style_btn_negative, LV_STATE_DEFAULT, LV_OPA_COVER);
+    lv_style_set_bg_color(&style_btn_negative, LV_STATE_FOCUSED, lv_color_darken(REFLOW_OVEN_RED, LV_OPA_30));
+    lv_style_set_bg_color(&style_btn_negative, LV_STATE_PRESSED, lv_color_darken(REFLOW_OVEN_RED, LV_OPA_30));
+    lv_style_set_bg_color(&style_btn_negative, LV_STATE_DEFAULT, REFLOW_OVEN_RED);
+    lv_style_set_text_color(&style_btn_negative, LV_STATE_DEFAULT, LV_COLOR_WHITE);
+    lv_style_set_value_color(&style_btn_negative, LV_STATE_DEFAULT, LV_COLOR_WHITE);
+    lv_style_set_shadow_color(&style_btn_negative, LV_STATE_DEFAULT, REFLOW_OVEN_RED);
+    lv_style_set_shadow_opa(&style_btn_negative, LV_STATE_DEFAULT, LV_OPA_70);
+    lv_style_set_shadow_width(&style_btn_negative, LV_STATE_DEFAULT, 8);
+    lv_style_set_shadow_opa(&style_btn_negative, LV_STATE_PRESSED, 0);
+    lv_style_set_shadow_opa(&style_btn_negative, LV_STATE_FOCUSED, 0);
+    lv_style_set_shadow_ofs_y(&style_btn_negative, LV_STATE_DEFAULT, 2);
+    lv_style_set_transition_prop_3(&style_btn_negative, LV_STATE_DEFAULT, LV_STYLE_BG_OPA);
+
+    lv_style_init(&style_btn_positive);
+    lv_style_set_radius(&style_btn_positive, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE);
+    lv_style_set_bg_opa(&style_btn_positive, LV_STATE_DEFAULT, LV_OPA_COVER);
+    lv_style_set_bg_color(&style_btn_positive, LV_STATE_FOCUSED, lv_color_darken(REFLOW_OVEN_LIGHT_GREEN, LV_OPA_30));
+    lv_style_set_bg_color(&style_btn_positive, LV_STATE_PRESSED, lv_color_darken(REFLOW_OVEN_LIGHT_GREEN, LV_OPA_30));
+    lv_style_set_bg_color(&style_btn_positive, LV_STATE_DEFAULT, REFLOW_OVEN_LIGHT_GREEN);
+    lv_style_set_text_color(&style_btn_positive, LV_STATE_DEFAULT, LV_COLOR_WHITE);
+    lv_style_set_value_color(&style_btn_positive, LV_STATE_DEFAULT, LV_COLOR_WHITE);
+    lv_style_set_shadow_color(&style_btn_positive, LV_STATE_DEFAULT, REFLOW_OVEN_LIGHT_GREEN);
+    lv_style_set_shadow_opa(&style_btn_positive, LV_STATE_DEFAULT, LV_OPA_70);
+    lv_style_set_shadow_width(&style_btn_positive, LV_STATE_DEFAULT, 8);
+    lv_style_set_shadow_opa(&style_btn_positive, LV_STATE_PRESSED, 0);
+    lv_style_set_shadow_opa(&style_btn_positive, LV_STATE_FOCUSED, 0);
+    lv_style_set_shadow_ofs_y(&style_btn_positive, LV_STATE_DEFAULT, 2);
+    lv_style_set_transition_prop_3(&style_btn_positive, LV_STATE_DEFAULT, LV_STYLE_BG_OPA);
 
     lv_style_init(&style_btn_border);
     lv_style_set_radius(&style_btn_border, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE);
@@ -217,13 +238,17 @@ static void basic_init(void)
     lv_style_set_bg_grad_dir(&style_chart, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
     lv_style_set_bg_main_stop(&style_chart, LV_STATE_DEFAULT, LV_OPA_100);
     lv_style_set_bg_grad_stop(&style_chart, LV_STATE_DEFAULT, LV_OPA_0);
-    lv_style_set_pad_all(&style_chart, LV_STATE_DEFAULT, 0);
+
+    lv_style_init(&style_chart_series_bg);
+    lv_style_set_pad_all(&style_chart_series_bg, LV_STATE_DEFAULT, -6);
+
     lv_style_init(&style_chart_bg);
+    lv_style_set_text_font(&style_chart_bg, LV_STATE_DEFAULT, theme.font_small);
     lv_style_set_bg_opa(&style_chart_bg, LV_STATE_DEFAULT, LV_OPA_TRANSP);
-    lv_style_set_pad_left(&style_chart_bg, LV_STATE_DEFAULT, 35);
-    lv_style_set_pad_bottom(&style_chart_bg, LV_STATE_DEFAULT, 25);
+    lv_style_set_pad_left(&style_chart_bg, LV_STATE_DEFAULT, 25);
+    lv_style_set_pad_bottom(&style_chart_bg, LV_STATE_DEFAULT, 13);
     lv_style_set_pad_right(&style_chart_bg, LV_STATE_DEFAULT, 10);
-    lv_style_set_pad_top(&style_chart_bg, LV_STATE_DEFAULT, 40);
+    lv_style_set_pad_top(&style_chart_bg, LV_STATE_DEFAULT, 35);
 
     lv_style_init(&style_back);
     lv_style_set_value_color(&style_back, LV_STATE_DEFAULT, LV_COLOR_WHITE);
@@ -289,10 +314,10 @@ static void basic_init(void)
     lv_style_set_bg_opa(&style_sw_knob, LV_STATE_DEFAULT, LV_OPA_COVER);
     lv_style_set_bg_color(&style_sw_knob, LV_STATE_DEFAULT, LV_COLOR_WHITE);
     lv_style_set_radius(&style_sw_knob, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE);
-    lv_style_set_pad_top(&style_sw_knob, LV_STATE_DEFAULT, - 4);
-    lv_style_set_pad_bottom(&style_sw_knob, LV_STATE_DEFAULT, - 4);
-    lv_style_set_pad_left(&style_sw_knob, LV_STATE_DEFAULT, - 4);
-    lv_style_set_pad_right(&style_sw_knob, LV_STATE_DEFAULT,  - 4);
+    lv_style_set_pad_top(&style_sw_knob, LV_STATE_DEFAULT, - 3);
+    lv_style_set_pad_bottom(&style_sw_knob, LV_STATE_DEFAULT, - 3);
+    lv_style_set_pad_left(&style_sw_knob, LV_STATE_DEFAULT, - 3);
+    lv_style_set_pad_right(&style_sw_knob, LV_STATE_DEFAULT,  - 3);
 
     lv_style_init(&style_slider_knob);
     lv_style_set_bg_opa(&style_slider_knob, LV_STATE_DEFAULT, LV_OPA_COVER);
@@ -339,7 +364,7 @@ static void basic_init(void)
  * @param font_title pointer to a extra large font
  * @return a pointer to reference this theme later
  */
-lv_theme_t * REFLOW_OVEN_theme_init(lv_color_t color_primary, lv_color_t color_secondary, uint32_t flags,
+lv_theme_t * reflow_oven_theme_init(lv_color_t color_primary, lv_color_t color_secondary, uint32_t flags,
                                     const lv_font_t * font_small, const lv_font_t * font_normal, const lv_font_t * font_subtitle,
                                     const lv_font_t * font_title)
 {
@@ -384,7 +409,6 @@ static void theme_apply(lv_obj_t * obj, lv_theme_style_t name)
         case REFLOW_OVEN_THEME_BOX_BORDER:
             lv_obj_clean_style_list(obj, LV_OBJ_PART_MAIN);
             list = lv_obj_get_style_list(obj, LV_OBJ_PART_MAIN);
-            _lv_style_list_add_style(list, &style_box);
             _lv_style_list_add_style(list, &style_box_border);
             break;
 
@@ -397,21 +421,24 @@ static void theme_apply(lv_obj_t * obj, lv_theme_style_t name)
         case REFLOW_OVEN_THEME_BTN_NEUTRAL:
             lv_obj_clean_style_list(obj, LV_BTN_PART_MAIN);
             list = lv_obj_get_style_list(obj, LV_BTN_PART_MAIN);
-            _lv_style_list_add_style(list, &style_btn);
             _lv_style_list_add_style(list, &style_btn_neutral);
             break;
 
-        case REFLOW_OVEN_THEME_BTN_CANCEL:
+        case REFLOW_OVEN_THEME_BTN_NEGATIVE:
             lv_obj_clean_style_list(obj, LV_BTN_PART_MAIN);
             list = lv_obj_get_style_list(obj, LV_BTN_PART_MAIN);
-            _lv_style_list_add_style(list, &style_btn);
-            _lv_style_list_add_style(list, &style_btn_cancel);
+            _lv_style_list_add_style(list, &style_btn_negative);
+            break;
+
+        case REFLOW_OVEN_THEME_BTN_POSITIVE:
+            lv_obj_clean_style_list(obj, LV_BTN_PART_MAIN);
+            list = lv_obj_get_style_list(obj, LV_BTN_PART_MAIN);
+            _lv_style_list_add_style(list, &style_btn_positive);
             break;
 
         case REFLOW_OVEN_THEME_BTN_BORDER:
             lv_obj_clean_style_list(obj, LV_BTN_PART_MAIN);
             list = lv_obj_get_style_list(obj, LV_BTN_PART_MAIN);
-            _lv_style_list_add_style(list, &style_btn);
             _lv_style_list_add_style(list, &style_btn_border);
             break;
 
@@ -447,20 +474,28 @@ static void theme_apply(lv_obj_t * obj, lv_theme_style_t name)
             list = lv_obj_get_style_list(obj, LV_IMG_PART_MAIN);
             _lv_style_list_add_style(list, &style_icon);
             break;
+
         case REFLOW_OVEN_THEME_ICON_LABEL:
             lv_obj_clean_style_list(obj, LV_IMG_PART_MAIN);
             list = lv_obj_get_style_list(obj, LV_IMG_PART_MAIN);
             _lv_style_list_add_style(list, &style_icon_label);
             break;
+
         case REFLOW_OVEN_THEME_CHART:
             lv_obj_clean_style_list(obj, LV_CHART_PART_SERIES);
             list = lv_obj_get_style_list(obj, LV_CHART_PART_SERIES);
             _lv_style_list_add_style(list, &style_chart);
 
-            lv_obj_clean_style_list(obj, LV_BAR_PART_BG);
-            list = lv_obj_get_style_list(obj, LV_BAR_PART_BG);
+            lv_obj_clean_style_list(obj, LV_CHART_PART_SERIES_BG);
+            list = lv_obj_get_style_list(obj, LV_CHART_PART_SERIES_BG);
+            _lv_style_list_add_style(list, &style_chart_series_bg);
+
+            lv_obj_clean_style_list(obj, LV_CHART_PART_BG);
+            list = lv_obj_get_style_list(obj, LV_CHART_PART_BG);
             _lv_style_list_add_style(list, &style_chart_bg);
+
             break;
+
         case LV_THEME_LABEL:
             lv_obj_clean_style_list(obj, LV_LABEL_PART_MAIN);
             list = lv_obj_get_style_list(obj, LV_LABEL_PART_MAIN);
@@ -471,6 +506,12 @@ static void theme_apply(lv_obj_t * obj, lv_theme_style_t name)
             lv_obj_clean_style_list(obj, LV_LABEL_PART_MAIN);
             list = lv_obj_get_style_list(obj, LV_LABEL_PART_MAIN);
             _lv_style_list_add_style(list, &style_title);
+            break;
+
+        case REFLOW_OVEN_THEME_TITLE_WHITE:
+            lv_obj_clean_style_list(obj, LV_LABEL_PART_MAIN);
+            list = lv_obj_get_style_list(obj, LV_LABEL_PART_MAIN);
+            _lv_style_list_add_style(list, &style_title_white);
             break;
 
         case REFLOW_OVEN_THEME_LABEL_WHITE:
@@ -511,7 +552,6 @@ static void theme_apply(lv_obj_t * obj, lv_theme_style_t name)
             _lv_style_list_add_style(list, &style_list_btn);
             break;
 
-
         case LV_THEME_ARC:
             lv_obj_clean_style_list(obj, LV_ARC_PART_BG);
             list = lv_obj_get_style_list(obj, LV_ARC_PART_BG);
@@ -521,7 +561,6 @@ static void theme_apply(lv_obj_t * obj, lv_theme_style_t name)
             list = lv_obj_get_style_list(obj, LV_ARC_PART_INDIC);
             _lv_style_list_add_style(list, &style_arc_indic);
             break;
-
 
         case LV_THEME_SWITCH:
             lv_obj_clean_style_list(obj, LV_SWITCH_PART_BG);
@@ -562,6 +601,6 @@ static void theme_apply(lv_obj_t * obj, lv_theme_style_t name)
             break;
     }
 
-    lv_obj_refresh_style(obj, LV_STYLE_PROP_ALL);
+    lv_obj_refresh_style(obj, LV_OBJ_PART_ALL, LV_STYLE_PROP_ALL);
 
 }

@@ -41,6 +41,7 @@ void settings_setup();
 void settings_load();
 void settings_save();
 void settings_reset();
+char* settings_dump();
 
 #ifdef __cplusplus
 } /* extern "C" */

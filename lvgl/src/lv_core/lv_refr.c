@@ -517,10 +517,12 @@ static void lv_refr_area_part(const lv_area_t * area_p)
                 lv_area_t a;
                 lv_area_set(&a, 0, 0, header.w - 1, header.h - 1);
                 lv_draw_img(&a, &start_mask, disp_refr->bg_img, &dsc);
-            } else {
+            }
+            else {
                 LV_LOG_WARN("Can't draw the background image")
             }
-        } else {
+        }
+        else {
             lv_draw_rect_dsc_t dsc;
             lv_draw_rect_dsc_init(&dsc);
             dsc.bg_color = disp_refr->bg_color;
@@ -542,8 +544,8 @@ static void lv_refr_area_part(const lv_area_t * area_p)
 
 
     if(top_act_scr == NULL) {
-         top_act_scr = disp_refr->act_scr;
-     }
+        top_act_scr = disp_refr->act_scr;
+    }
     /*Do the refreshing from the top object*/
     lv_refr_obj_and_children(top_act_scr, &start_mask);
 
@@ -570,9 +572,14 @@ static lv_obj_t * lv_refr_get_top_obj(const lv_area_t * area_p, lv_obj_t * obj)
 
     /*If this object is fully cover the draw area check the children too */
     if(_lv_area_is_in(area_p, &obj->coords, 0) && obj->hidden == 0) {
-        lv_design_res_t design_res = obj->design_cb ? obj->design_cb(obj, area_p,
-                                                                     LV_DESIGN_COVER_CHK) : LV_DESIGN_RES_NOT_COVER;
+        lv_design_res_t design_res = obj->design_cb(obj, area_p, LV_DESIGN_COVER_CHK);
         if(design_res == LV_DESIGN_RES_MASKED) return NULL;
+
+#if LV_USE_OPA_SCALE
+        if(design_res == LV_DESIGN_RES_COVER && lv_obj_get_style_opa_scale(obj, LV_OBJ_PART_MAIN) != LV_OPA_COVER) {
+            design_res = LV_DESIGN_RES_NOT_COVER;
+        }
+#endif
 
         lv_obj_t * i;
         _LV_LL_READ(obj->child_ll, i) {
@@ -739,6 +746,8 @@ static void lv_refr_vdb_flush(void)
 
     /*Flush the rendered content to the display*/
     lv_disp_t * disp = _lv_refr_get_disp_refreshing();
+    if(disp->driver.gpu_wait_cb) disp->driver.gpu_wait_cb(&disp->driver);
+
     if(disp->driver.flush_cb) disp->driver.flush_cb(&disp->driver, &vdb->area, vdb->buf_act);
 
     if(vdb->buf1 && vdb->buf2) {

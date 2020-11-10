@@ -6,10 +6,9 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "stdio.h"
-#include "math.h"
 #include "reflow_oven_ui.h"
 #include "reflow_oven_theme.h"
+#include "reflow_oven_utils.h"
 #include "reflow_oven_profiles.h"
 #include "reflow_oven_settings.h"
 #include "reflow_oven_pid_control.h"
@@ -66,9 +65,6 @@ static void toggle_door();
 static void open_settings();
 static void open_profiles();
 
-static void display_heater_status(reflow_oven_heater_status_type_t state);
-static void display_door_status(reflow_oven_door_status_type_t state);
-
 LV_EVENT_CB_DECLARE(back_to_home_event_cb);
 LV_EVENT_CB_DECLARE(start_reflow_icon_event_cb);
 LV_EVENT_CB_DECLARE(toggle_door_icon_event_cb);
@@ -78,7 +74,7 @@ LV_EVENT_CB_DECLARE(abort_reflow_event_cb);
 LV_EVENT_CB_DECLARE(no_abort_event_cb);
 
 static icon_t * add_icon(lv_obj_t * parent, const void * src,  const void * label_src, lv_color_t color);
-static lv_obj_t * add_title(const char * txt, lv_obj_t * src);
+static lv_obj_t * add_title(const char * txt, lv_obj_t * src, reflow_oven_theme_t theme);
 static lv_obj_t * add_back(lv_event_cb_t event_cb);
 static lv_obj_t * add_loader(void (*end_cb)(lv_anim_t *));
 static void loader_anim_cb(void * arc, lv_anim_value_t v);
@@ -92,6 +88,7 @@ static void reflow_oven_anim_in(lv_obj_t * obj, uint32_t delay);
 /**********************
  *  STATIC VARIABLES
  **********************/
+static bool error_state = false;
 static lv_group_t * g;
 static lv_obj_t * bg_circle;
 static lv_obj_t * bg_left_status_icons;
@@ -101,9 +98,11 @@ static lv_obj_t * popup;
 static lv_obj_t * abort_title;
 static lv_obj_t * abort_btn;
 static lv_obj_t * no_btn;
-static lv_obj_t * cancel_btn;
+static lv_obj_t * reflow_bottom_btn;
 static lv_obj_t * heater_state_icon;
 static lv_obj_t * door_state_icon;
+static lv_obj_t * temp_state_icon;
+static lv_obj_t * temp_state_symbol;
 /**********************
  *      MACROS
  **********************/
@@ -113,8 +112,8 @@ static lv_obj_t * door_state_icon;
  **********************/
 void reflow_oven_ui(void)
 {
-    lv_theme_t * th = REFLOW_OVEN_theme_init(LV_COLOR_BLACK, LV_COLOR_BLACK,
-            0, &lv_font_montserrat_12, &lv_font_montserrat_12,
+    lv_theme_t * th = reflow_oven_theme_init(LV_COLOR_BLACK, LV_COLOR_BLACK,
+            0, &lv_font_montserrat_10, &lv_font_montserrat_12,
             &lv_font_montserrat_14, &lv_font_montserrat_16);
     lv_theme_set_act(th);
 
@@ -132,14 +131,14 @@ void reflow_oven_ui(void)
 	#endif
 
     bg_right_status_icons = lv_obj_create(lv_scr_act(), NULL);
-    lv_obj_set_size(bg_right_status_icons, 20, 100);
+    lv_obj_set_size(bg_right_status_icons, 24, 100);
     lv_obj_set_style_local_bg_opa(bg_right_status_icons, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_10);
-    lv_obj_align(bg_right_status_icons, NULL, LV_ALIGN_IN_RIGHT_MID, -11, 0);
+    lv_obj_align(bg_right_status_icons, NULL, LV_ALIGN_IN_RIGHT_MID, -12, 0);
 
     bg_left_status_icons = lv_obj_create(lv_scr_act(), NULL);
-    lv_obj_set_size(bg_left_status_icons, 20, 100);
+    lv_obj_set_size(bg_left_status_icons, 24, 100);
     lv_obj_set_style_local_bg_opa(bg_left_status_icons, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_10);
-    lv_obj_align(bg_left_status_icons, NULL, LV_ALIGN_IN_LEFT_MID, 11, 0);
+    lv_obj_align(bg_left_status_icons, NULL, LV_ALIGN_IN_LEFT_MID, 12, 0);
 
     heater_state_icon = lv_img_create(bg_right_status_icons, NULL);
 
@@ -148,18 +147,18 @@ void reflow_oven_ui(void)
     display_heater_status(REFLOW_OVEN_HEATER_STATUS_DISABLED);
     display_door_status(REFLOW_OVEN_DOOR_STATUS_UNLOCKED);
 
-    lv_obj_t * temp_state_icon = lv_label_create(bg_left_status_icons, NULL);
-    lv_obj_t * temp_state_symbol = lv_label_create(bg_left_status_icons, NULL);
+    temp_state_icon = lv_label_create(bg_left_status_icons, NULL);
+    temp_state_symbol = lv_label_create(bg_left_status_icons, NULL);
     lv_obj_set_size(temp_state_icon, 18, 18);
     lv_obj_set_size(temp_state_symbol, 18, 18);
     lv_obj_set_style_local_text_color(temp_state_icon, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE);
     lv_obj_set_style_local_text_color(temp_state_symbol, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE);
-    lv_obj_set_style_local_text_font(temp_state_icon, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, &lv_font_montserrat_10);
-    lv_obj_set_style_local_text_font(temp_state_symbol, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, &lv_font_montserrat_10);
-    lv_label_set_text(temp_state_icon, "250");
+    lv_obj_set_style_local_text_font(temp_state_icon, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_theme_get_font_normal());
+    lv_obj_set_style_local_text_font(temp_state_symbol, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_theme_get_font_normal());
+    lv_label_set_text(temp_state_icon, "?");
     lv_label_set_text(temp_state_symbol, "C");
-    lv_obj_align(temp_state_icon, NULL, LV_ALIGN_CENTER, 0, -4);
-    lv_obj_align(temp_state_symbol, NULL, LV_ALIGN_CENTER, 0, 4);
+    lv_obj_align(temp_state_icon, NULL, LV_ALIGN_CENTER, 0, -6);
+    lv_obj_align(temp_state_symbol, NULL, LV_ALIGN_CENTER, 0, 6);
 
     lv_indev_drv_t enc_drv;
     lv_indev_drv_init(&enc_drv);
@@ -172,10 +171,7 @@ void reflow_oven_ui(void)
     home_open(0);
 }
 
-/**********************
- *   STATIC FUNCTIONS
- **********************/
-static void display_heater_status(reflow_oven_heater_status_type_t state){
+void display_heater_status(reflow_oven_heater_status_type_t state){
     if(state == REFLOW_OVEN_HEATER_STATUS_DISABLED){
         LV_IMG_DECLARE(reflow_oven_img_heater_disabled);
         lv_img_set_src(heater_state_icon, &reflow_oven_img_heater_disabled);
@@ -191,20 +187,26 @@ static void display_heater_status(reflow_oven_heater_status_type_t state){
     }
 }
 
-static void display_door_status(reflow_oven_door_status_type_t state){
+void display_door_status(reflow_oven_door_status_type_t state){
     if(state == REFLOW_OVEN_DOOR_STATUS_UNLOCKED){
         LV_IMG_DECLARE(reflow_oven_img_unlocked);
         lv_img_set_src(door_state_icon, &reflow_oven_img_unlocked);
+        lv_obj_set_style_local_image_recolor_opa(door_state_icon, LV_IMG_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_TRANSP);
         lv_obj_align(door_state_icon, NULL, LV_ALIGN_CENTER, 0, 16);
     }else if(state == REFLOW_OVEN_DOOR_STATUS_LOCKED){
         LV_IMG_DECLARE(reflow_oven_img_locked);
         lv_img_set_src(door_state_icon, &reflow_oven_img_locked);
+        lv_obj_set_style_local_image_recolor_opa(door_state_icon, LV_IMG_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_100);
+        lv_obj_set_style_local_image_recolor(door_state_icon, LV_IMG_PART_MAIN, LV_STATE_DEFAULT, REFLOW_OVEN_YELLOW);
         lv_obj_align(door_state_icon, NULL, LV_ALIGN_CENTER, 0, 16);
     }
 }
+/**********************
+ *   STATIC FUNCTIONS
+ **********************/
 
 static void home_open(uint32_t delay) {
-    lv_obj_t * title = add_title("Reflow Oven", lv_scr_act());
+    lv_obj_t * title = add_title("Reflow Oven", lv_scr_act(), REFLOW_OVEN_THEME_TITLE_WHITE);
     lv_obj_align(title, NULL, LV_ALIGN_IN_TOP_MID, 0, REFLOW_OVEN_TITLE_PAD);
 
     delay += REFLOW_OVEN_ANIM_DELAY;
@@ -254,17 +256,6 @@ static void home_open(uint32_t delay) {
 
     delay += REFLOW_OVEN_ANIM_DELAY;
     reflow_oven_anim_in(box, delay);
-
-    box = lv_obj_create(lv_scr_act(), NULL);
-    lv_obj_set_size(box, 115, 18);
-    lv_obj_align(box, NULL, LV_ALIGN_IN_BOTTOM_MID, 0, -2);
-    lv_obj_set_style_local_value_str(box, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, "Welcome HX2003");
-
-    delay += REFLOW_OVEN_ANIM_DELAY;
-    reflow_oven_anim_in(box, delay);
-
-    delay += REFLOW_OVEN_ANIM_DELAY;
-    reflow_oven_anim_in(box, delay);
 }
 
 static void add_home_icon_group(){
@@ -274,22 +265,14 @@ static void add_home_icon_group(){
     lv_group_add_obj(g, home_icon.icon4->obj);
 }
 
-int16_t linear_interpolate(uint16_t x, int16_t x2, int16_t y1, int16_t y2){
-    int16_t rise = y2 - y1;
-    int16_t run = x2;
-    int16_t val = (x)*(rise*1.0/run) + y1;
-    return val;
-}
-
 static void start_reflow(){
     reflow_oven_anim_out_all(lv_scr_act(), 0);
 
-    lv_obj_t * title = add_title("Reflow started", lv_scr_act());
+    lv_obj_t * title = add_title("Reflow started", lv_scr_act(), REFLOW_OVEN_THEME_TITLE_WHITE);
     lv_obj_align(title, NULL, LV_ALIGN_IN_TOP_MID, 0, REFLOW_OVEN_TITLE_PAD);
 
-    lv_coord_t box_w = 170;
+    lv_coord_t box_w = 160;
     lv_obj_t * box = lv_obj_create(lv_scr_act(), NULL);
-    //lv_obj_set_style_local_radius(box, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, 20);
     lv_obj_set_size(box, box_w, box_w);
     lv_obj_align(box, NULL, LV_ALIGN_CENTER, 0, 0);
     lv_obj_set_style_local_bg_color(box, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE);
@@ -299,7 +282,7 @@ static void start_reflow(){
     lv_obj_t * profile_title = lv_label_create(box, NULL);
     lv_label_set_long_mode(profile_title, LV_LABEL_LONG_BREAK);
     lv_obj_set_size(profile_title, box_w - 10, 20);
-    lv_obj_set_style_local_text_font(profile_title, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_theme_get_font_small());
+    lv_obj_set_style_local_text_font(profile_title, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_theme_get_font_normal());
     lv_obj_set_style_local_bg_color(profile_title, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, REFLOW_OVEN_BLUE);
     lv_label_set_text(profile_title, reflow_profiles[reflow_oven_setting.current_reflow_profile]->title);
     lv_obj_align(profile_title, box, LV_ALIGN_IN_TOP_MID, 0, 0);
@@ -323,7 +306,7 @@ static void start_reflow(){
     lv_obj_set_width(chart_base, box_w);
     lv_obj_set_height(chart_base, box_w);
     lv_chart_set_point_count(chart_base, chart_horizontal_max_points);
-    lv_chart_set_range(chart_base, 0, chart_horizontal_max_points);
+    lv_chart_set_range(chart_base, 0, 250);
     lv_obj_set_style_local_bg_opa(chart_base, LV_CHART_PART_BG, LV_STATE_DEFAULT, LV_OPA_TRANSP);
     lv_chart_set_type(chart_base, LV_CHART_TYPE_LINE);
     lv_theme_apply(chart_base, REFLOW_OVEN_THEME_CHART);
@@ -332,7 +315,7 @@ static void start_reflow(){
 
     //Generate tick labels
     static char x_tick_texts[32];
-
+    memset(x_tick_texts, 0, 32);
     for(uint16_t i=0; i<ceil(chart_horizontal_max_points/60.0) + 1; i++){
         char mins[2];
         sprintf(mins, "%u", i);
@@ -349,21 +332,21 @@ static void start_reflow(){
 
     //I know this is inefficient, a terrible waste of memory but LVGL currently doesn't support what i want,
     for(uint16_t i=0; i<chart_horizontal_max_points; i++){
-        uint16_t y_temp = 0;
+        int16_t y_temp = 0;
         if(i<reflow_profile_soak_start_time){
             y_temp = linear_interpolate(i, reflow_profiles[reflow_oven_setting.current_reflow_profile]->presoak_dur, reflow_profiles[reflow_oven_setting.current_reflow_profile]->presoak_start_temp, reflow_profiles[reflow_oven_setting.current_reflow_profile]->presoak_end_temp);
             lv_chart_set_next(chart_base, s1, y_temp);
         }else if(i>=reflow_profile_soak_start_time&&i<reflow_profile_reflow_begin_start_time){
-            y_temp = linear_interpolate(i - reflow_profile_soak_start_time, reflow_profiles[reflow_oven_setting.current_reflow_profile]->soak_dur, reflow_profiles[reflow_oven_setting.current_reflow_profile]->presoak_end_temp, reflow_profiles[reflow_oven_setting.current_reflow_profile]->soak_end_temp);
+            y_temp = linear_interpolate(i - reflow_profile_soak_start_time, reflow_profiles[reflow_oven_setting.current_reflow_profile]->soak_dur, reflow_profiles[reflow_oven_setting.current_reflow_profile]->soak_start_temp, reflow_profiles[reflow_oven_setting.current_reflow_profile]->soak_end_temp);
             lv_chart_set_next(chart_base, s1, y_temp);
         }else if(i>=reflow_profile_reflow_begin_start_time&&i<reflow_profile_reflow_hold_start_time){
-            y_temp = linear_interpolate(i - reflow_profile_reflow_begin_start_time, reflow_profiles[reflow_oven_setting.current_reflow_profile]->reflow_begin_dur, reflow_profiles[reflow_oven_setting.current_reflow_profile]->soak_end_temp, reflow_profiles[reflow_oven_setting.current_reflow_profile]->reflow_begin_end_temp);
+            y_temp = linear_interpolate(i - reflow_profile_reflow_begin_start_time, reflow_profiles[reflow_oven_setting.current_reflow_profile]->reflow_begin_dur, reflow_profiles[reflow_oven_setting.current_reflow_profile]->reflow_begin_start_temp, reflow_profiles[reflow_oven_setting.current_reflow_profile]->reflow_begin_end_temp);
             lv_chart_set_next(chart_base, s1, y_temp);
         }else if(i>=reflow_profile_reflow_hold_start_time&&i<reflow_profile_cooldown_start_time){
-            y_temp = linear_interpolate(i - reflow_profile_reflow_hold_start_time, reflow_profiles[reflow_oven_setting.current_reflow_profile]->reflow_hold_dur, reflow_profiles[reflow_oven_setting.current_reflow_profile]->reflow_begin_end_temp, reflow_profiles[reflow_oven_setting.current_reflow_profile]->reflow_begin_end_temp);
+            y_temp = linear_interpolate(i - reflow_profile_reflow_hold_start_time, reflow_profiles[reflow_oven_setting.current_reflow_profile]->reflow_hold_dur, reflow_profiles[reflow_oven_setting.current_reflow_profile]->reflow_hold_start_temp, reflow_profiles[reflow_oven_setting.current_reflow_profile]->reflow_hold_end_temp);
             lv_chart_set_next(chart_base, s1, y_temp);
         }else if(i>=reflow_profile_cooldown_start_time&&i<reflow_profile_horizontal_max_dur){
-            y_temp = linear_interpolate(i - reflow_profile_cooldown_start_time, reflow_profiles[reflow_oven_setting.current_reflow_profile]->cooldown_dur, reflow_profiles[reflow_oven_setting.current_reflow_profile]->reflow_begin_end_temp, reflow_profiles[reflow_oven_setting.current_reflow_profile]->cooldown_end_temp);
+            y_temp = linear_interpolate(i - reflow_profile_cooldown_start_time, reflow_profiles[reflow_oven_setting.current_reflow_profile]->cooldown_dur, reflow_profiles[reflow_oven_setting.current_reflow_profile]->cooldown_start_temp, reflow_profiles[reflow_oven_setting.current_reflow_profile]->cooldown_end_temp);
             lv_chart_set_next(chart_base, s1, y_temp);
         }else{
             lv_chart_set_next(chart_base, s1, LV_CHART_POINT_DEF);
@@ -373,7 +356,7 @@ static void start_reflow(){
     lv_obj_set_height(chart_data, box_w);
     lv_obj_set_width(chart_data, box_w);
     lv_chart_set_point_count(chart_data, chart_horizontal_max_points);
-    lv_chart_set_range(chart_data, 0, chart_horizontal_max_points);
+    lv_chart_set_range(chart_data, 0, 250);
     lv_chart_set_type(chart_data, LV_CHART_TYPE_LINE);
     lv_theme_apply(chart_data, REFLOW_OVEN_THEME_CHART);
 
@@ -394,69 +377,77 @@ static void start_reflow(){
 
     uint16_t current_time_past = 150;
 
-    lv_chart_set_ext_array(chart_base, s2, temp_readings, chart_horizontal_max_points);
-    lv_chart_refresh(chart_base);
+    lv_chart_set_ext_array(chart_data, s2, temp_readings, chart_horizontal_max_points);
+    lv_chart_refresh(chart_data);
 
-    cancel_btn = lv_btn_create(lv_scr_act(), NULL);
-    lv_theme_apply(cancel_btn, REFLOW_OVEN_THEME_BTN_CANCEL);
-    lv_obj_set_size(cancel_btn, 100, 20);
-    lv_obj_align(cancel_btn, lv_scr_act(), LV_ALIGN_IN_BOTTOM_MID, 0, -10);
-    lv_obj_set_style_local_value_str(cancel_btn, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, "Abort");
-    lv_obj_set_style_local_value_font(cancel_btn, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_theme_get_font_subtitle());
-    lv_obj_set_event_cb(cancel_btn, abort_reflow_event_cb);
+    reflow_bottom_btn = lv_btn_create(lv_scr_act(), NULL);
+    lv_theme_apply(reflow_bottom_btn, REFLOW_OVEN_THEME_BTN_NEGATIVE);
+    lv_obj_set_size(reflow_bottom_btn, 100, 20);
+    lv_obj_align(reflow_bottom_btn, lv_scr_act(), LV_ALIGN_IN_BOTTOM_MID, 0, -10);
+    lv_obj_set_style_local_value_str(reflow_bottom_btn, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, "Abort");
+    lv_obj_set_style_local_value_font(reflow_bottom_btn, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_theme_get_font_subtitle());
+    lv_obj_set_event_cb(reflow_bottom_btn, abort_reflow_event_cb);
 
-    lv_group_add_obj(g, cancel_btn);
-    lv_group_focus_obj(cancel_btn);
+    lv_group_add_obj(g, reflow_bottom_btn);
+    lv_group_focus_obj(reflow_bottom_btn);
 }
 
 static void toggle_door(){
     uint32_t delay = 200;
 
     lv_obj_t * bg_shade = lv_obj_create(lv_scr_act(), NULL);
-    lv_obj_set_style_local_bg_opa(bg_shade, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_60);
+    lv_obj_set_style_local_bg_opa(bg_shade, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_30);
     lv_obj_set_style_local_bg_color(bg_shade, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_BLACK);
     lv_obj_set_style_local_radius(bg_shade, LV_IMG_PART_MAIN, LV_STATE_DEFAULT, LV_VER_RES/2);
     lv_obj_set_size(bg_shade, LV_HOR_RES, LV_VER_RES);
 
     lv_obj_t * popup = lv_obj_create(lv_scr_act(), NULL);
-    lv_obj_set_style_local_bg_color(popup, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, REFLOW_OVEN_GRAY);
-    lv_obj_set_size(popup, 200, 100);
+    lv_obj_set_style_local_bg_color(popup, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE);
+    lv_obj_set_size(popup, 200, 70);
     lv_obj_align(popup, NULL, LV_ALIGN_CENTER, 0, 0);
 
-    lv_obj_t * title = add_title("Doors closing...", popup);
+    lv_obj_t * title = add_title("Doors closing...", popup, REFLOW_OVEN_THEME_TITLE);
 
     //Not sure why cant set bg color, temp workaround
     lv_obj_t * bar0 = lv_bar_create(popup, NULL);
-    lv_obj_set_size(bar0, 180, 20);
-    lv_obj_align(bar0, NULL, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_size(bar0, 180, 15);
+    lv_obj_align(bar0, NULL, LV_ALIGN_CENTER, 0, 10);
     lv_obj_set_style_local_bg_color(bar0, LV_BAR_PART_INDIC, LV_STATE_DEFAULT, REFLOW_OVEN_LIGHT_GRAY);
     lv_bar_set_value(bar0, 100, LV_ANIM_OFF);
 
     lv_obj_t * bar1 = lv_bar_create(popup, NULL);
-    lv_obj_set_size(bar1, 180, 20);
-    lv_obj_align(bar1, NULL, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_size(bar1, 180, 15);
+    lv_obj_align(bar1, NULL, LV_ALIGN_CENTER, 0, 10);
     lv_theme_apply(bar1, LV_THEME_BAR);
-    lv_bar_set_anim_time(bar1, 2000);
+    lv_bar_set_anim_time(bar1, 3000);
     lv_bar_set_value(bar1, 100, LV_ANIM_ON);
 
-    lv_obj_t * cancel_btn = lv_btn_create(popup, NULL);
-    lv_theme_apply(cancel_btn, REFLOW_OVEN_THEME_BTN_CANCEL);
-    lv_obj_set_size(cancel_btn, 180, 20);
-    lv_obj_align(cancel_btn, popup, LV_ALIGN_IN_BOTTOM_MID, 0, -10);
-    lv_obj_set_style_local_value_str(cancel_btn, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, "Cancel");
-    lv_obj_set_style_local_value_font(cancel_btn, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_theme_get_font_subtitle());
+    /*
+    lv_obj_t * reflow_bottom_btn = lv_btn_create(popup, NULL);
+    lv_theme_apply(reflow_bottom_btn, REFLOW_OVEN_THEME_BTN_NEGATIVE);
+    lv_obj_set_size(reflow_bottom_btn, 180, 20);
+    lv_obj_align(reflow_bottom_btn, popup, LV_ALIGN_IN_BOTTOM_MID, 0, -10);
+    lv_obj_set_style_local_value_str(reflow_bottom_btn, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, "Cancel");
+    lv_obj_set_style_local_value_font(reflow_bottom_btn, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_theme_get_font_subtitle());
+    */
 
     lv_group_remove_all_objs(g);
-    lv_group_add_obj(g, cancel_btn);
-    lv_group_focus_obj(cancel_btn);
+
+    /*
+    lv_group_add_obj(g, reflow_bottom_btn);
+    lv_group_focus_obj(reflow_bottom_btn);
+    */
 
     reflow_oven_anim_in(popup, delay);
 
     reflow_oven_anim_out(bg_shade, 2200);
     reflow_oven_anim_out(popup, 2200);
 
-    //This should be called from a separate thread
-    lv_group_remove_obj(cancel_btn);
+    reflow_oven_focus_door_icon();
+}
+
+void reflow_oven_focus_door_icon(){
+    lv_group_remove_all_objs(g);
     add_home_icon_group();
     //workaround
     lv_style_int_t trans_delay = lv_obj_get_style_transition_delay(home_icon.icon2->obj, LV_OBJ_PART_MAIN);
@@ -465,15 +456,14 @@ static void toggle_door(){
     lv_group_focus_obj(home_icon.icon2->obj);
     //workaround
     lv_obj_set_style_local_transition_delay(home_icon.icon1->obj, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, trans_delay);
-    //
 }
 static void open_settings(){
     reflow_oven_anim_out_all(lv_scr_act(), 0);
 
-    lv_obj_t * title = add_title("Settings", lv_scr_act());
+    lv_obj_t * title = add_title("Settings", lv_scr_act(), REFLOW_OVEN_THEME_TITLE_WHITE);
     lv_obj_align(title, NULL, LV_ALIGN_IN_TOP_MID, 0, REFLOW_OVEN_TITLE_PAD);
 
-    lv_coord_t box_w = 170;
+    lv_coord_t box_w = 160;
     lv_obj_t * box = lv_obj_create(lv_scr_act(), NULL);
     lv_obj_set_size(box, box_w, box_w);
     lv_obj_align(box, NULL, LV_ALIGN_CENTER, 0, 0);
@@ -532,10 +522,10 @@ static void main_profile_menu_event_cb(lv_obj_t * btn, lv_event_t e)
 }
 static void open_profiles(){
     reflow_oven_anim_out_all(lv_scr_act(), 0);
-    lv_obj_t * title = add_title("Profiles", lv_scr_act());
+    lv_obj_t * title = add_title("Profiles", lv_scr_act(), REFLOW_OVEN_THEME_TITLE_WHITE);
     lv_obj_align(title, NULL, LV_ALIGN_IN_TOP_MID, 0, REFLOW_OVEN_TITLE_PAD);
 
-    lv_coord_t box_w = 170;
+    lv_coord_t box_w = 160;
     lv_obj_t * box = lv_obj_create(lv_scr_act(), NULL);
     lv_obj_set_size(box, box_w, box_w);
     lv_obj_align(box, NULL, LV_ALIGN_CENTER, 0, 0);
@@ -564,23 +554,29 @@ static void open_profiles(){
     lv_settings_set_max_width(lv_obj_get_width(box));
 }
 
+void reflow_complete(){
+    lv_theme_apply(reflow_bottom_btn, REFLOW_OVEN_THEME_BTN_POSITIVE);
+    lv_obj_set_style_local_value_str(reflow_bottom_btn, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, "Complete");
+    lv_obj_set_event_cb(reflow_bottom_btn, back_to_home_event_cb);
+}
+
 LV_EVENT_CB_DECLARE(abort_reflow_event_cb){
      if (e == LV_EVENT_CLICKED) {
         bg_shade = lv_obj_create(lv_scr_act(), NULL);
-        lv_obj_set_style_local_bg_opa(bg_shade, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_60);
+        lv_obj_set_style_local_bg_opa(bg_shade, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_30);
         lv_obj_set_style_local_bg_color(bg_shade, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_BLACK);
         lv_obj_set_style_local_radius(bg_shade, LV_IMG_PART_MAIN, LV_STATE_DEFAULT, LV_VER_RES/2);
         lv_obj_set_size(bg_shade, LV_HOR_RES, LV_VER_RES);
 
         popup = lv_obj_create(lv_scr_act(), NULL);
-        lv_obj_set_style_local_bg_color(popup, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, REFLOW_OVEN_GRAY);
+        lv_obj_set_style_local_bg_color(popup, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE);
         lv_obj_set_size(popup, 200, 80);
         lv_obj_align(popup, NULL, LV_ALIGN_CENTER, 0, 0);
 
-        abort_title = add_title("Do you want abort?", popup);
+        abort_title = add_title("Do you want abort?", popup, REFLOW_OVEN_THEME_TITLE);
 
         abort_btn = lv_btn_create(popup, NULL);
-        lv_theme_apply(abort_btn, REFLOW_OVEN_THEME_BTN_CANCEL);
+        lv_theme_apply(abort_btn, REFLOW_OVEN_THEME_BTN_NEGATIVE);
         lv_obj_set_size(abort_btn, 80, 20);
         lv_obj_align(abort_btn, popup, LV_ALIGN_IN_BOTTOM_MID, 50, -10);
         lv_obj_set_style_local_value_str(abort_btn, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, "Abort");
@@ -610,54 +606,56 @@ LV_EVENT_CB_DECLARE(no_abort_event_cb){
     reflow_oven_anim_out(abort_btn, 0);
     reflow_oven_anim_out(no_btn, 0);
 
-    lv_group_add_obj(g, cancel_btn);
-    lv_group_focus_obj(cancel_btn);
+    lv_group_add_obj(g, reflow_bottom_btn);
+    lv_group_focus_obj(reflow_bottom_btn);
     }
+}
+
+void reflow_oven_update_temperature(char* temp){
+    lv_label_set_text(temp_state_icon, temp);
+    lv_obj_align(temp_state_icon, NULL, LV_ALIGN_CENTER, 0, -6);
 }
 
 void reflow_oven_error_popup(char* msg, uint8_t error_code_val){
-    lv_obj_t * bg_shade = lv_obj_create(lv_scr_act(), NULL);
-    lv_obj_set_style_local_bg_opa(bg_shade, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_60);
-    lv_obj_set_style_local_bg_color(bg_shade, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_BLACK);
-    lv_obj_set_style_local_radius(bg_shade, LV_IMG_PART_MAIN, LV_STATE_DEFAULT, LV_VER_RES/2);
-    lv_obj_set_size(bg_shade, LV_HOR_RES, LV_VER_RES);
-
-    lv_obj_t * popup = lv_obj_create(lv_scr_act(), NULL);
-
-    lv_obj_set_size(popup, 200, 80);
-    lv_obj_align(popup, NULL, LV_ALIGN_CENTER, 0, 0);
-
-    lv_obj_t * title = add_title("A fatal error occurred", popup);
-    lv_obj_set_style_local_text_color(title, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, REFLOW_OVEN_RED);
-
-    lv_obj_t * desc = lv_label_create(popup, NULL);
-
-    char final_msg[50];
-    char error_code[8];
-    strcpy(final_msg, "ERR: ");
-    strcat(final_msg, msg);
-    if(error_code_val>0){
-        sprintf(error_code, " [%u]", error_code_val);
-        strcat(final_msg, error_code);
-    }
-    lv_label_set_text(desc, final_msg);
-    lv_obj_align(desc, NULL, LV_ALIGN_CENTER, 0, 0);
-
-    lv_obj_t * help = lv_label_create(popup, NULL);
-    lv_obj_set_style_local_text_color(help, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, REFLOW_OVEN_GRAY);
-    lv_label_set_text(help, "Check the wiring and restart");
-    lv_obj_align(help, NULL, LV_ALIGN_IN_BOTTOM_MID, 0, -10);
-
-    lv_group_remove_all_objs(g);
-
-    //System will be stuck here unless reboot
+    if(!error_state){
+        error_state = true;
+		lv_obj_t * bg_shade = lv_obj_create(lv_scr_act(), NULL);
+		lv_obj_set_style_local_bg_opa(bg_shade, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_60);
+		lv_obj_set_style_local_bg_color(bg_shade, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_BLACK);
+		lv_obj_set_style_local_radius(bg_shade, LV_IMG_PART_MAIN, LV_STATE_DEFAULT, LV_VER_RES/2);
+		lv_obj_set_size(bg_shade, LV_HOR_RES, LV_VER_RES);
+		lv_obj_t * popup = lv_obj_create(lv_scr_act(), NULL);
+		lv_obj_set_size(popup, 200, 80);
+		lv_obj_align(popup, NULL, LV_ALIGN_CENTER, 0, 0);
+		lv_obj_t * title = add_title("A fatal error occurred!", popup, REFLOW_OVEN_THEME_TITLE_WHITE);
+		lv_obj_set_style_local_text_color(title, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, REFLOW_OVEN_RED);
+		lv_obj_t * desc = lv_label_create(popup, NULL);
+		char final_msg[50];
+		char error_code[8];
+		strcpy(final_msg, "ERR: ");
+		strcat(final_msg, msg);
+		if(error_code_val>0){
+			sprintf(error_code, " [%u]", error_code_val);
+			strcat(final_msg, error_code);
+		}
+		lv_label_set_text(desc, final_msg);
+		lv_obj_align(desc, NULL, LV_ALIGN_CENTER, 0, 0);
+		lv_obj_t * help = lv_label_create(popup, NULL);
+		lv_obj_set_style_local_text_color(help, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, REFLOW_OVEN_GRAY);
+		lv_label_set_text(help, "Check the wiring and restart");
+		lv_obj_align(help, NULL, LV_ALIGN_IN_BOTTOM_MID, 0, -10);
+		lv_group_remove_all_objs(g);
+		//System will be stuck here unless reboot
+	}
 }
+
 LV_EVENT_CB_DECLARE(start_reflow_icon_event_cb){
      if (e == LV_EVENT_CLICKED) {
         start_reflow();
     }
     icon_generic_event_cb(obj, e);
 }
+
 LV_EVENT_CB_DECLARE(toggle_door_icon_event_cb) {
     if (e == LV_EVENT_CLICKED) {
         toggle_door();
@@ -734,10 +732,10 @@ static icon_t * add_icon(lv_obj_t * parent, const void * src, const void * label
     return icon_struct;
 }
 
-static lv_obj_t * add_title(const char * txt, lv_obj_t * src)
+static lv_obj_t * add_title(const char * txt, lv_obj_t * src, reflow_oven_theme_t theme)
 {
     lv_obj_t * title = lv_label_create(src, NULL);
-    lv_theme_apply(title, REFLOW_OVEN_THEME_TITLE);
+    lv_theme_apply(title, theme);
     lv_label_set_text(title, txt);
     lv_obj_align(title, NULL, LV_ALIGN_IN_TOP_MID, 0,
             REFLOW_OVEN_TITLE_PAD);
@@ -856,13 +854,14 @@ static lv_settings_item_t pid_reflow_menu_items[] = {
 };
 static lv_settings_item_t about_menu_items[] =
 {
-    {.type = LV_SETTINGS_TYPE_LIST_BTN, .name = "Firmware version ", .value = firmware_version_value},
-    {.type = LV_SETTINGS_TYPE_LIST_BTN, .name = "Designed by ", .value = "HX2003"},
+    {.type = LV_SETTINGS_TYPE_LIST_BTN, .name = "Firmware version", .value = firmware_version_value},
+    {.type = LV_SETTINGS_TYPE_LIST_BTN, .name = "Designed by", .value = "HX2003"},
+    {.type = LV_SETTINGS_TYPE_LIST_BTN, .name = "Settings dump", .value = ""},
     {.type = LV_SETTINGS_TYPE_INV},    /*Mark the last item*/
 };
 static lv_settings_item_t factory_reset_menu_items[] =
 {
-    {.type = LV_SETTINGS_TYPE_LIST_BTN, .name = "Confirm Factory Reset", .value = NULL},
+    {.type = LV_SETTINGS_TYPE_LIST_BTN, .name = "Confirm factory reset", .value = NULL},
     {.type = LV_SETTINGS_TYPE_INV},    /*Mark the last item*/
 };
 /**********************
@@ -903,40 +902,40 @@ void lv_ex_settings_2(lv_obj_t * parent)
 
     /*PID menus*/
     i = &pid_presoak_menu_items[PID_ITEM_PROPORTIONAL];
-    i->state = (int32_t)reflow_oven_setting.pid_p_presoak/5.0;
-    sprintf(i->value, "%.2f", (5.0)*i->state);
+    i->state = (int32_t)reflow_oven_setting.pid_p_presoak/1.0;
+    sprintf(i->value, "%.2f", (1.0)*i->state);
 
     i = &pid_presoak_menu_items[PID_ITEM_INTEGRAL];
     i->state = (int32_t)(100*reflow_oven_setting.pid_i_presoak);
     sprintf(i->value, "%.2f", (0.01)*i->state);
 
     i = &pid_presoak_menu_items[PID_ITEM_DERIVATIVE];
-    i->state = (int32_t)reflow_oven_setting.pid_d_presoak/5.0;
-    sprintf(i->value, "%.2f", (5.0)*i->state);
+    i->state = (int32_t)reflow_oven_setting.pid_d_presoak/1.0;
+    sprintf(i->value, "%.2f", (1.0)*i->state);
     //
     i = &pid_soak_menu_items[PID_ITEM_PROPORTIONAL];
-    i->state = (int32_t)reflow_oven_setting.pid_p_soak/5.0;
-    sprintf(i->value, "%.2f", (5.0)*i->state);
+    i->state = (int32_t)reflow_oven_setting.pid_p_soak/1.0;
+    sprintf(i->value, "%.2f", (1.0)*i->state);
 
     i = &pid_soak_menu_items[PID_ITEM_INTEGRAL];
     i->state = (int32_t)(100*reflow_oven_setting.pid_i_soak);
     sprintf(i->value, "%.2f", (0.01)*i->state);
 
     i = &pid_soak_menu_items[PID_ITEM_DERIVATIVE];
-    i->state = (int32_t)reflow_oven_setting.pid_d_soak/5.0;
-    sprintf(i->value, "%.2f", (5.0)*i->state);
+    i->state = (int32_t)reflow_oven_setting.pid_d_soak/1.0;
+    sprintf(i->value, "%.2f", (1.0)*i->state);
     //
     i = &pid_reflow_menu_items[PID_ITEM_PROPORTIONAL];
-    i->state = (int32_t)reflow_oven_setting.pid_p_reflow/5.0;
-    sprintf(i->value, "%.2f", (5.0)*i->state);
+    i->state = (int32_t)reflow_oven_setting.pid_p_reflow/1.0;
+    sprintf(i->value, "%.2f", (1.0)*i->state);
 
     i = &pid_reflow_menu_items[PID_ITEM_INTEGRAL];
     i->state = (int32_t)(100*reflow_oven_setting.pid_i_reflow);
     sprintf(i->value, "%.2f", (0.01)*i->state);
 
     i = &pid_reflow_menu_items[PID_ITEM_DERIVATIVE];
-    i->state = (int32_t)reflow_oven_setting.pid_d_reflow/5.0;
-    sprintf(i->value, "%.2f", (5.0)*i->state);
+    i->state = (int32_t)reflow_oven_setting.pid_d_reflow/1.0;
+    sprintf(i->value, "%.2f", (1.0)*i->state);
 
     lv_settings_create(&settings_root_item, parent, 3, back_to_home_event_cb);
     lv_settings_open_page(&settings_root_item, main_menu_event_cb);
@@ -945,6 +944,8 @@ void lv_ex_settings_2(lv_obj_t * parent)
     /*About menus*/
     i = &about_menu_items[0];
     sprintf(i->value, "%d.%d.%d", REFLOW_OVEN_FIRMWARE_MAJOR_VERSION, REFLOW_OVEN_FIRMWARE_MINOR_VERSION, REFLOW_OVEN_FIRMWARE_PATCH_VERSION);
+    i = &about_menu_items[2];
+    i->value = settings_dump();
 }
 
 /**********************
@@ -1073,8 +1074,8 @@ static void pid_presoak_menu_event_cb(lv_obj_t * btn, lv_event_t e)
     }
     else if(e == LV_EVENT_VALUE_CHANGED) {
         if(strcmp("Proportional", act_item->name) == 0) {
-            reflow_oven_setting.pid_p_presoak = (5.0)*act_item->state;
-            sprintf(act_item->value, "%.2f", (5.0)*act_item->state);
+            reflow_oven_setting.pid_p_presoak = (1.0)*act_item->state;
+            sprintf(act_item->value, "%.2f", (1.0)*act_item->state);
             lv_settings_refr(act_item);
         }
         else if(strcmp("Integral", act_item->name) == 0) {
@@ -1083,8 +1084,8 @@ static void pid_presoak_menu_event_cb(lv_obj_t * btn, lv_event_t e)
             lv_settings_refr(act_item);
         }
         else if(strcmp("Derivative", act_item->name) == 0) {
-            reflow_oven_setting.pid_d_presoak = (5.0)*act_item->state;
-            sprintf(act_item->value, "%.2f", (5.0)*act_item->state);
+            reflow_oven_setting.pid_d_presoak = (1.0)*act_item->state;
+            sprintf(act_item->value, "%.2f", (1.0)*act_item->state);
             lv_settings_refr(act_item);
         }
     }
@@ -1106,8 +1107,8 @@ static void pid_soak_menu_event_cb(lv_obj_t * btn, lv_event_t e)
     }
     else if(e == LV_EVENT_VALUE_CHANGED) {
         if(strcmp("Proportional", act_item->name) == 0) {
-            reflow_oven_setting.pid_p_soak = (5.0)*act_item->state;
-            sprintf(act_item->value, "%.2f", (5.0)*act_item->state);
+            reflow_oven_setting.pid_p_soak = (1.0)*act_item->state;
+            sprintf(act_item->value, "%.2f", (1.0)*act_item->state);
             lv_settings_refr(act_item);
         }
         else if(strcmp("Integral", act_item->name) == 0) {
@@ -1116,8 +1117,8 @@ static void pid_soak_menu_event_cb(lv_obj_t * btn, lv_event_t e)
             lv_settings_refr(act_item);
         }
         else if(strcmp("Derivative", act_item->name) == 0) {
-            reflow_oven_setting.pid_d_soak = (5.0)*act_item->state;
-            sprintf(act_item->value, "%.2f", (5.0)*act_item->state);
+            reflow_oven_setting.pid_d_soak = (1.0)*act_item->state;
+            sprintf(act_item->value, "%.2f", (1.0)*act_item->state);
             lv_settings_refr(act_item);
         }
     }
@@ -1139,8 +1140,8 @@ static void pid_reflow_menu_event_cb(lv_obj_t * btn, lv_event_t e)
     }
     else if(e == LV_EVENT_VALUE_CHANGED) {
         if(strcmp("Proportional", act_item->name) == 0) {
-            reflow_oven_setting.pid_p_reflow = (5.0)*act_item->state;
-            sprintf(act_item->value, "%.2f", (5.0)*act_item->state);
+            reflow_oven_setting.pid_p_reflow = (1.0)*act_item->state;
+            sprintf(act_item->value, "%.2f", (1.0)*act_item->state);
             lv_settings_refr(act_item);
         }
         else if(strcmp("Integral", act_item->name) == 0) {
@@ -1149,8 +1150,8 @@ static void pid_reflow_menu_event_cb(lv_obj_t * btn, lv_event_t e)
             lv_settings_refr(act_item);
         }
         else if(strcmp("Derivative", act_item->name) == 0) {
-            reflow_oven_setting.pid_d_reflow = (5.0)*act_item->state;
-            sprintf(act_item->value, "%.2f", (5.0)*act_item->state);
+            reflow_oven_setting.pid_d_reflow = (1.0)*act_item->state;
+            sprintf(act_item->value, "%.2f", (1.0)*act_item->state);
             lv_settings_refr(act_item);
         }
     }
@@ -1299,16 +1300,6 @@ static void reflow_oven_anim_out(lv_obj_t * obj, uint32_t delay) {
             lv_anim_set_var(&a, child);
             lv_anim_set_time(&a, REFLOW_OVEN_ANIM_TIME);
             lv_anim_set_delay(&a, delay);
-            lv_anim_set_exec_cb(&a, (lv_anim_exec_xcb_t) lv_obj_set_y);
-            if(lv_obj_get_y(child) < 80) {
-                lv_anim_set_values(&a, lv_obj_get_y(child),
-                        lv_obj_get_y(child) - REFLOW_OVEN_ANIM_Y);
-            } else {
-                lv_anim_set_values(&a, lv_obj_get_y(child),
-                        lv_obj_get_y(child) + REFLOW_OVEN_ANIM_Y);
-
-                delay += REFLOW_OVEN_ANIM_DELAY;
-            }
             lv_anim_set_ready_cb(&a, lv_obj_del_anim_ready_cb);
             lv_anim_start(&a);
 
@@ -1316,6 +1307,14 @@ static void reflow_oven_anim_out(lv_obj_t * obj, uint32_t delay) {
         }
         child = lv_obj_get_child_back(obj, child);
     }
+
+    lv_anim_t a;
+    lv_anim_init(&a);
+    lv_anim_set_var(&a, obj);
+    lv_anim_set_time(&a, REFLOW_OVEN_ANIM_TIME);
+    lv_anim_set_delay(&a, delay);
+    lv_anim_set_ready_cb(&a, lv_obj_del_anim_ready_cb);
+    lv_anim_start(&a);
     lv_obj_fade_out(obj, REFLOW_OVEN_ANIM_TIME - 70, delay + 70);
 }
 

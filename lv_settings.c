@@ -89,7 +89,7 @@ static lv_obj_t * act_cont;
 static lv_ll_t history_ll;
 static lv_group_t * group;
 static lv_coord_t settings_max_width = LV_SETTINGS_MAX_WIDTH;
-static main_tab = 0;
+static int main_tab = 0;
 /**********************
  *      MACROS
  **********************/

@@ -37,16 +37,18 @@ extern "C" {
  **********************/
 typedef enum {
     REFLOW_OVEN_THEME_TITLE = _LV_THEME_BUILTIN_LAST,
+    REFLOW_OVEN_THEME_TITLE_WHITE,
     REFLOW_OVEN_THEME_LABEL_WHITE,
     REFLOW_OVEN_THEME_ICON,
     REFLOW_OVEN_THEME_ICON_LABEL,
     REFLOW_OVEN_THEME_CHART,
     REFLOW_OVEN_THEME_BTN_BORDER,
     REFLOW_OVEN_THEME_BTN_NEUTRAL,
-    REFLOW_OVEN_THEME_BTN_CANCEL,
+    REFLOW_OVEN_THEME_BTN_NEGATIVE,
+    REFLOW_OVEN_THEME_BTN_POSITIVE,
     REFLOW_OVEN_THEME_BOX_BORDER,
     REFLOW_OVEN_THEME_BTN_BACK
-}REFLOW_OVEN_theme_t;
+}reflow_oven_theme_t;
 
 /**********************
  * GLOBAL PROTOTYPES
@@ -64,7 +66,7 @@ typedef enum {
  * @param font_title pointer to a extra large font
  * @return a pointer to reference this theme later
  */
-lv_theme_t * REFLOW_OVEN_theme_init(lv_color_t color_primary, lv_color_t color_secondary, uint32_t flags,
+lv_theme_t * reflow_oven_theme_init(lv_color_t color_primary, lv_color_t color_secondary, uint32_t flags,
                                     const lv_font_t * font_small, const lv_font_t * font_normal, const lv_font_t * font_subtitle,
                                     const lv_font_t * font_title);
 /**********************

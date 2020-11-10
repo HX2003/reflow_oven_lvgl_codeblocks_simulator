@@ -29,6 +29,7 @@ extern "C" {
 typedef struct {
     lv_color_t color;
     lv_color_t sel_color;
+    lv_color_t sel_bg_color;
     const lv_font_t * font;
     lv_opa_t opa;
     lv_style_int_t line_space;
@@ -77,7 +78,8 @@ LV_ATTRIBUTE_FAST_MEM void lv_draw_label_dsc_init(lv_draw_label_dsc_t * dsc);
  * @param hint pointer to a `lv_draw_label_hint_t` variable.
  * It is managed by the drawer to speed up the drawing of very long texts (thousands of lines).
  */
-LV_ATTRIBUTE_FAST_MEM void lv_draw_label(const lv_area_t * coords, const lv_area_t * mask, lv_draw_label_dsc_t * dsc,
+LV_ATTRIBUTE_FAST_MEM void lv_draw_label(const lv_area_t * coords, const lv_area_t * mask,
+                                         const lv_draw_label_dsc_t * dsc,
                                          const char * txt, lv_draw_label_hint_t * hint);
 
 //! @endcond

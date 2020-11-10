@@ -36,7 +36,12 @@ typedef enum {
  * GLOBAL PROTOTYPES
  **********************/
 void reflow_oven_ui(void);
+void display_heater_status(reflow_oven_heater_status_type_t state);
+void display_door_status(reflow_oven_door_status_type_t state);
+void reflow_complete();
+void reflow_oven_focus_door_icon();
 void reflow_oven_error_popup(char* msg, uint8_t error_code_val);
+void reflow_oven_update_temperature(char* temp);
 /**********************
  *      MACROS
  **********************/

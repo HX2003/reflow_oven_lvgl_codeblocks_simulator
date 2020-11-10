@@ -27,6 +27,35 @@ reflow_oven_settings_t reflow_oven_setting = {
     .pid_d_reflow = 350,
     .current_reflow_profile = 1
 };
+
+void uchar2hexString(char* input, char* output)
+{
+    int loop;
+    int i;
+
+    i=0;
+    loop=0;
+
+    while(loop < sizeof(input))
+    {
+        sprintf((char*)(output+i),"%02X", input[loop]);
+        loop+=1;
+        i+=2;
+    }
+    //insert NULL at the end of the output string
+    output[i++] = '\0';
+}
+
+char* settings_dump(){
+    char* settings_bytes = malloc(sizeof(reflow_oven_settings_t));
+    memset(settings_bytes, 0, sizeof(reflow_oven_settings_t));
+    settings_bytes[0] = "q";
+
+    char* hex_dump = malloc(sizeof(reflow_oven_settings_t)*2 + 1);
+
+    uchar2hexString(settings_bytes, hex_dump);
+    return hex_dump;
+}
 void settings_setup(){
 
 }

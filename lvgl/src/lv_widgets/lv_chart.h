@@ -42,7 +42,6 @@ enum {
     LV_CHART_TYPE_NONE     = 0x00, /**< Don't draw the series*/
     LV_CHART_TYPE_LINE     = 0x01, /**< Connect the points with lines*/
     LV_CHART_TYPE_COLUMN   = 0x02, /**< Draw columns*/
-    LV_CHART_TYPE_SCATTER  = 0x03, /**< X/Y chart, points and/or lines*/
 };
 typedef uint8_t lv_chart_type_t;
 
@@ -61,6 +60,15 @@ enum {
 };
 typedef uint8_t lv_chart_axis_t;
 
+enum {
+    LV_CHART_CURSOR_NONE = 0x00,
+    LV_CHART_CURSOR_RIGHT    = 0x01,
+    LV_CHART_CURSOR_UP    = 0x02,
+    LV_CHART_CURSOR_LEFT    = 0x04,
+    LV_CHART_CURSOR_DOWN    = 0x08
+};
+typedef uint8_t lv_cursor_direction_t;
+
 typedef struct {
     lv_coord_t * points;
     lv_color_t color;
@@ -68,6 +76,12 @@ typedef struct {
     uint8_t ext_buf_assigned : 1;
     lv_chart_axis_t y_axis  : 1;
 } lv_chart_series_t;
+
+typedef struct {
+    lv_point_t point;
+    lv_color_t color;
+    lv_cursor_direction_t axes  : 4;
+} lv_chart_cursor_t;
 
 /** Data of axis */
 enum {
@@ -90,6 +104,7 @@ typedef struct {
     /*No inherited ext*/ /*Ext. of ancestor*/
     /*New data for this type */
     lv_ll_t series_ll;    /*Linked list for the data line pointers (stores lv_chart_series_t)*/
+    lv_ll_t cursors_ll;    /*Linked list for the cursor pointers (stores lv_chart_cursor_t)*/
     lv_coord_t ymin[_LV_CHART_AXIS_LAST];      /*y min values for both axis (used to scale the data)*/
     lv_coord_t ymax[_LV_CHART_AXIS_LAST];      /*y max values for both axis  (used to scale the data)*/
     uint8_t hdiv_cnt;     /*Number of horizontal division lines*/
@@ -97,6 +112,7 @@ typedef struct {
     uint16_t point_cnt;   /*Point number in a data line*/
     lv_style_list_t style_series_bg;
     lv_style_list_t style_series;
+    lv_style_list_t style_cursors;
     lv_chart_type_t type; /*Line, column or point chart (from 'lv_chart_type_t')*/
     lv_chart_axis_cfg_t y_axis;
     lv_chart_axis_cfg_t x_axis;
@@ -108,7 +124,8 @@ typedef struct {
 enum {
     LV_CHART_PART_BG = LV_OBJ_PART_MAIN,
     LV_CHART_PART_SERIES_BG = _LV_OBJ_PART_VIRTUAL_LAST,
-    LV_CHART_PART_SERIES
+    LV_CHART_PART_SERIES,
+    LV_CHART_PART_CURSOR
 };
 
 /**********************
@@ -137,11 +154,20 @@ lv_obj_t * lv_chart_create(lv_obj_t * par, const lv_obj_t * copy);
 lv_chart_series_t * lv_chart_add_series(lv_obj_t * chart, lv_color_t color);
 
 /**
+ * Add a cursor with a given color
+ * @param chart pointer to chart object
+ * @param color color of the cursor
+ * @param dir direction of the cursor. `LV_CHART_CURSOR_RIGHT/LEFT/TOP/DOWN`. OR-ed vaéues are possible
+ * @return pointer to the created cursor
+ */
+lv_chart_cursor_t * lv_chart_add_cursor(lv_obj_t * chart, lv_color_t color, lv_cursor_direction_t dir);
+
+/**
  * Clear the point of a series
  * @param chart pointer to a chart object
- * @param serie pointer to the chart's series to clear
+ * @param series pointer to the chart's series to clear
  */
-void lv_chart_clear_serie(lv_obj_t * chart, lv_chart_series_t * serie);
+void lv_chart_clear_series(lv_obj_t * chart, lv_chart_series_t * series);
 
 /*=====================
  * Setter functions
@@ -276,8 +302,8 @@ void lv_chart_set_y_tick_texts(lv_obj_t * chart, const char * list_of_values, ui
 /**
  * Set the index of the x-axis start point in the data array
  * @param chart             pointer to a chart object
- * @param ser 				pointer to a data series on 'chart'
- * @param id    			the index of the x point in the data array
+ * @param ser               pointer to a data series on 'chart'
+ * @param id                the index of the x point in the data array
  */
 void lv_chart_set_x_start_point(lv_obj_t * chart, lv_chart_series_t * ser, uint16_t id);
 
@@ -285,17 +311,17 @@ void lv_chart_set_x_start_point(lv_obj_t * chart, lv_chart_series_t * ser, uint1
  * Set an external array of data points to use for the chart
  * NOTE: It is the users responsibility to make sure the point_cnt matches the external array size.
  * @param chart             pointer to a chart object
- * @param ser 				pointer to a data series on 'chart'
- * @param array				external array of points for chart
+ * @param ser               pointer to a data series on 'chart'
+ * @param array             external array of points for chart
  */
-void lv_chart_set_ext_array(lv_obj_t * chart, lv_chart_series_t * ser, lv_coord_t array[], uint16_t point_cnt );
+void lv_chart_set_ext_array(lv_obj_t * chart, lv_chart_series_t * ser, lv_coord_t array[], uint16_t point_cnt);
 
 /**
  * Set an individual point value in the chart series directly based on index
  * @param chart             pointer to a chart object
- * @param ser 				pointer to a data series on 'chart'
- * @param value				value to assign to array point
- * @param id				the index of the x point in the array
+ * @param ser               pointer to a data series on 'chart'
+ * @param value             value to assign to array point
+ * @param id                the index of the x point in the array
  */
 void lv_chart_set_point_id(lv_obj_t * chart, lv_chart_series_t * ser, lv_coord_t value, uint16_t id);
 
@@ -306,6 +332,16 @@ void lv_chart_set_point_id(lv_obj_t * chart, lv_chart_series_t * ser, lv_coord_t
  * @param axis `LV_CHART_AXIS_PRIMARY_Y` or `LV_CHART_AXIS_SECONDARY_Y`
  */
 void lv_chart_set_series_axis(lv_obj_t * chart, lv_chart_series_t * ser, lv_chart_axis_t axis);
+
+/**
+ * Set the coordinate of the cursor with respect
+ * to the origin of series area of the chart.
+ * @param chart pointer to a chart object.
+ * @param cursor pointer to the cursor.
+ * @param point the new coordinate of cursor relative to the series area
+ */
+void lv_chart_set_cursor_point(lv_obj_t * chart, lv_chart_cursor_t * cursor, lv_point_t * point);
+
 
 /*=====================
  * Getter functions
@@ -327,17 +363,17 @@ uint16_t lv_chart_get_point_count(const lv_obj_t * chart);
 
 /**
  * get the current index of the x-axis start point in the data array
- * @param ser 				pointer to a data series on 'chart'
- * @return 					the index of the current x start point in the data array
+ * @param ser               pointer to a data series on 'chart'
+ * @return                  the index of the current x start point in the data array
  */
 uint16_t lv_chart_get_x_start_point(lv_chart_series_t * ser);
 
 /**
  * Get an individual point value in the chart series directly based on index
  * @param chart             pointer to a chart object
- * @param ser 				pointer to a data series on 'chart'
- * @param id				the index of the x point in the array
- * @return					value of array point at index id
+ * @param ser               pointer to a data series on 'chart'
+ * @param id                the index of the x point in the array
+ * @return                  value of array point at index id
  */
 lv_coord_t lv_chart_get_point_id(lv_obj_t * chart, lv_chart_series_t * ser, uint16_t id);
 
@@ -348,6 +384,50 @@ lv_coord_t lv_chart_get_point_id(lv_obj_t * chart, lv_chart_series_t * ser, uint
  * @return `LV_CHART_AXIS_PRIMARY_Y` or `LV_CHART_AXIS_SECONDARY_Y`
  */
 lv_chart_axis_t lv_chart_get_series_axis(lv_obj_t * chart, lv_chart_series_t * ser);
+
+/**
+ * Get an individual point y value in the chart series directly based on index
+ * @param chart             pointer to a chart object
+ * @param series_area       pointer to an area variable that the result will put in.
+ */
+void lv_chart_get_series_area(lv_obj_t * chart, lv_area_t * series_area);
+
+/**
+ * Get the coordinate of the cursor with respect
+ * to the origin of series area of the chart.
+ * @param chart pointer to a chart object
+ * @param cursor pointer to cursor
+ * @return coordinate of the cursor as lv_point_t
+ */
+lv_point_t lv_chart_get_cursor_point(lv_obj_t * chart, lv_chart_cursor_t * cursor);
+
+/**
+ * Get the nearest index to an X coordinate
+ * @param chart pointer to a chart object
+ * @param coord the coordination of the point relative to the series area.
+ * @return the found index
+ */
+uint16_t lv_chart_get_nearest_index_from_coord(lv_obj_t * chart, lv_coord_t x);
+
+/**
+ * Get the x coordinate of the an index with respect
+ * to the origin of series area of the chart.
+ * @param chart pointer to a chart object
+ * @param ser pointer to series
+ * @param id the index.
+ * @return x coordinate of index
+ */
+lv_coord_t lv_chart_get_x_from_index(lv_obj_t * chart, lv_chart_series_t * ser, uint16_t id);
+
+/**
+ * Get the y coordinate of the an index with respect
+ * to the origin of series area of the chart.
+ * @param chart pointer to a chart object
+ * @param ser pointer to series
+ * @param id the index.
+ * @return y coordinate of index
+ */
+lv_coord_t lv_chart_get_y_from_index(lv_obj_t * chart, lv_chart_series_t * ser, uint16_t id);
 
 /*=====================
  * Other functions

@@ -1,4 +1,3 @@
-
 /**
  * @file lv_roller.c
  *
@@ -135,7 +134,7 @@ lv_obj_t * lv_roller_create(lv_obj_t * par, const lv_obj_t * copy)
         lv_obj_set_signal_cb(scrl, lv_roller_scrl_signal);
 
         lv_style_list_copy(&ext->style_sel, &copy_ext->style_sel);
-        lv_obj_refresh_style(roller, LV_STYLE_PROP_ALL);
+        lv_obj_refresh_style(roller, LV_OBJ_PART_ALL, LV_STYLE_PROP_ALL);
     }
 
     LV_LOG_INFO("roller created");
@@ -474,12 +473,15 @@ static lv_design_res_t lv_roller_design(lv_obj_t * roller, const lv_area_t * cli
 
             /*Get the size of the "selected text"*/
             lv_point_t res_p;
-            _lv_txt_get_size(&res_p, lv_label_get_text(label), label_dsc.font, label_dsc.letter_space, label_dsc.line_space, lv_obj_get_width(roller), LV_TXT_FLAG_EXPAND);
+            _lv_txt_get_size(&res_p, lv_label_get_text(label), label_dsc.font, label_dsc.letter_space, label_dsc.line_space,
+                             lv_obj_get_width(roller), LV_TXT_FLAG_EXPAND);
 
             /*Move the selected label proportionally with the background label*/
             lv_coord_t roller_h = lv_obj_get_height(roller);
-            int32_t label_y_prop = label->coords.y1 - (roller_h / 2 + roller->coords.y1); /*label offset from the middle line of the roller*/
-            label_y_prop = (label_y_prop << 14) / lv_obj_get_height(label); /*Proportional position from the middle line (upscaled)*/
+            int32_t label_y_prop = label->coords.y1 - (roller_h / 2 +
+                                                       roller->coords.y1); /*label offset from the middle line of the roller*/
+            label_y_prop = (label_y_prop << 14) / lv_obj_get_height(
+                               label); /*Proportional position from the middle line (upscaled)*/
 
             /*Apply a correction with different line heights*/
             const lv_font_t * normal_label_font = lv_obj_get_style_text_font(roller, LV_ROLLER_PART_BG);
@@ -582,10 +584,8 @@ static lv_res_t lv_roller_signal(lv_obj_t * roller, lv_signal_t sign, void * par
 
     /* Include the ancient signal function */
     if(sign != LV_SIGNAL_CONTROL) { /*Don't let the page to scroll on keys*/
-#if LV_USE_GROUP
         res = ancestor_signal(roller, sign, param);
         if(res != LV_RES_OK) return res;
-#endif
     }
 
     if(sign == LV_SIGNAL_GET_TYPE) return lv_obj_handle_get_type_signal(param, LV_OBJX_NAME);
@@ -962,6 +962,18 @@ static void refr_width(lv_obj_t * roller)
 
     lv_style_int_t left = lv_obj_get_style_pad_left(roller, LV_ROLLER_PART_BG);
     lv_style_int_t right = lv_obj_get_style_pad_right(roller, LV_ROLLER_PART_BG);
+
+    const lv_font_t * base_font = lv_obj_get_style_text_font(roller, LV_ROLLER_PART_BG);
+    const lv_font_t * sel_font = lv_obj_get_style_text_font(roller, LV_ROLLER_PART_SELECTED);
+
+    /*The selected text might be larger to get its size*/
+    if(base_font != sel_font) {
+        lv_coord_t letter_sp = lv_obj_get_style_text_letter_space(roller, LV_ROLLER_PART_SELECTED);
+        lv_coord_t line_sp = lv_obj_get_style_text_line_space(roller, LV_ROLLER_PART_SELECTED);
+        lv_point_t p;
+        _lv_txt_get_size(&p, lv_label_get_text(label), sel_font, letter_sp, line_sp, LV_COORD_MAX, LV_TXT_FLAG_NONE);
+        if(label_w < p.x)label_w = p.x;
+    }
 
     lv_obj_set_width(roller, label_w + left + right);
 }

@@ -6269,7 +6269,7 @@
 1590761935 c:\users\danny\documents\lv_sim_codeblocks_win\lv_conf.h
 	<stdint.h>
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\lvgl.h
+1603781050 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\lvgl.h
 	"src/lv_misc/lv_log.h"
 	"src/lv_misc/lv_task.h"
 	"src/lv_misc/lv_math.h"
@@ -6282,6 +6282,7 @@
 	"src/lv_core/lv_disp.h"
 	"src/lv_themes/lv_theme.h"
 	"src/lv_font/lv_font.h"
+	"src/lv_font/lv_font_loader.h"
 	"src/lv_font/lv_font_fmt_txt.h"
 	"src/lv_misc/lv_printf.h"
 	"src/lv_widgets/lv_btn.h"
@@ -6320,53 +6321,55 @@
 	"src/lv_draw/lv_img_cache.h"
 	"src/lv_api_map.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_log.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_log.h
 	"../lv_conf_internal.h"
 	<stdint.h>
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_conf_internal.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_conf_internal.h
+	"lv_conf_kconfig.h"
 	<stdint.h>
 	"lv_conf.h"
 	"../../lv_conf.h"
 	<stdint.h>
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_task.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_task.h
 	"../lv_conf_internal.h"
 	<stdint.h>
 	<stdbool.h>
 	"lv_mem.h"
 	"lv_ll.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_mem.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_mem.h
 	"../lv_conf_internal.h"
 	<stdint.h>
 	<stddef.h>
 	"lv_log.h"
 	"lv_types.h"
+	<string.h>
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_types.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_types.h
 	<stdint.h>
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_ll.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_ll.h
 	"lv_mem.h"
 	<stdint.h>
 	<stddef.h>
 	<stdbool.h>
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_math.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_math.h
 	"../lv_conf_internal.h"
 	<stdint.h>
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_async.h
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_async.h
 	"lv_task.h"
 	"lv_types.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal.h
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal.h
 	"lv_hal_disp.h"
 	"lv_hal_indev.h"
 	"lv_hal_tick.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal_disp.h
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal_disp.h
 	<stdint.h>
 	<stdbool.h>
 	"lv_hal.h"
@@ -6375,31 +6378,31 @@
 	"../lv_misc/lv_ll.h"
 	"../lv_misc/lv_task.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_color.h
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_color.h
 	"../lv_conf_internal.h"
 	"lv_math.h"
 	<stdint.h>
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_area.h
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_area.h
 	"../lv_conf_internal.h"
 	<string.h>
 	<stdbool.h>
 	<stdint.h>
 	"lv_mem.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal_indev.h
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal_indev.h
 	"../lv_conf_internal.h"
 	<stdbool.h>
 	<stdint.h>
 	"../lv_misc/lv_area.h"
 	"../lv_misc/lv_task.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal_tick.h
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal_tick.h
 	"../lv_conf_internal.h"
 	<stdint.h>
 	<stdbool.h>
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_obj.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_obj.h
 	"../lv_conf_internal.h"
 	<stddef.h>
 	<stdbool.h>
@@ -6415,7 +6418,7 @@
 	"../lv_draw/lv_draw_img.h"
 	"lv_obj_style_dec.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_style.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_style.h
 	<stdbool.h>
 	"../lv_font/lv_font.h"
 	"../lv_misc/lv_color.h"
@@ -6425,7 +6428,7 @@
 	"../lv_misc/lv_debug.h"
 	"../lv_draw/lv_draw_blend.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font.h
+1603781053 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font.h
 	"../lv_conf_internal.h"
 	<stdint.h>
 	<stddef.h>
@@ -6433,54 +6436,54 @@
 	"lv_symbol_def.h"
 	"../lv_misc/lv_area.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_symbol_def.h
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_symbol_def.h
 	"../lv_conf_internal.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_anim.h
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_anim.h
 	"../lv_conf_internal.h"
 	<stdint.h>
 	<stdbool.h>
 	<string.h>
 	"lv_mem.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_blend.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_blend.h
 	"../lv_misc/lv_color.h"
 	"../lv_misc/lv_area.h"
 	"lv_draw_mask.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_mask.h
+1603781053 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_mask.h
 	<stdbool.h>
 	"../lv_misc/lv_area.h"
 	"../lv_misc/lv_color.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_bidi.h
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_bidi.h
 	"../lv_conf_internal.h"
 	<stdbool.h>
 	<stdint.h>
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_rect.h
+1603781053 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_rect.h
 	"../lv_core/lv_style.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_label.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_label.h
 	"../lv_misc/lv_bidi.h"
 	"../lv_misc/lv_txt.h"
 	"../lv_core/lv_style.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_txt.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_txt.h
 	"../lv_conf_internal.h"
 	<stdbool.h>
 	"lv_area.h"
 	"lv_area.h"
 	"../lv_font/lv_font.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_line.h
+1603781053 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_line.h
 	"../lv_core/lv_style.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_img.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_img.h
 	"lv_img_decoder.h"
 	"lv_img_buf.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_img_decoder.h
+1603781053 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_img_decoder.h
 	"../lv_conf_internal.h"
 	<stdint.h>
 	"lv_img_buf.h"
@@ -6489,39 +6492,39 @@
 	"../lv_misc/lv_area.h"
 	"../lv_core/lv_style.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_img_buf.h
+1603781053 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_img_buf.h
 	<stdbool.h>
 	"../lv_misc/lv_color.h"
 	"../lv_misc/lv_area.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_fs.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_fs.h
 	"../lv_conf_internal.h"
 	<stdint.h>
 	<stdbool.h>
 	"lv_mem.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_obj_style_dec.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_obj_style_dec.h
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_group.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_group.h
 	"lv_obj.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_indev.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_indev.h
 	"lv_obj.h"
 	"../lv_hal/lv_hal_indev.h"
 	"../lv_core/lv_group.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_refr.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_refr.h
 	"lv_obj.h"
 	<stdbool.h>
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_disp.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_disp.h
 	"../lv_hal/lv_hal.h"
 	"lv_obj.h"
 
 1590746511 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_debug.h
 	"lv_obj.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_style.h"
 	"../lv_core/lv_obj.h"
@@ -6530,52 +6533,52 @@
 	"lv_theme_material.h"
 	"lv_theme_mono.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_empty.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_empty.h
 	"../lv_conf_internal.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_template.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_template.h
 	"../lv_conf_internal.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_material.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_material.h
 	"../lv_conf_internal.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_mono.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_mono.h
 	"../lv_conf_internal.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_fmt_txt.h
+1603781053 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_fmt_txt.h
 	<stdint.h>
 	<stddef.h>
 	<stdbool.h>
 	"lv_font.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_printf.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_printf.h
 	"../lv_conf_internal.h"
 	<stdarg.h>
 	<stddef.h>
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_btn.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_btn.h
 	"../lv_conf_internal.h"
 	"lv_cont.h"
 	"../lv_core/lv_indev.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_cont.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_cont.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_imgbtn.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_imgbtn.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_btn.h"
 	"../lv_draw/lv_draw_img.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_img.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_img.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"../lv_misc/lv_fs.h"
 	"lv_label.h"
 	"../lv_draw/lv_draw.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_label.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_label.h
 	"../lv_conf_internal.h"
 	<stdarg.h>
 	"../lv_core/lv_obj.h"
@@ -6584,7 +6587,7 @@
 	"../lv_misc/lv_txt.h"
 	"../lv_draw/lv_draw.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_style.h"
 	"../lv_misc/lv_txt.h"
@@ -6598,23 +6601,23 @@
 	"lv_draw_blend.h"
 	"lv_draw_mask.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_triangle.h
+1603781053 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_triangle.h
 	"lv_draw_rect.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_arc.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_arc.h
 	"lv_draw_line.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_line.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_line.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_page.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_page.h
 	"../lv_conf_internal.h"
 	"lv_cont.h"
 	"../lv_core/lv_indev.h"
 	"../lv_misc/lv_anim.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_list.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_list.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_page.h"
@@ -6622,27 +6625,27 @@
 	"lv_label.h"
 	"lv_img.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_chart.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_chart.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_line.h"
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_table.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_table.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_label.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_checkbox.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_checkbox.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_btn.h"
 	"lv_label.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_cpicker.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_cpicker.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_bar.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_bar.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"../lv_misc/lv_anim.h"
@@ -6650,50 +6653,50 @@
 	"lv_btn.h"
 	"lv_label.h"
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_slider.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_slider.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_bar.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_led.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_led.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_btnmatrix.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_btnmatrix.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_label.h"
 	"lv_btn.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_keyboard.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_keyboard.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_btnmatrix.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_dropdown.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_dropdown.h
 	"../lv_conf_internal.h"
 	"../lv_widgets/lv_page.h"
 	"../lv_widgets/lv_label.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_roller.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_roller.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_page.h"
 	"lv_label.h"
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_textarea.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_textarea.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_page.h"
 	"lv_label.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_canvas.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_canvas.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"../lv_widgets/lv_img.h"
 	"../lv_draw/lv_draw_img.h"
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_win.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_win.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_cont.h"
@@ -6702,67 +6705,67 @@
 	"lv_img.h"
 	"lv_page.h"
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_tabview.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_tabview.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"../lv_widgets/lv_win.h"
 	"../lv_widgets/lv_page.h"
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_tileview.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_tileview.h
 	"../lv_conf_internal.h"
 	"../lv_widgets/lv_page.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_msgbox.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_msgbox.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_cont.h"
 	"lv_btnmatrix.h"
 	"lv_label.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_objmask.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_objmask.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"../lv_widgets/lv_cont.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_gauge.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_gauge.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_linemeter.h"
 	"lv_label.h"
 	"lv_line.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_linemeter.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_linemeter.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_switch.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_switch.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"lv_bar.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_arc.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_arc.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_spinner.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_spinner.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"../lv_misc/lv_anim.h"
 	"lv_arc.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_calendar.h
+1603781056 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_calendar.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_spinbox.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_spinbox.h
 	"../lv_conf_internal.h"
 	"../lv_core/lv_obj.h"
 	"../lv_widgets/lv_textarea.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_img_cache.h
+1603781053 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_img_cache.h
 	"lv_img_decoder.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_api_map.h
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_api_map.h
 	"../lvgl.h"
 
 1590509074 source:c:\users\danny\documents\lv_sim_codeblocks_win\lv_drivers\display\r61581.c
@@ -6949,7 +6952,7 @@
 1595004086 source:c:\users\danny\documents\lv_sim_codeblocks_win\lv_examples\src\lv_demo_stress\lv_demo_stress.c
 	"../../lv_examples.h"
 
-1590508945 source:c:\users\danny\documents\lv_sim_codeblocks_win\lv_examples\src\lv_demo_widgets\lv_demo_widgets.c
+1600708389 source:c:\users\danny\documents\lv_sim_codeblocks_win\lv_examples\src\lv_demo_widgets\lv_demo_widgets.c
 	"../../lv_examples.h"
 	"lv_demo_widgets.h"
 
@@ -7180,19 +7183,19 @@
 	"lv_obj.h"
 	"lv_debug.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_disp.c
+1603781052 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_disp.c
 	"lv_disp.h"
 	"../lv_misc/lv_math.h"
 	"../lv_core/lv_refr.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_group.c
+1603781052 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_group.c
 	"lv_group.h"
 	<stddef.h>
 	"../lv_misc/lv_debug.h"
 	"../lv_themes/lv_theme.h"
 	"../lv_misc/lv_gc.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_gc.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_gc.h
 	<stdint.h>
 	<stdbool.h>
 	"lv_mem.h"
@@ -7201,7 +7204,7 @@
 	"../lv_draw/lv_img_cache.h"
 	"../lv_draw/lv_draw_mask.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_indev.c
+1603781052 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_indev.c
 	"lv_indev.h"
 	"lv_disp.h"
 	"lv_obj.h"
@@ -7211,7 +7214,7 @@
 	"../lv_misc/lv_task.h"
 	"../lv_misc/lv_math.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_obj.c
+1603781052 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_obj.c
 	"lv_obj.h"
 	"lv_indev.h"
 	"lv_refr.h"
@@ -7232,9 +7235,11 @@
 	"../lv_hal/lv_hal.h"
 	<stdint.h>
 	<string.h>
+	"../lv_gpu/lv_gpu_nxp_pxp.h"
+	"../lv_gpu/lv_gpu_nxp_pxp_osa.h"
 	"../lv_gpu/lv_gpu_stm32_dma2d.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_refr.c
+1603781052 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_refr.c
 	<stddef.h>
 	"lv_refr.h"
 	"lv_disp.h"
@@ -7249,26 +7254,28 @@
 	"../lv_gpu/lv_gpu_stm32_dma2d.h"
 	"../lv_widgets/lv_label.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_style.c
+1603781052 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_core\lv_style.c
 	"lv_obj.h"
 	"../lv_misc/lv_mem.h"
 	"../lv_misc/lv_anim.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_arc.c
+1603781052 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_arc.c
 	"lv_draw_arc.h"
 	"lv_draw_rect.h"
 	"lv_draw_mask.h"
 	"../lv_misc/lv_math.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_blend.c
+1603781052 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_blend.c
 	"lv_draw_blend.h"
 	"lv_img_decoder.h"
 	"../lv_misc/lv_math.h"
 	"../lv_hal/lv_hal_disp.h"
 	"../lv_core/lv_refr.h"
+	"../lv_gpu/lv_gpu_nxp_pxp.h"
+	"../lv_gpu/lv_gpu_nxp_vglite.h"
 	"../lv_gpu/lv_gpu_stm32_dma2d.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_img.c
+1603781052 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_img.c
 	"lv_draw_img.h"
 	"lv_img_cache.h"
 	"../lv_hal/lv_hal_disp.h"
@@ -7277,8 +7284,9 @@
 	"../lv_misc/lv_mem.h"
 	"../lv_misc/lv_math.h"
 	"../lv_gpu/lv_gpu_stm32_dma2d.h"
+	"../lv_gpu/lv_gpu_nxp_pxp.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_label.c
+1603781052 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_label.c
 	"lv_draw_label.h"
 	"../lv_misc/lv_math.h"
 	"../lv_hal/lv_hal_disp.h"
@@ -7286,7 +7294,7 @@
 	"../lv_misc/lv_bidi.h"
 	"../lv_misc/lv_debug.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_line.c
+1603781052 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_line.c
 	<stdio.h>
 	<stdbool.h>
 	"lv_draw_mask.h"
@@ -7294,14 +7302,14 @@
 	"../lv_core/lv_refr.h"
 	"../lv_misc/lv_math.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_mask.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_mask.c
 	"lv_draw_mask.h"
 	"../lv_misc/lv_math.h"
 	"../lv_misc/lv_log.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_misc/lv_gc.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_rect.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_rect.c
 	"lv_draw_rect.h"
 	"lv_draw_blend.h"
 	"lv_draw_mask.h"
@@ -7313,12 +7321,12 @@
 	<stddef.h>
 	"lv_area.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_triangle.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_draw_triangle.c
 	"lv_draw_triangle.h"
 	"../lv_misc/lv_math.h"
 	"../lv_misc/lv_mem.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_img_buf.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_img_buf.c
 	<stddef.h>
 	<string.h>
 	"lv_img_buf.h"
@@ -7327,7 +7335,7 @@
 	"../lv_misc/lv_log.h"
 	"../lv_misc/lv_mem.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_img_cache.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_img_cache.c
 	"../lv_misc/lv_debug.h"
 	"lv_img_cache.h"
 	"lv_img_decoder.h"
@@ -7335,7 +7343,7 @@
 	"../lv_hal/lv_hal_tick.h"
 	"../lv_misc/lv_gc.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_img_decoder.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_draw\lv_img_decoder.c
 	"lv_img_decoder.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_draw/lv_draw_img.h"
@@ -7343,92 +7351,93 @@
 	"../lv_misc/lv_color.h"
 	"../lv_misc/lv_gc.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font.c
 	"lv_font.h"
 	"../lv_misc/lv_utils.h"
 	"../lv_misc/lv_log.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_utils.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_utils.h
 	<stdint.h>
 	<stddef.h>
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_fmt_txt.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_fmt_txt.c
 	"lv_font.h"
 	"lv_font_fmt_txt.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_draw/lv_draw.h"
 	"../lv_misc/lv_types.h"
+	"../lv_misc/lv_gc.h"
 	"../lv_misc/lv_log.h"
 	"../lv_misc/lv_utils.h"
 	"../lv_misc/lv_mem.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_12.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_12.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_12_subpx.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_12_subpx.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_14.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_14.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_16.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_16.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_18.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_18.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_20.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_20.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_22.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_22.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_24.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_24.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_26.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_26.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_28.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_28.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_28_compressed.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_28_compressed.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_30.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_30.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_32.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_32.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_34.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_34.c
 	"../../lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_36.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_36.c
 	"../../lvgl.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_38.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_38.c
 	"../../lvgl.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_40.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_40.c
 	"../../lvgl.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_42.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_42.c
 	"../../lvgl.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_44.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_44.c
 	"../../lvgl.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_46.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_46.c
 	"../../lvgl.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_48.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_48.c
 	"../../lvgl.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_unscii_8.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_unscii_8.c
 	"../../lvgl.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal_disp.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal_disp.c
 	<stdint.h>
 	<stddef.h>
 	"lv_hal.h"
@@ -7439,7 +7448,7 @@
 	"../lv_core/lv_refr.h"
 	"../lv_themes/lv_theme.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal_indev.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal_indev.c
 	"../lv_misc/lv_debug.h"
 	"../lv_hal/lv_hal_indev.h"
 	"../lv_core/lv_indev.h"
@@ -7447,11 +7456,11 @@
 	"../lv_misc/lv_gc.h"
 	"lv_hal_disp.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal_tick.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_hal\lv_hal_tick.c
 	"lv_hal_tick.h"
 	<stddef.h>
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_anim.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_anim.c
 	"lv_anim.h"
 	<stddef.h>
 	<string.h>
@@ -7461,15 +7470,15 @@
 	"lv_math.h"
 	"lv_gc.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_area.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_area.c
 	"../lv_conf_internal.h"
 	"lv_area.h"
 	"lv_math.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_async.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_async.c
 	"lv_async.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_bidi.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_bidi.c
 	<stddef.h>
 	"lv_bidi.h"
 	"lv_txt.h"
@@ -7478,101 +7487,103 @@
 1590505257 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_circ.c
 	"lv_circ.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_color.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_color.c
 	"lv_color.h"
 	"lv_math.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_fs.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_fs.c
 	"lv_fs.h"
 	"../lv_misc/lv_debug.h"
 	"lv_ll.h"
 	<string.h>
 	"lv_gc.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_gc.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_gc.c
 	"lv_gc.h"
 	"string.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_ll.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_ll.c
 	<stdint.h>
 	<string.h>
 	"lv_ll.h"
 	"lv_mem.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_log.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_log.c
 	"lv_log.h"
 	<stdarg.h>
 	<string.h>
 	"lv_printf.h"
 	<stdio.h>
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_math.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_math.c
 	"lv_math.h"
 	<stdbool.h>
 	<stdlib.h>
 	<string.h>
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_mem.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_mem.c
 	"lv_mem.h"
 	"lv_math.h"
 	"lv_gc.h"
 	<string.h>
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_printf.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_printf.c
 	"lv_printf.h"
 	<stdbool.h>
 	<stdint.h>
 	<float.h>
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_task.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_task.c
 	<stddef.h>
 	"lv_task.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_hal/lv_hal_tick.h"
 	"lv_gc.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_templ.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_templ.c
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_txt.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_txt.c
 	"lv_txt.h"
 	"lv_math.h"
 	"lv_log.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_utils.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_utils.c
 	<stdbool.h>
 	"lv_utils.h"
 	"lv_math.h"
 	"lv_printf.h"
 	"lv_txt.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme.c
 	"../../lvgl.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_empty.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_empty.c
 	<stdint.h>
 	"../../lvgl.h"
 	"../lv_misc/lv_gc.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_material.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_material.c
 	"../../lvgl.h"
 	"../lv_misc/lv_gc.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_mono.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_mono.c
 	"../../lvgl.h"
 	"../lv_misc/lv_gc.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_template.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_themes\lv_theme_template.c
 	"../../lvgl.h"
 	"../lv_misc/lv_gc.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_arc.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_arc.c
 	"lv_arc.h"
+	"../lv_core/lv_group.h"
+	"../lv_core/lv_indev.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_misc/lv_math.h"
 	"../lv_draw/lv_draw_arc.h"
 	"../lv_themes/lv_theme.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_bar.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_bar.c
 	"lv_bar.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_draw/lv_draw.h"
@@ -7581,7 +7592,7 @@
 	"../lv_misc/lv_math.h"
 	<stdio.h>
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_btn.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_btn.c
 	"lv_btn.h"
 	<string.h>
 	"../lv_core/lv_group.h"
@@ -7592,7 +7603,7 @@
 	"../lv_misc/lv_color.h"
 	"../lv_misc/lv_math.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_btnmatrix.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_btnmatrix.c
 	"lv_btnmatrix.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_core/lv_group.h"
@@ -7601,7 +7612,7 @@
 	"../lv_themes/lv_theme.h"
 	"../lv_misc/lv_txt.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_calendar.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_calendar.c
 	"lv_calendar.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_draw/lv_draw.h"
@@ -7611,7 +7622,7 @@
 	"../lv_themes/lv_theme.h"
 	<string.h>
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_canvas.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_canvas.c
 	<stdlib.h>
 	"lv_canvas.h"
 	"../lv_misc/lv_debug.h"
@@ -7620,7 +7631,7 @@
 	"../lv_core/lv_refr.h"
 	"../lv_themes/lv_theme.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_chart.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_chart.c
 	"lv_chart.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_core/lv_refr.h"
@@ -7628,13 +7639,13 @@
 	"../lv_misc/lv_math.h"
 	"../lv_themes/lv_theme.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_checkbox.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_checkbox.c
 	"lv_checkbox.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_core/lv_group.h"
 	"../lv_themes/lv_theme.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_cont.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_cont.c
 	"lv_cont.h"
 	<stdbool.h>
 	<stdint.h>
@@ -7647,7 +7658,7 @@
 	"../lv_misc/lv_color.h"
 	"../lv_misc/lv_math.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_cpicker.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_cpicker.c
 	"lv_cpicker.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_draw/lv_draw_arc.h"
@@ -7656,7 +7667,7 @@
 	"../lv_core/lv_refr.h"
 	"../lv_misc/lv_math.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_dropdown.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_dropdown.c
 	"lv_dropdown.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_draw/lv_draw.h"
@@ -7669,7 +7680,7 @@
 	"../lv_misc/lv_math.h"
 	<string.h>
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_gauge.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_gauge.c
 	"lv_gauge.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_draw/lv_draw.h"
@@ -7681,7 +7692,7 @@
 	<stdio.h>
 	<string.h>
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_img.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_img.c
 	"lv_img.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_themes/lv_theme.h"
@@ -7691,19 +7702,19 @@
 	"../lv_misc/lv_math.h"
 	"../lv_misc/lv_log.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_imgbtn.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_imgbtn.c
 	"../lv_misc/lv_debug.h"
 	"../lv_themes/lv_theme.h"
 	"lv_imgbtn.h"
 	"lv_label.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_keyboard.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_keyboard.c
 	"lv_keyboard.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_themes/lv_theme.h"
 	"lv_textarea.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_label.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_label.c
 	"lv_label.h"
 	"../lv_core/lv_obj.h"
 	"../lv_misc/lv_debug.h"
@@ -7716,13 +7727,13 @@
 	"../lv_misc/lv_printf.h"
 	"../lv_themes/lv_theme.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_led.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_led.c
 	"lv_led.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_themes/lv_theme.h"
 	"../lv_draw/lv_draw.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_line.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_line.c
 	"lv_line.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_draw/lv_draw.h"
@@ -7732,7 +7743,7 @@
 	<stdint.h>
 	<string.h>
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_linemeter.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_linemeter.c
 	"lv_linemeter.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_draw/lv_draw.h"
@@ -7740,7 +7751,7 @@
 	"../lv_core/lv_group.h"
 	"../lv_misc/lv_math.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_list.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_list.c
 	"lv_list.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_core/lv_group.h"
@@ -7748,7 +7759,7 @@
 	"../lv_misc/lv_anim.h"
 	"../lv_misc/lv_math.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_msgbox.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_msgbox.c
 	"lv_msgbox.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_core/lv_group.h"
@@ -7757,16 +7768,16 @@
 	"../lv_misc/lv_anim.h"
 	"../lv_misc/lv_math.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_objmask.c
+1603781056 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_objmask.c
 	"lv_objmask.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_draw/lv_draw.h"
 	"../lv_themes/lv_theme.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_objx_templ.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_objx_templ.c
 	"../lv_misc/lv_debug.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_page.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_page.c
 	"../lv_widgets/lv_page.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_core/lv_group.h"
@@ -7776,14 +7787,14 @@
 	"../lv_misc/lv_anim.h"
 	"../lv_misc/lv_math.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_roller.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_roller.c
 	"lv_roller.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_draw/lv_draw.h"
 	"../lv_core/lv_group.h"
 	"../lv_themes/lv_theme.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_slider.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_slider.c
 	"lv_slider.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_core/lv_group.h"
@@ -7793,14 +7804,14 @@
 	"../lv_misc/lv_math.h"
 	"lv_img.h"
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_spinbox.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_spinbox.c
 	"lv_spinbox.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_themes/lv_theme.h"
 	"../lv_misc/lv_math.h"
 	"../lv_misc/lv_utils.h"
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_spinner.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_spinner.c
 	"lv_spinner.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_misc/lv_math.h"
@@ -7808,7 +7819,7 @@
 	"../lv_draw/lv_draw_arc.h"
 	"../lv_themes/lv_theme.h"
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_switch.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_switch.c
 	"lv_switch.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_themes/lv_theme.h"
@@ -7817,16 +7828,17 @@
 	"../lv_core/lv_disp.h"
 	"lv_img.h"
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_table.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_table.c
 	"lv_table.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_core/lv_indev.h"
 	"../lv_misc/lv_txt.h"
 	"../lv_misc/lv_math.h"
 	"../lv_draw/lv_draw_label.h"
+	"../lv_misc/lv_printf.h"
 	"../lv_themes/lv_theme.h"
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_tabview.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_tabview.c
 	"lv_tabview.h"
 	"lv_btnmatrix.h"
 	"../lv_misc/lv_debug.h"
@@ -7834,7 +7846,7 @@
 	"../lv_misc/lv_anim.h"
 	"../lv_core/lv_disp.h"
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_textarea.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_textarea.c
 	"lv_textarea.h"
 	<string.h>
 	"../lv_misc/lv_debug.h"
@@ -7846,7 +7858,7 @@
 	"../lv_misc/lv_txt.h"
 	"../lv_misc/lv_math.h"
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_tileview.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_tileview.c
 	"lv_tileview.h"
 	<stdbool.h>
 	"lv_cont.h"
@@ -7854,13 +7866,13 @@
 	"../lv_misc/lv_debug.h"
 	"../lv_themes/lv_theme.h"
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_win.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_widgets\lv_win.c
 	"lv_win.h"
 	"../lv_misc/lv_debug.h"
 	"../lv_themes/lv_theme.h"
 	"../lv_core/lv_disp.h"
 
-1595149815 source:c:\users\danny\documents\lv_sim_codeblocks_win\main.c
+1600708407 source:c:\users\danny\documents\lv_sim_codeblocks_win\main.c
 	<stdlib.h>
 	<unistd.h>
 	"lvgl/lvgl.h"
@@ -7927,7 +7939,7 @@
 1590746511 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\porting\lv_port_indev_template.h
 	"lvgl/lvgl.h"
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_assert.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_assert.c
 	"lv_test_assert.h"
 	"../lvgl.h"
 	<unistd.h>
@@ -7937,39 +7949,42 @@
 	<stdarg.h>
 	<png.h>
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_assert.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_assert.h
 	<stdbool.h>
 	<stdint.h>
 	"../lvgl.h"
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_core.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_core.c
 	"../lv_test_assert.h"
 	"lv_test_core.h"
 	"lv_test_obj.h"
 	"lv_test_style.h"
+	"lv_test_font_loader.h"
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_core.h
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_core.h
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_obj.h
+1603781058 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_obj.h
 
-1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_style.h
+1603781058 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_style.h
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_obj.c
+1603781058 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_obj.c
 	"../../lvgl.h"
 	"../lv_test_assert.h"
 	"lv_test_obj.h"
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_style.c
+1603781058 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_style.c
 	"../../lvgl.h"
 	"../lv_test_assert.h"
 	"lv_test_style.h"
 
-1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_main.c
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_main.c
 	"../lvgl.h"
 	<stdio.h>
 	<stdlib.h>
 	<sys/time.h>
 	"lv_test_core/lv_test_core.h"
+	"lv_test_widgets/lv_test_label.h"
+	<stdio.h>
 
 1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_objx\lv_test_cont.c
 	"../../lvgl.h"
@@ -7978,11 +7993,11 @@
 1590508945 c:\users\danny\documents\lv_sim_codeblocks_win\lv_examples\src\lv_demo_printer\lv_demo_printer.h
 	"../../lv_examples.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_gpu\lv_gpu_stm32_dma2d.h
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_gpu\lv_gpu_stm32_dma2d.h
 	"../lv_misc/lv_area.h"
 	"../lv_misc/lv_color.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_txt_ap.h
+1603781055 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_txt_ap.h
 	<stddef.h>
 	"lv_txt.h"
 	"../lv_draw/lv_draw.h"
@@ -8073,43 +8088,42 @@
 1590508945 source:c:\users\danny\documents\lv_sim_codeblocks_win\lv_examples\src\lv_ex_widgets\lv_ex_chart\lv_ex_chart_2.c
 	"../../../lv_examples.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_dejavu_16_persian_hebrew.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_dejavu_16_persian_hebrew.c
 	"../../lvgl.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_simsun_16_cjk.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_simsun_16_cjk.c
 	"../../lvgl.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_gpu\lv_gpu_stm32_dma2d.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_gpu\lv_gpu_stm32_dma2d.c
 	"lv_gpu_stm32_dma2d.h"
+	"../lv_core/lv_disp.h"
 	"../lv_core/lv_refr.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_txt_ap.c
+1603781055 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_txt_ap.c
 	<stddef.h>
 	"lv_bidi.h"
 	"lv_txt.h"
 	"lv_txt_ap.h"
 	"../lv_draw/lv_draw.h"
 
-1600248231 source:c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_ui.c
-	"stdio.h"
-	"math.h"
+1604161601 source:c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_ui.c
 	"reflow_oven_ui.h"
 	"reflow_oven_theme.h"
+	"reflow_oven_utils.h"
 	"reflow_oven_profiles.h"
 	"reflow_oven_settings.h"
 	"reflow_oven_pid_control.h"
 	"lv_drivers/win_drv.h"
 	"lv_settings.h"
 
-1595159623 c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_theme.h
+1604159559 c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_theme.h
 	"reflow_oven_ui.h"
 	"lvgl.h"
 
-1595319749 c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_ui.h
+1604160312 c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_ui.h
 	"lvgl.h"
 
-1595176558 source:c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_theme.c
-	"reflow_oven_ui.h"
+1604159786 source:c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_theme.c
 	"reflow_oven_theme.h"
 
 1590572253 source:c:\users\danny\documents\lv_sim_codeblocks_win\images\reflow_oven_icon_hue.c
@@ -8187,7 +8201,7 @@
 1590587434 source:c:\users\danny\documents\lv_sim_codeblocks_win\images\reflow_oven_icon_start.c
 	"lvgl/lvgl.h"
 
-1595073824 c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_profiles.h
+1603796526 c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_profiles.h
 
 1590756461 source:c:\users\danny\documents\lv_sim_codeblocks_win\images\reflow_oven_img_unlocked.c
 	"lvgl/lvgl.h"
@@ -8207,7 +8221,7 @@
 1590759174 source:c:\users\danny\documents\lv_sim_codeblocks_win\images\reflow_oven_img_heater_inactive.c
 	"lvgl/lvgl.h"
 
-1590762101 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_10.c
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_10.c
 	"../../lvgl.h"
 
 1594482662 source:c:\users\danny\documents\lv_sim_codeblocks_win\images\reflow_oven_label_start.c
@@ -8241,36 +8255,36 @@
 1594491505 source:c:\users\danny\documents\lv_sim_codeblocks_win\lv_settings\lv_settings.c
 	"lv_settings.h"
 
-1600248045 source:c:\users\danny\documents\lv_sim_codeblocks_win\lv_settings.c
+1602923433 source:c:\users\danny\documents\lv_sim_codeblocks_win\lv_settings.c
 	"lv_settings.h"
 
 1595077461 c:\users\danny\documents\lv_sim_codeblocks_win\lv_settings.h
 	"lvgl.h"
 	"lvgl/lvgl.h"
 
-1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_debug.h
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_debug.h
 	"../lv_conf_internal.h"
 	<stdbool.h>
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\examples\porting\lv_port_disp_template.c
+1603781050 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\examples\porting\lv_port_disp_template.c
 	"lv_port_disp_template.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\examples\porting\lv_port_disp_template.h
+1603781050 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\examples\porting\lv_port_disp_template.h
 	"lvgl/lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\examples\porting\lv_port_fs_template.c
+1603781050 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\examples\porting\lv_port_fs_template.c
 	"lv_port_fs_template.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\examples\porting\lv_port_fs_template.h
+1603781050 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\examples\porting\lv_port_fs_template.h
 	"lvgl/lvgl.h"
 
-1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\examples\porting\lv_port_indev_template.c
+1603781050 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\examples\porting\lv_port_indev_template.c
 	"lv_port_indev_template.h"
 
-1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\examples\porting\lv_port_indev_template.h
+1603781050 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\examples\porting\lv_port_indev_template.h
 	"lvgl/lvgl.h"
 
-1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_debug.c
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_misc\lv_debug.c
 	"lv_debug.h"
 	"lv_mem.h"
 	<string.h>
@@ -8281,11 +8295,11 @@
 1595086684 c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_settings_nvs.h
 	"reflow_oven_settings.h"
 
-1595153215 c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_settings.h
+1601864029 c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_settings.h
 	<stdint.h>
 	<stdlib.h>
 
-1595153347 source:c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_settings.c
+1601864894 source:c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_settings.c
 	"reflow_oven_settings.h"
 
 1595318120 source:c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_pid_control.c
@@ -8299,4 +8313,2667 @@
 
 1595319489 source:c:\users\danny\documents\lv_sim_codeblocks_win\images\reflow_oven_img_locked.c
 	"lvgl/lvgl.h"
+
+1603781053 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_loader.h
+
+1603781057 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_font_loader.h
+
+1603781058 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_widgets\lv_test_label.h
+
+1600248822 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\examples\porting\lv_port_disp_template.c
+	"lv_port_disp_template.h"
+
+1600248822 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\examples\porting\lv_port_disp_template.h
+	"lvgl/lvgl.h"
+
+1600248822 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\examples\porting\lv_port_fs_template.c
+	"lv_port_fs_template.h"
+
+1600248822 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\examples\porting\lv_port_fs_template.h
+	"lvgl/lvgl.h"
+
+1600248822 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\examples\porting\lv_port_indev_template.c
+	"lv_port_indev_template.h"
+
+1600248822 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\examples\porting\lv_port_indev_template.h
+	"lvgl/lvgl.h"
+
+1600248823 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_disp.c
+	"lv_disp.h"
+	"../lv_misc/lv_math.h"
+	"../lv_core/lv_refr.h"
+
+1600248823 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_disp.h
+	"../lv_hal/lv_hal.h"
+	"lv_obj.h"
+
+1600248825 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_hal\lv_hal.h
+	"lv_hal_disp.h"
+	"lv_hal_indev.h"
+	"lv_hal_tick.h"
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_hal\lv_hal_disp.h
+	<stdint.h>
+	<stdbool.h>
+	"lv_hal.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_ll.h"
+	"../lv_misc/lv_task.h"
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_color.h
+	"../lv_conf_internal.h"
+	"lv_math.h"
+	<stdint.h>
+
+1600248823 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_conf_internal.h
+	<stdint.h>
+	"lv_conf.h"
+	"../../lv_conf.h"
+	<stdint.h>
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_math.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_area.h
+	"../lv_conf_internal.h"
+	<string.h>
+	<stdbool.h>
+	<stdint.h>
+	"lv_mem.h"
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_mem.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	<stddef.h>
+	"lv_log.h"
+	"lv_types.h"
+	<string.h>
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_log.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_types.h
+	<stdint.h>
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_ll.h
+	"lv_mem.h"
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_task.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	<stdbool.h>
+	"lv_mem.h"
+	"lv_ll.h"
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_hal\lv_hal_indev.h
+	"../lv_conf_internal.h"
+	<stdbool.h>
+	<stdint.h>
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_task.h"
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_hal\lv_hal_tick.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	<stdbool.h>
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_obj.h
+	"../lv_conf_internal.h"
+	<stddef.h>
+	<stdbool.h>
+	"lv_style.h"
+	"../lv_misc/lv_types.h"
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_hal/lv_hal.h"
+	"../lv_draw/lv_draw_rect.h"
+	"../lv_draw/lv_draw_label.h"
+	"../lv_draw/lv_draw_line.h"
+	"../lv_draw/lv_draw_img.h"
+	"lv_obj_style_dec.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_style.h
+	<stdbool.h>
+	"../lv_font/lv_font.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_types.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw_blend.h"
+
+1600248825 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+	"lv_symbol_def.h"
+	"../lv_misc/lv_area.h"
+
+1600248825 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_symbol_def.h
+	"../lv_conf_internal.h"
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_anim.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	<stdbool.h>
+	<string.h>
+	"lv_mem.h"
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_debug.h
+	"../lv_conf_internal.h"
+	<stdbool.h>
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_blend.h
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_area.h"
+	"lv_draw_mask.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_mask.h
+	<stdbool.h>
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_color.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_rect.h
+	"../lv_core/lv_style.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_label.h
+	"../lv_misc/lv_bidi.h"
+	"../lv_misc/lv_txt.h"
+	"../lv_core/lv_style.h"
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_bidi.h
+	"../lv_conf_internal.h"
+	<stdbool.h>
+	<stdint.h>
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_txt.h
+	"../lv_conf_internal.h"
+	<stdbool.h>
+	"lv_area.h"
+	"lv_area.h"
+	"../lv_font/lv_font.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_line.h
+	"../lv_core/lv_style.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_img.h
+	"lv_img_decoder.h"
+	"lv_img_buf.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_img_decoder.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	"lv_img_buf.h"
+	"../lv_misc/lv_fs.h"
+	"../lv_misc/lv_types.h"
+	"../lv_misc/lv_area.h"
+	"../lv_core/lv_style.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_img_buf.h
+	<stdbool.h>
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_area.h"
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_fs.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	<stdbool.h>
+	"lv_mem.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_obj_style_dec.h
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_refr.h
+	"lv_obj.h"
+	<stdbool.h>
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_group.c
+	"lv_group.h"
+	<stddef.h>
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_gc.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_group.h
+	"lv_obj.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_themes\lv_theme.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_style.h"
+	"../lv_core/lv_obj.h"
+	"lv_theme_empty.h"
+	"lv_theme_template.h"
+	"lv_theme_material.h"
+	"lv_theme_mono.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_themes\lv_theme_empty.h
+	"../lv_conf_internal.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_themes\lv_theme_template.h
+	"../lv_conf_internal.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_themes\lv_theme_material.h
+	"../lv_conf_internal.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_themes\lv_theme_mono.h
+	"../lv_conf_internal.h"
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_gc.h
+	<stdint.h>
+	<stdbool.h>
+	"lv_mem.h"
+	"lv_ll.h"
+	"lv_task.h"
+	"../lv_draw/lv_img_cache.h"
+	"../lv_draw/lv_draw_mask.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_img_cache.h
+	"lv_img_decoder.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_indev.c
+	"lv_indev.h"
+	"lv_disp.h"
+	"lv_obj.h"
+	"../lv_hal/lv_hal_tick.h"
+	"../lv_core/lv_group.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_task.h"
+	"../lv_misc/lv_math.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_indev.h
+	"lv_obj.h"
+	"../lv_hal/lv_hal_indev.h"
+	"../lv_core/lv_group.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_obj.c
+	"lv_obj.h"
+	"lv_indev.h"
+	"lv_refr.h"
+	"lv_group.h"
+	"lv_disp.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_task.h"
+	"../lv_misc/lv_async.h"
+	"../lv_misc/lv_fs.h"
+	"../lv_misc/lv_gc.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_gc.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_log.h"
+	"../lv_hal/lv_hal.h"
+	<stdint.h>
+	<string.h>
+	"../lv_gpu/lv_gpu_stm32_dma2d.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_style.h"
+	"../lv_misc/lv_txt.h"
+	"lv_img_decoder.h"
+	"lv_draw_rect.h"
+	"lv_draw_label.h"
+	"lv_draw_img.h"
+	"lv_draw_line.h"
+	"lv_draw_triangle.h"
+	"lv_draw_arc.h"
+	"lv_draw_blend.h"
+	"lv_draw_mask.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_triangle.h
+	"lv_draw_rect.h"
+
+1600248824 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_arc.h
+	"lv_draw_line.h"
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_async.h
+	"lv_task.h"
+	"lv_types.h"
+
+1600248825 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_gpu\lv_gpu_stm32_dma2d.h
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_color.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_refr.c
+	<stddef.h>
+	"lv_refr.h"
+	"lv_disp.h"
+	"../lv_hal/lv_hal_tick.h"
+	"../lv_hal/lv_hal_disp.h"
+	"../lv_misc/lv_task.h"
+	"../lv_misc/lv_mem.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_gc.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_font/lv_font_fmt_txt.h"
+	"../lv_gpu/lv_gpu_stm32_dma2d.h"
+	"../lv_widgets/lv_label.h"
+
+1600248825 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_fmt_txt.h
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+	"lv_font.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_label.h
+	"../lv_conf_internal.h"
+	<stdarg.h>
+	"../lv_core/lv_obj.h"
+	"../lv_font/lv_font.h"
+	"../lv_font/lv_symbol_def.h"
+	"../lv_misc/lv_txt.h"
+	"../lv_draw/lv_draw.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_core\lv_style.c
+	"lv_obj.h"
+	"../lv_misc/lv_mem.h"
+	"../lv_misc/lv_anim.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_arc.c
+	"lv_draw_arc.h"
+	"lv_draw_rect.h"
+	"lv_draw_mask.h"
+	"../lv_misc/lv_math.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_blend.c
+	"lv_draw_blend.h"
+	"lv_img_decoder.h"
+	"../lv_misc/lv_math.h"
+	"../lv_hal/lv_hal_disp.h"
+	"../lv_core/lv_refr.h"
+	"../lv_gpu/lv_gpu_stm32_dma2d.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_img.c
+	"lv_draw_img.h"
+	"lv_img_cache.h"
+	"../lv_hal/lv_hal_disp.h"
+	"../lv_misc/lv_log.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_mem.h"
+	"../lv_misc/lv_math.h"
+	"../lv_gpu/lv_gpu_stm32_dma2d.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_label.c
+	"lv_draw_label.h"
+	"../lv_misc/lv_math.h"
+	"../lv_hal/lv_hal_disp.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_bidi.h"
+	"../lv_misc/lv_debug.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_line.c
+	<stdio.h>
+	<stdbool.h>
+	"lv_draw_mask.h"
+	"lv_draw_blend.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_math.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_mask.c
+	"lv_draw_mask.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_log.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_misc/lv_gc.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_rect.c
+	"lv_draw_rect.h"
+	"lv_draw_blend.h"
+	"lv_draw_mask.h"
+	"../lv_misc/lv_math.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_debug.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_draw_triangle.c
+	"lv_draw_triangle.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_mem.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_img_buf.c
+	<stddef.h>
+	<string.h>
+	"lv_img_buf.h"
+	"lv_draw_img.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_log.h"
+	"../lv_misc/lv_mem.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_img_cache.c
+	"../lv_misc/lv_debug.h"
+	"lv_img_cache.h"
+	"lv_img_decoder.h"
+	"lv_draw_img.h"
+	"../lv_hal/lv_hal_tick.h"
+	"../lv_misc/lv_gc.h"
+
+1600248824 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_draw\lv_img_decoder.c
+	"lv_img_decoder.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw_img.h"
+	"../lv_misc/lv_ll.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_gc.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font.c
+	"lv_font.h"
+	"../lv_misc/lv_utils.h"
+	"../lv_misc/lv_log.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_utils.h
+	<stdint.h>
+	<stddef.h>
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_dejavu_16_persian_hebrew.c
+	"../../lvgl.h"
+
+1600248822 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\lvgl.h
+	"src/lv_misc/lv_log.h"
+	"src/lv_misc/lv_task.h"
+	"src/lv_misc/lv_math.h"
+	"src/lv_misc/lv_async.h"
+	"src/lv_hal/lv_hal.h"
+	"src/lv_core/lv_obj.h"
+	"src/lv_core/lv_group.h"
+	"src/lv_core/lv_indev.h"
+	"src/lv_core/lv_refr.h"
+	"src/lv_core/lv_disp.h"
+	"src/lv_themes/lv_theme.h"
+	"src/lv_font/lv_font.h"
+	"src/lv_font/lv_font_loader.h"
+	"src/lv_font/lv_font_fmt_txt.h"
+	"src/lv_misc/lv_printf.h"
+	"src/lv_widgets/lv_btn.h"
+	"src/lv_widgets/lv_imgbtn.h"
+	"src/lv_widgets/lv_img.h"
+	"src/lv_widgets/lv_label.h"
+	"src/lv_widgets/lv_line.h"
+	"src/lv_widgets/lv_page.h"
+	"src/lv_widgets/lv_cont.h"
+	"src/lv_widgets/lv_list.h"
+	"src/lv_widgets/lv_chart.h"
+	"src/lv_widgets/lv_table.h"
+	"src/lv_widgets/lv_checkbox.h"
+	"src/lv_widgets/lv_cpicker.h"
+	"src/lv_widgets/lv_bar.h"
+	"src/lv_widgets/lv_slider.h"
+	"src/lv_widgets/lv_led.h"
+	"src/lv_widgets/lv_btnmatrix.h"
+	"src/lv_widgets/lv_keyboard.h"
+	"src/lv_widgets/lv_dropdown.h"
+	"src/lv_widgets/lv_roller.h"
+	"src/lv_widgets/lv_textarea.h"
+	"src/lv_widgets/lv_canvas.h"
+	"src/lv_widgets/lv_win.h"
+	"src/lv_widgets/lv_tabview.h"
+	"src/lv_widgets/lv_tileview.h"
+	"src/lv_widgets/lv_msgbox.h"
+	"src/lv_widgets/lv_objmask.h"
+	"src/lv_widgets/lv_gauge.h"
+	"src/lv_widgets/lv_linemeter.h"
+	"src/lv_widgets/lv_switch.h"
+	"src/lv_widgets/lv_arc.h"
+	"src/lv_widgets/lv_spinner.h"
+	"src/lv_widgets/lv_calendar.h"
+	"src/lv_widgets/lv_spinbox.h"
+	"src/lv_draw/lv_img_cache.h"
+	"src/lv_api_map.h"
+
+1600248825 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_loader.h
+
+1600248826 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_printf.h
+	"../lv_conf_internal.h"
+	<stdarg.h>
+	<stddef.h>
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_btn.h
+	"../lv_conf_internal.h"
+	"lv_cont.h"
+	"../lv_core/lv_indev.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_cont.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_imgbtn.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_btn.h"
+	"../lv_draw/lv_draw_img.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_img.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_misc/lv_fs.h"
+	"lv_label.h"
+	"../lv_draw/lv_draw.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_line.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_page.h
+	"../lv_conf_internal.h"
+	"lv_cont.h"
+	"../lv_core/lv_indev.h"
+	"../lv_misc/lv_anim.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_list.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_page.h"
+	"lv_btn.h"
+	"lv_label.h"
+	"lv_img.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_chart.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_line.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_table.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_label.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_checkbox.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_btn.h"
+	"lv_label.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_cpicker.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_bar.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_misc/lv_anim.h"
+	"lv_cont.h"
+	"lv_btn.h"
+	"lv_label.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_slider.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_bar.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_led.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_btnmatrix.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_label.h"
+	"lv_btn.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_keyboard.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_btnmatrix.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_dropdown.h
+	"../lv_conf_internal.h"
+	"../lv_widgets/lv_page.h"
+	"../lv_widgets/lv_label.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_roller.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_page.h"
+	"lv_label.h"
+
+1600248829 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_textarea.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_page.h"
+	"lv_label.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_canvas.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_widgets/lv_img.h"
+	"../lv_draw/lv_draw_img.h"
+
+1600248829 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_win.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_cont.h"
+	"lv_btn.h"
+	"lv_label.h"
+	"lv_img.h"
+	"lv_page.h"
+
+1600248829 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_tabview.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_widgets/lv_win.h"
+	"../lv_widgets/lv_page.h"
+
+1600248829 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_tileview.h
+	"../lv_conf_internal.h"
+	"../lv_widgets/lv_page.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_msgbox.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_cont.h"
+	"lv_btnmatrix.h"
+	"lv_label.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_objmask.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_widgets/lv_cont.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_gauge.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_linemeter.h"
+	"lv_label.h"
+	"lv_line.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_linemeter.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_switch.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_bar.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_arc.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_spinner.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_misc/lv_anim.h"
+	"lv_arc.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_calendar.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1600248828 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_spinbox.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_widgets/lv_textarea.h"
+
+1600248823 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_api_map.h
+	"../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_fmt_txt.c
+	"lv_font.h"
+	"lv_font_fmt_txt.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_misc/lv_types.h"
+	"../lv_misc/lv_gc.h"
+	"../lv_misc/lv_log.h"
+	"../lv_misc/lv_utils.h"
+	"../lv_misc/lv_mem.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_loader.c
+	<stdint.h>
+	<stdbool.h>
+	"../lvgl.h"
+	"../lv_misc/lv_fs.h"
+	"lv_font_loader.h"
+
+1600248823 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lvgl.h
+	"../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_12.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_12_subpx.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_14.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_16.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_18.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_20.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_22.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_24.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_26.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_28.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_28_compressed.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_30.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_32.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_34.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_36.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_38.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_40.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_42.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_44.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_46.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_montserrat_48.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_simsun_16_cjk.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_font\lv_font_unscii_8.c
+	"../../lvgl.h"
+
+1600248825 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_gpu\lv_gpu_stm32_dma2d.c
+	"lv_gpu_stm32_dma2d.h"
+	"../lv_core/lv_disp.h"
+	"../lv_core/lv_refr.h"
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_hal\lv_hal_disp.c
+	<stdint.h>
+	<stddef.h>
+	"lv_hal.h"
+	"../lv_misc/lv_mem.h"
+	"../lv_misc/lv_gc.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_obj.h"
+	"../lv_core/lv_refr.h"
+	"../lv_themes/lv_theme.h"
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_hal\lv_hal_indev.c
+	"../lv_misc/lv_debug.h"
+	"../lv_hal/lv_hal_indev.h"
+	"../lv_core/lv_indev.h"
+	"../lv_misc/lv_mem.h"
+	"../lv_misc/lv_gc.h"
+	"lv_hal_disp.h"
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_hal\lv_hal_tick.c
+	"lv_hal_tick.h"
+	<stddef.h>
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_anim.c
+	"lv_anim.h"
+	<stddef.h>
+	<string.h>
+	"../lv_misc/lv_debug.h"
+	"../lv_hal/lv_hal_tick.h"
+	"lv_task.h"
+	"lv_math.h"
+	"lv_gc.h"
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_area.c
+	"../lv_conf_internal.h"
+	"lv_area.h"
+	"lv_math.h"
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_async.c
+	"lv_async.h"
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_bidi.c
+	<stddef.h>
+	"lv_bidi.h"
+	"lv_txt.h"
+	"../lv_misc/lv_mem.h"
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_color.c
+	"lv_color.h"
+	"lv_math.h"
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_debug.c
+	"lv_debug.h"
+	"lv_mem.h"
+	<string.h>
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_fs.c
+	"lv_fs.h"
+	"../lv_misc/lv_debug.h"
+	"lv_ll.h"
+	<string.h>
+	"lv_gc.h"
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_gc.c
+	"lv_gc.h"
+	"string.h"
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_ll.c
+	<stdint.h>
+	<string.h>
+	"lv_ll.h"
+	"lv_mem.h"
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_log.c
+	"lv_log.h"
+	<stdarg.h>
+	<string.h>
+	"lv_printf.h"
+	<stdio.h>
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_math.c
+	"lv_math.h"
+	<stdbool.h>
+	<stdlib.h>
+	<string.h>
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_mem.c
+	"lv_mem.h"
+	"lv_math.h"
+	"lv_gc.h"
+	<string.h>
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_printf.c
+	"lv_printf.h"
+	<stdbool.h>
+	<stdint.h>
+	<float.h>
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_task.c
+	<stddef.h>
+	"lv_task.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_hal/lv_hal_tick.h"
+	"lv_gc.h"
+
+1600248826 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_templ.c
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_txt.c
+	"lv_txt.h"
+	"lv_math.h"
+	"lv_log.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_txt_ap.c
+	<stddef.h>
+	"lv_bidi.h"
+	"lv_txt.h"
+	"lv_txt_ap.h"
+	"../lv_draw/lv_draw.h"
+
+1600248827 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_txt_ap.h
+	<stddef.h>
+	"lv_txt.h"
+	"../lv_draw/lv_draw.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_misc\lv_utils.c
+	<stdbool.h>
+	"lv_utils.h"
+	"lv_math.h"
+	"lv_printf.h"
+	"lv_txt.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_themes\lv_theme.c
+	"../../lvgl.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_themes\lv_theme_empty.c
+	<stdint.h>
+	"../../lvgl.h"
+	"../lv_misc/lv_gc.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_themes\lv_theme_material.c
+	"../../lvgl.h"
+	"../lv_misc/lv_gc.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_themes\lv_theme_mono.c
+	"../../lvgl.h"
+	"../lv_misc/lv_gc.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_themes\lv_theme_template.c
+	"../../lvgl.h"
+	"../lv_misc/lv_gc.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_arc.c
+	"lv_arc.h"
+	"../lv_core/lv_group.h"
+	"../lv_core/lv_indev.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_misc/lv_math.h"
+	"../lv_draw/lv_draw_arc.h"
+	"../lv_themes/lv_theme.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_bar.c
+	"lv_bar.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_math.h"
+	<stdio.h>
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_btn.c
+	"lv_btn.h"
+	<string.h>
+	"../lv_core/lv_group.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_math.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_btnmatrix.c
+	"lv_btnmatrix.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_core/lv_refr.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_txt.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_calendar.c
+	"lv_calendar.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_hal/lv_hal_indev.h"
+	"../lv_misc/lv_utils.h"
+	"../lv_core/lv_indev.h"
+	"../lv_themes/lv_theme.h"
+	<string.h>
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_canvas.c
+	<stdlib.h>
+	"lv_canvas.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_misc/lv_math.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_core/lv_refr.h"
+	"../lv_themes/lv_theme.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_chart.c
+	"lv_chart.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_refr.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_misc/lv_math.h"
+	"../lv_themes/lv_theme.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_checkbox.c
+	"lv_checkbox.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_themes/lv_theme.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_cont.c
+	"lv_cont.h"
+	<stdbool.h>
+	<stdint.h>
+	<string.h>
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_draw/lv_draw_mask.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_math.h"
+
+1600248827 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_cpicker.c
+	"lv_cpicker.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw_arc.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_core/lv_indev.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_math.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_dropdown.c
+	"lv_dropdown.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_core/lv_group.h"
+	"../lv_core/lv_indev.h"
+	"../lv_core/lv_disp.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_font/lv_symbol_def.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_math.h"
+	<string.h>
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_gauge.c
+	"lv_gauge.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_txt.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_utils.h"
+	"lv_img.h"
+	<stdio.h>
+	<string.h>
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_img.c
+	"lv_img.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_draw/lv_img_decoder.h"
+	"../lv_misc/lv_fs.h"
+	"../lv_misc/lv_txt.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_log.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_imgbtn.c
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"lv_imgbtn.h"
+	"lv_label.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_keyboard.c
+	"lv_keyboard.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"lv_textarea.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_label.c
+	"lv_label.h"
+	"../lv_core/lv_obj.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_bidi.h"
+	"../lv_misc/lv_txt_ap.h"
+	"../lv_misc/lv_printf.h"
+	"../lv_themes/lv_theme.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_led.c
+	"lv_led.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_draw/lv_draw.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_line.c
+	"lv_line.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_misc/lv_math.h"
+	"../lv_themes/lv_theme.h"
+	<stdbool.h>
+	<stdint.h>
+	<string.h>
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_linemeter.c
+	"lv_linemeter.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_core/lv_group.h"
+	"../lv_misc/lv_math.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_list.c
+	"lv_list.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_math.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_msgbox.c
+	"lv_msgbox.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_core/lv_disp.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_math.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_objmask.c
+	"lv_objmask.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_objx_templ.c
+	"../lv_misc/lv_debug.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_page.c
+	"../lv_widgets/lv_page.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_math.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_roller.c
+	"lv_roller.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_core/lv_group.h"
+	"../lv_themes/lv_theme.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_slider.c
+	"lv_slider.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_core/lv_indev.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_math.h"
+	"lv_img.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_spinbox.c
+	"lv_spinbox.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_utils.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_spinner.c
+	"lv_spinner.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_misc/lv_math.h"
+	"../lv_draw/lv_draw_rect.h"
+	"../lv_draw/lv_draw_arc.h"
+	"../lv_themes/lv_theme.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_switch.c
+	"lv_switch.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_math.h"
+	"../lv_core/lv_indev.h"
+	"../lv_core/lv_disp.h"
+	"lv_img.h"
+
+1600248828 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_table.c
+	"lv_table.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_indev.h"
+	"../lv_misc/lv_txt.h"
+	"../lv_misc/lv_math.h"
+	"../lv_draw/lv_draw_label.h"
+	"../lv_themes/lv_theme.h"
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_tabview.c
+	"lv_tabview.h"
+	"lv_btnmatrix.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_core/lv_disp.h"
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_textarea.c
+	"lv_textarea.h"
+	<string.h>
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_core/lv_refr.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_txt.h"
+	"../lv_misc/lv_math.h"
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_tileview.c
+	"lv_tileview.h"
+	<stdbool.h>
+	"lv_cont.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\src\lv_widgets\lv_win.c
+	"lv_win.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_core/lv_disp.h"
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_assert.c
+	"lv_test_assert.h"
+	"../lvgl.h"
+	<unistd.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<stdarg.h>
+	<png.h>
+
+1600248829 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_assert.h
+	<stdbool.h>
+	<stdint.h>
+	"../lvgl.h"
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_core\lv_test_core.c
+	"../lv_test_assert.h"
+	"lv_test_core.h"
+	"lv_test_obj.h"
+	"lv_test_style.h"
+	"lv_test_font_loader.h"
+
+1600248829 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_core\lv_test_core.h
+
+1600248829 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_core\lv_test_obj.h
+
+1600248829 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_core\lv_test_style.h
+
+1600248829 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_core\lv_test_font_loader.h
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_core\lv_test_font_loader.c
+	"lvgl/lvgl.h"
+	"../lv_test_assert.h"
+	"lvgl/src/lv_font/lv_font_fmt_txt.h"
+	"lvgl/src/lv_font/lv_font.h"
+	"lvgl/src/lv_font/lv_font_loader.h"
+	"lv_test_font_loader.h"
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_core\lv_test_obj.c
+	"../../lvgl.h"
+	"../lv_test_assert.h"
+	"lv_test_obj.h"
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_core\lv_test_style.c
+	"../../lvgl.h"
+	"../lv_test_assert.h"
+	"lv_test_style.h"
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_fonts\font_1.c
+	"lvgl/lvgl.h"
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_fonts\font_2.c
+	"lvgl/lvgl.h"
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_fonts\font_3.c
+	"lvgl/lvgl.h"
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_main.c
+	"../lvgl.h"
+	<stdio.h>
+	<stdlib.h>
+	<sys/time.h>
+	"lv_test_core/lv_test_core.h"
+	"lv_test_widgets/lv_test_label.h"
+	<stdio.h>
+
+1600248829 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_widgets\lv_test_label.h
+
+1600248829 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl1\tests\lv_test_widgets\lv_test_label.c
+	"../../lvgl.h"
+	"../lv_test_assert.h"
+	"lv_test_label.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\examples\porting\lv_port_disp_template.c
+	"lv_port_disp_template.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\examples\porting\lv_port_disp_template.h
+	"lvgl/lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\examples\porting\lv_port_fs_template.c
+	"lv_port_fs_template.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\examples\porting\lv_port_fs_template.h
+	"lvgl/lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\examples\porting\lv_port_indev_template.c
+	"lv_port_indev_template.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\examples\porting\lv_port_indev_template.h
+	"lvgl/lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_disp.c
+	"lv_disp.h"
+	"../lv_misc/lv_math.h"
+	"../lv_core/lv_refr.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_disp.h
+	"../lv_hal/lv_hal.h"
+	"lv_obj.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_hal\lv_hal.h
+	"lv_hal_disp.h"
+	"lv_hal_indev.h"
+	"lv_hal_tick.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_hal\lv_hal_disp.h
+	<stdint.h>
+	<stdbool.h>
+	"lv_hal.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_ll.h"
+	"../lv_misc/lv_task.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_color.h
+	"../lv_conf_internal.h"
+	"lv_math.h"
+	<stdint.h>
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_conf_internal.h
+	<stdint.h>
+	"lv_conf.h"
+	"../../lv_conf.h"
+	<stdint.h>
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_math.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_area.h
+	"../lv_conf_internal.h"
+	<string.h>
+	<stdbool.h>
+	<stdint.h>
+	"lv_mem.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_mem.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	<stddef.h>
+	"lv_log.h"
+	"lv_types.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_log.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_types.h
+	<stdint.h>
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_ll.h
+	"lv_mem.h"
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_task.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	<stdbool.h>
+	"lv_mem.h"
+	"lv_ll.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_hal\lv_hal_indev.h
+	"../lv_conf_internal.h"
+	<stdbool.h>
+	<stdint.h>
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_task.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_hal\lv_hal_tick.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	<stdbool.h>
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_obj.h
+	"../lv_conf_internal.h"
+	<stddef.h>
+	<stdbool.h>
+	"lv_style.h"
+	"../lv_misc/lv_types.h"
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_hal/lv_hal.h"
+	"../lv_draw/lv_draw_rect.h"
+	"../lv_draw/lv_draw_label.h"
+	"../lv_draw/lv_draw_line.h"
+	"../lv_draw/lv_draw_img.h"
+	"lv_obj_style_dec.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_style.h
+	<stdbool.h>
+	"../lv_font/lv_font.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_types.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw_blend.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+	"lv_symbol_def.h"
+	"../lv_misc/lv_area.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_symbol_def.h
+	"../lv_conf_internal.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_anim.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	<stdbool.h>
+	<string.h>
+	"lv_mem.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_debug.h
+	"../lv_conf_internal.h"
+	<stdbool.h>
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_blend.h
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_area.h"
+	"lv_draw_mask.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_mask.h
+	<stdbool.h>
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_color.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_rect.h
+	"../lv_core/lv_style.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_label.h
+	"../lv_misc/lv_bidi.h"
+	"../lv_misc/lv_txt.h"
+	"../lv_core/lv_style.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_bidi.h
+	"../lv_conf_internal.h"
+	<stdbool.h>
+	<stdint.h>
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_txt.h
+	"../lv_conf_internal.h"
+	<stdbool.h>
+	"lv_area.h"
+	"lv_area.h"
+	"../lv_font/lv_font.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_line.h
+	"../lv_core/lv_style.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_img.h
+	"lv_img_decoder.h"
+	"lv_img_buf.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_img_decoder.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	"lv_img_buf.h"
+	"../lv_misc/lv_fs.h"
+	"../lv_misc/lv_types.h"
+	"../lv_misc/lv_area.h"
+	"../lv_core/lv_style.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_img_buf.h
+	<stdbool.h>
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_area.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_fs.h
+	"../lv_conf_internal.h"
+	<stdint.h>
+	<stdbool.h>
+	"lv_mem.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_obj_style_dec.h
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_refr.h
+	"lv_obj.h"
+	<stdbool.h>
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_group.c
+	"lv_group.h"
+	<stddef.h>
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_gc.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_group.h
+	"lv_obj.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_themes\lv_theme.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_style.h"
+	"../lv_core/lv_obj.h"
+	"lv_theme_empty.h"
+	"lv_theme_template.h"
+	"lv_theme_material.h"
+	"lv_theme_mono.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_themes\lv_theme_empty.h
+	"../lv_conf_internal.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_themes\lv_theme_template.h
+	"../lv_conf_internal.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_themes\lv_theme_material.h
+	"../lv_conf_internal.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_themes\lv_theme_mono.h
+	"../lv_conf_internal.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_gc.h
+	<stdint.h>
+	<stdbool.h>
+	"lv_mem.h"
+	"lv_ll.h"
+	"lv_task.h"
+	"../lv_draw/lv_img_cache.h"
+	"../lv_draw/lv_draw_mask.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_img_cache.h
+	"lv_img_decoder.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_indev.c
+	"lv_indev.h"
+	"lv_disp.h"
+	"lv_obj.h"
+	"../lv_hal/lv_hal_tick.h"
+	"../lv_core/lv_group.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_task.h"
+	"../lv_misc/lv_math.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_indev.h
+	"lv_obj.h"
+	"../lv_hal/lv_hal_indev.h"
+	"../lv_core/lv_group.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_obj.c
+	"lv_obj.h"
+	"lv_indev.h"
+	"lv_refr.h"
+	"lv_group.h"
+	"lv_disp.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_task.h"
+	"../lv_misc/lv_async.h"
+	"../lv_misc/lv_fs.h"
+	"../lv_misc/lv_gc.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_gc.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_log.h"
+	"../lv_hal/lv_hal.h"
+	<stdint.h>
+	<string.h>
+	"../lv_gpu/lv_gpu_stm32_dma2d.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_style.h"
+	"../lv_misc/lv_txt.h"
+	"lv_img_decoder.h"
+	"lv_draw_rect.h"
+	"lv_draw_label.h"
+	"lv_draw_img.h"
+	"lv_draw_line.h"
+	"lv_draw_triangle.h"
+	"lv_draw_arc.h"
+	"lv_draw_blend.h"
+	"lv_draw_mask.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_triangle.h
+	"lv_draw_rect.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_arc.h
+	"lv_draw_line.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_async.h
+	"lv_task.h"
+	"lv_types.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_gpu\lv_gpu_stm32_dma2d.h
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_color.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_refr.c
+	<stddef.h>
+	"lv_refr.h"
+	"lv_disp.h"
+	"../lv_hal/lv_hal_tick.h"
+	"../lv_hal/lv_hal_disp.h"
+	"../lv_misc/lv_task.h"
+	"../lv_misc/lv_mem.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_gc.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_font/lv_font_fmt_txt.h"
+	"../lv_gpu/lv_gpu_stm32_dma2d.h"
+	"../lv_widgets/lv_label.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_fmt_txt.h
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+	"lv_font.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_label.h
+	"../lv_conf_internal.h"
+	<stdarg.h>
+	"../lv_core/lv_obj.h"
+	"../lv_font/lv_font.h"
+	"../lv_font/lv_symbol_def.h"
+	"../lv_misc/lv_txt.h"
+	"../lv_draw/lv_draw.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_core\lv_style.c
+	"lv_obj.h"
+	"../lv_misc/lv_mem.h"
+	"../lv_misc/lv_anim.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_arc.c
+	"lv_draw_arc.h"
+	"lv_draw_rect.h"
+	"lv_draw_mask.h"
+	"../lv_misc/lv_math.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_blend.c
+	"lv_draw_blend.h"
+	"lv_img_decoder.h"
+	"../lv_misc/lv_math.h"
+	"../lv_hal/lv_hal_disp.h"
+	"../lv_core/lv_refr.h"
+	"../lv_gpu/lv_gpu_stm32_dma2d.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_img.c
+	"lv_draw_img.h"
+	"lv_img_cache.h"
+	"../lv_hal/lv_hal_disp.h"
+	"../lv_misc/lv_log.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_mem.h"
+	"../lv_misc/lv_math.h"
+	"../lv_gpu/lv_gpu_stm32_dma2d.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_label.c
+	"lv_draw_label.h"
+	"../lv_misc/lv_math.h"
+	"../lv_hal/lv_hal_disp.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_bidi.h"
+	"../lv_misc/lv_debug.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_line.c
+	<stdio.h>
+	<stdbool.h>
+	"lv_draw_mask.h"
+	"lv_draw_blend.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_math.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_mask.c
+	"lv_draw_mask.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_log.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_misc/lv_gc.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_rect.c
+	"lv_draw_rect.h"
+	"lv_draw_blend.h"
+	"lv_draw_mask.h"
+	"../lv_misc/lv_math.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_debug.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_draw_triangle.c
+	"lv_draw_triangle.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_mem.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_img_buf.c
+	<stddef.h>
+	<string.h>
+	"lv_img_buf.h"
+	"lv_draw_img.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_log.h"
+	"../lv_misc/lv_mem.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_img_cache.c
+	"../lv_misc/lv_debug.h"
+	"lv_img_cache.h"
+	"lv_img_decoder.h"
+	"lv_draw_img.h"
+	"../lv_hal/lv_hal_tick.h"
+	"../lv_misc/lv_gc.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_draw\lv_img_decoder.c
+	"lv_img_decoder.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw_img.h"
+	"../lv_misc/lv_ll.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_gc.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font.c
+	"lv_font.h"
+	"../lv_misc/lv_utils.h"
+	"../lv_misc/lv_log.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_utils.h
+	<stdint.h>
+	<stddef.h>
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_dejavu_16_persian_hebrew.c
+	"../../lvgl.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\lvgl.h
+	"src/lv_misc/lv_log.h"
+	"src/lv_misc/lv_task.h"
+	"src/lv_misc/lv_math.h"
+	"src/lv_misc/lv_async.h"
+	"src/lv_hal/lv_hal.h"
+	"src/lv_core/lv_obj.h"
+	"src/lv_core/lv_group.h"
+	"src/lv_core/lv_indev.h"
+	"src/lv_core/lv_refr.h"
+	"src/lv_core/lv_disp.h"
+	"src/lv_themes/lv_theme.h"
+	"src/lv_font/lv_font.h"
+	"src/lv_font/lv_font_fmt_txt.h"
+	"src/lv_misc/lv_printf.h"
+	"src/lv_widgets/lv_btn.h"
+	"src/lv_widgets/lv_imgbtn.h"
+	"src/lv_widgets/lv_img.h"
+	"src/lv_widgets/lv_label.h"
+	"src/lv_widgets/lv_line.h"
+	"src/lv_widgets/lv_page.h"
+	"src/lv_widgets/lv_cont.h"
+	"src/lv_widgets/lv_list.h"
+	"src/lv_widgets/lv_chart.h"
+	"src/lv_widgets/lv_table.h"
+	"src/lv_widgets/lv_checkbox.h"
+	"src/lv_widgets/lv_cpicker.h"
+	"src/lv_widgets/lv_bar.h"
+	"src/lv_widgets/lv_slider.h"
+	"src/lv_widgets/lv_led.h"
+	"src/lv_widgets/lv_btnmatrix.h"
+	"src/lv_widgets/lv_keyboard.h"
+	"src/lv_widgets/lv_dropdown.h"
+	"src/lv_widgets/lv_roller.h"
+	"src/lv_widgets/lv_textarea.h"
+	"src/lv_widgets/lv_canvas.h"
+	"src/lv_widgets/lv_win.h"
+	"src/lv_widgets/lv_tabview.h"
+	"src/lv_widgets/lv_tileview.h"
+	"src/lv_widgets/lv_msgbox.h"
+	"src/lv_widgets/lv_objmask.h"
+	"src/lv_widgets/lv_gauge.h"
+	"src/lv_widgets/lv_linemeter.h"
+	"src/lv_widgets/lv_switch.h"
+	"src/lv_widgets/lv_arc.h"
+	"src/lv_widgets/lv_spinner.h"
+	"src/lv_widgets/lv_calendar.h"
+	"src/lv_widgets/lv_spinbox.h"
+	"src/lv_draw/lv_img_cache.h"
+	"src/lv_api_map.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_printf.h
+	"../lv_conf_internal.h"
+	<stdarg.h>
+	<stddef.h>
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_btn.h
+	"../lv_conf_internal.h"
+	"lv_cont.h"
+	"../lv_core/lv_indev.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_cont.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_imgbtn.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_btn.h"
+	"../lv_draw/lv_draw_img.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_img.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_misc/lv_fs.h"
+	"lv_label.h"
+	"../lv_draw/lv_draw.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_line.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_page.h
+	"../lv_conf_internal.h"
+	"lv_cont.h"
+	"../lv_core/lv_indev.h"
+	"../lv_misc/lv_anim.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_list.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_page.h"
+	"lv_btn.h"
+	"lv_label.h"
+	"lv_img.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_chart.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_line.h"
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_table.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_label.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_checkbox.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_btn.h"
+	"lv_label.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_cpicker.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_bar.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_misc/lv_anim.h"
+	"lv_cont.h"
+	"lv_btn.h"
+	"lv_label.h"
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_slider.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_bar.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_led.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_btnmatrix.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_label.h"
+	"lv_btn.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_keyboard.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_btnmatrix.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_dropdown.h
+	"../lv_conf_internal.h"
+	"../lv_widgets/lv_page.h"
+	"../lv_widgets/lv_label.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_roller.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_page.h"
+	"lv_label.h"
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_textarea.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_page.h"
+	"lv_label.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_canvas.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_widgets/lv_img.h"
+	"../lv_draw/lv_draw_img.h"
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_win.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_cont.h"
+	"lv_btn.h"
+	"lv_label.h"
+	"lv_img.h"
+	"lv_page.h"
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_tabview.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_widgets/lv_win.h"
+	"../lv_widgets/lv_page.h"
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_tileview.h
+	"../lv_conf_internal.h"
+	"../lv_widgets/lv_page.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_msgbox.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_cont.h"
+	"lv_btnmatrix.h"
+	"lv_label.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_objmask.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_widgets/lv_cont.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_gauge.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_linemeter.h"
+	"lv_label.h"
+	"lv_line.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_linemeter.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_switch.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"lv_bar.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_arc.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_spinner.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_misc/lv_anim.h"
+	"lv_arc.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_calendar.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_spinbox.h
+	"../lv_conf_internal.h"
+	"../lv_core/lv_obj.h"
+	"../lv_widgets/lv_textarea.h"
+
+1595006129 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_api_map.h
+	"../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_fmt_txt.c
+	"lv_font.h"
+	"lv_font_fmt_txt.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_misc/lv_types.h"
+	"../lv_misc/lv_log.h"
+	"../lv_misc/lv_utils.h"
+	"../lv_misc/lv_mem.h"
+
+1590762101 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_10.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_12.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_12_subpx.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_14.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_16.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_18.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_20.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_22.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_24.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_26.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_28.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_28_compressed.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_30.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_32.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_34.c
+	"../../lvgl.h"
+
+1595006129 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_36.c
+	"../../lvgl.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_38.c
+	"../../lvgl.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_40.c
+	"../../lvgl.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_42.c
+	"../../lvgl.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_44.c
+	"../../lvgl.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_46.c
+	"../../lvgl.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_montserrat_48.c
+	"../../lvgl.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_simsun_16_cjk.c
+	"../../lvgl.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_font\lv_font_unscii_8.c
+	"../../lvgl.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_gpu\lv_gpu_stm32_dma2d.c
+	"lv_gpu_stm32_dma2d.h"
+	"../lv_core/lv_refr.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_hal\lv_hal_disp.c
+	<stdint.h>
+	<stddef.h>
+	"lv_hal.h"
+	"../lv_misc/lv_mem.h"
+	"../lv_misc/lv_gc.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_obj.h"
+	"../lv_core/lv_refr.h"
+	"../lv_themes/lv_theme.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_hal\lv_hal_indev.c
+	"../lv_misc/lv_debug.h"
+	"../lv_hal/lv_hal_indev.h"
+	"../lv_core/lv_indev.h"
+	"../lv_misc/lv_mem.h"
+	"../lv_misc/lv_gc.h"
+	"lv_hal_disp.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_hal\lv_hal_tick.c
+	"lv_hal_tick.h"
+	<stddef.h>
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_anim.c
+	"lv_anim.h"
+	<stddef.h>
+	<string.h>
+	"../lv_misc/lv_debug.h"
+	"../lv_hal/lv_hal_tick.h"
+	"lv_task.h"
+	"lv_math.h"
+	"lv_gc.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_area.c
+	"../lv_conf_internal.h"
+	"lv_area.h"
+	"lv_math.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_async.c
+	"lv_async.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_bidi.c
+	<stddef.h>
+	"lv_bidi.h"
+	"lv_txt.h"
+	"../lv_misc/lv_mem.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_color.c
+	"lv_color.h"
+	"lv_math.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_debug.c
+	"lv_debug.h"
+	"lv_mem.h"
+	<string.h>
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_fs.c
+	"lv_fs.h"
+	"../lv_misc/lv_debug.h"
+	"lv_ll.h"
+	<string.h>
+	"lv_gc.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_gc.c
+	"lv_gc.h"
+	"string.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_ll.c
+	<stdint.h>
+	<string.h>
+	"lv_ll.h"
+	"lv_mem.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_log.c
+	"lv_log.h"
+	<stdarg.h>
+	<string.h>
+	"lv_printf.h"
+	<stdio.h>
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_math.c
+	"lv_math.h"
+	<stdbool.h>
+	<stdlib.h>
+	<string.h>
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_mem.c
+	"lv_mem.h"
+	"lv_math.h"
+	"lv_gc.h"
+	<string.h>
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_printf.c
+	"lv_printf.h"
+	<stdbool.h>
+	<stdint.h>
+	<float.h>
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_task.c
+	<stddef.h>
+	"lv_task.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_hal/lv_hal_tick.h"
+	"lv_gc.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_templ.c
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_txt.c
+	"lv_txt.h"
+	"lv_math.h"
+	"lv_log.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_txt_ap.c
+	<stddef.h>
+	"lv_bidi.h"
+	"lv_txt.h"
+	"lv_txt_ap.h"
+	"../lv_draw/lv_draw.h"
+
+1595006130 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_txt_ap.h
+	<stddef.h>
+	"lv_txt.h"
+	"../lv_draw/lv_draw.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_misc\lv_utils.c
+	<stdbool.h>
+	"lv_utils.h"
+	"lv_math.h"
+	"lv_printf.h"
+	"lv_txt.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_themes\lv_theme.c
+	"../../lvgl.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_themes\lv_theme_empty.c
+	<stdint.h>
+	"../../lvgl.h"
+	"../lv_misc/lv_gc.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_themes\lv_theme_material.c
+	"../../lvgl.h"
+	"../lv_misc/lv_gc.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_themes\lv_theme_mono.c
+	"../../lvgl.h"
+	"../lv_misc/lv_gc.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_themes\lv_theme_template.c
+	"../../lvgl.h"
+	"../lv_misc/lv_gc.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_arc.c
+	"lv_arc.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_misc/lv_math.h"
+	"../lv_draw/lv_draw_arc.h"
+	"../lv_themes/lv_theme.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_bar.c
+	"lv_bar.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_math.h"
+	<stdio.h>
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_btn.c
+	"lv_btn.h"
+	<string.h>
+	"../lv_core/lv_group.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_math.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_btnmatrix.c
+	"lv_btnmatrix.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_core/lv_refr.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_txt.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_calendar.c
+	"lv_calendar.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_hal/lv_hal_indev.h"
+	"../lv_misc/lv_utils.h"
+	"../lv_core/lv_indev.h"
+	"../lv_themes/lv_theme.h"
+	<string.h>
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_canvas.c
+	<stdlib.h>
+	"lv_canvas.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_misc/lv_math.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_core/lv_refr.h"
+	"../lv_themes/lv_theme.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_chart.c
+	"lv_chart.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_refr.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_misc/lv_math.h"
+	"../lv_themes/lv_theme.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_checkbox.c
+	"lv_checkbox.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_themes/lv_theme.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_cont.c
+	"lv_cont.h"
+	<stdbool.h>
+	<stdint.h>
+	<string.h>
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_draw/lv_draw_mask.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_math.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_cpicker.c
+	"lv_cpicker.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw_arc.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_core/lv_indev.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_math.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_dropdown.c
+	"lv_dropdown.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_core/lv_group.h"
+	"../lv_core/lv_indev.h"
+	"../lv_core/lv_disp.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_font/lv_symbol_def.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_math.h"
+	<string.h>
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_gauge.c
+	"lv_gauge.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_txt.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_utils.h"
+	"lv_img.h"
+	<stdio.h>
+	<string.h>
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_img.c
+	"lv_img.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_draw/lv_img_decoder.h"
+	"../lv_misc/lv_fs.h"
+	"../lv_misc/lv_txt.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_log.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_imgbtn.c
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"lv_imgbtn.h"
+	"lv_label.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_keyboard.c
+	"lv_keyboard.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"lv_textarea.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_label.c
+	"lv_label.h"
+	"../lv_core/lv_obj.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_misc/lv_color.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_bidi.h"
+	"../lv_misc/lv_txt_ap.h"
+	"../lv_misc/lv_printf.h"
+	"../lv_themes/lv_theme.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_led.c
+	"lv_led.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_draw/lv_draw.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_line.c
+	"lv_line.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_misc/lv_math.h"
+	"../lv_themes/lv_theme.h"
+	<stdbool.h>
+	<stdint.h>
+	<string.h>
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_linemeter.c
+	"lv_linemeter.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_core/lv_group.h"
+	"../lv_misc/lv_math.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_list.c
+	"lv_list.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_math.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_msgbox.c
+	"lv_msgbox.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_core/lv_disp.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_math.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_objmask.c
+	"lv_objmask.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_objx_templ.c
+	"../lv_misc/lv_debug.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_page.c
+	"../lv_widgets/lv_page.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_core/lv_refr.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_math.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_roller.c
+	"lv_roller.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_core/lv_group.h"
+	"../lv_themes/lv_theme.h"
+
+1595006130 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_slider.c
+	"lv_slider.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_core/lv_indev.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_math.h"
+	"lv_img.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_spinbox.c
+	"lv_spinbox.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_utils.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_spinner.c
+	"lv_spinner.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_misc/lv_math.h"
+	"../lv_draw/lv_draw_rect.h"
+	"../lv_draw/lv_draw_arc.h"
+	"../lv_themes/lv_theme.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_switch.c
+	"lv_switch.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_math.h"
+	"../lv_core/lv_indev.h"
+	"../lv_core/lv_disp.h"
+	"lv_img.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_table.c
+	"lv_table.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_indev.h"
+	"../lv_misc/lv_txt.h"
+	"../lv_misc/lv_math.h"
+	"../lv_draw/lv_draw_label.h"
+	"../lv_themes/lv_theme.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_tabview.c
+	"lv_tabview.h"
+	"lv_btnmatrix.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_core/lv_disp.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_textarea.c
+	"lv_textarea.h"
+	<string.h>
+	"../lv_misc/lv_debug.h"
+	"../lv_core/lv_group.h"
+	"../lv_core/lv_refr.h"
+	"../lv_draw/lv_draw.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_misc/lv_anim.h"
+	"../lv_misc/lv_txt.h"
+	"../lv_misc/lv_math.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_tileview.c
+	"lv_tileview.h"
+	<stdbool.h>
+	"lv_cont.h"
+	"../lv_misc/lv_math.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\src\lv_widgets\lv_win.c
+	"lv_win.h"
+	"../lv_misc/lv_debug.h"
+	"../lv_themes/lv_theme.h"
+	"../lv_core/lv_disp.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\tests\lv_test_assert.c
+	"lv_test_assert.h"
+	"../lvgl.h"
+	<unistd.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<stdarg.h>
+	<png.h>
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\tests\lv_test_assert.h
+	<stdbool.h>
+	<stdint.h>
+	"../lvgl.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\tests\lv_test_core\lv_test_core.c
+	"../lv_test_assert.h"
+	"lv_test_core.h"
+	"lv_test_obj.h"
+	"lv_test_style.h"
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\tests\lv_test_core\lv_test_core.h
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\tests\lv_test_core\lv_test_obj.h
+
+1595006131 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\tests\lv_test_core\lv_test_style.h
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\tests\lv_test_core\lv_test_obj.c
+	"../../lvgl.h"
+	"../lv_test_assert.h"
+	"lv_test_obj.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\tests\lv_test_core\lv_test_style.c
+	"../../lvgl.h"
+	"../lv_test_assert.h"
+	"lv_test_style.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\tests\lv_test_main.c
+	"../lvgl.h"
+	<stdio.h>
+	<stdlib.h>
+	<sys/time.h>
+	"lv_test_core/lv_test_core.h"
+
+1595006131 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl2\tests\lv_test_objx\lv_test_cont.c
+	"../../lvgl.h"
+	"../lv_test_assert.h"
+
+1603781053 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_loader.c
+	<stdint.h>
+	<stdbool.h>
+	"../lvgl.h"
+	"../lv_misc/lv_fs.h"
+	"lv_font_loader.h"
+
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lvgl.h
+	"../lvgl.h"
+
+1603781057 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_core\lv_test_font_loader.c
+	"../../lvgl.h"
+	"../lv_test_assert.h"
+	"../src/lv_font/lv_font_fmt_txt.h"
+	"../src/lv_font/lv_font.h"
+	"../src/lv_font/lv_font_loader.h"
+	"lv_test_font_loader.h"
+
+1603781058 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_fonts\font_1.c
+	"../../lvgl.h"
+
+1603781058 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_fonts\font_2.c
+	"../../lvgl.h"
+
+1603781058 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_fonts\font_3.c
+	"../../lvgl.h"
+
+1603781058 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\tests\lv_test_widgets\lv_test_label.c
+	"../../lvgl.h"
+	"../lv_test_assert.h"
+	"lv_test_label.h"
+
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_gpu\lv_gpu_nxp_pxp.h
+	"../lv_misc/lv_area.h"
+	"../lv_misc/lv_color.h"
+
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_gpu\lv_gpu_nxp_pxp_osa.h
+	"../lv_conf_internal.h"
+
+1603781054 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_gpu\lv_gpu_nxp_vglite.h
+	"lv_misc/lv_area.h"
+
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_font\lv_font_montserrat_8.c
+	"../../lvgl.h"
+
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_gpu\lv_gpu_nxp_pxp.c
+	"../lv_conf_internal.h"
+	"lvgl.h"
+	"lv_gpu_nxp_pxp.h"
+	"../lv_misc/lv_mem.h"
+	"../lv_misc/lv_log.h"
+	"fsl_pxp.h"
+	"fsl_cache.h"
+
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_gpu\lv_gpu_nxp_pxp_osa.c
+	"../lv_conf_internal.h"
+	"lv_gpu_nxp_pxp.h"
+	"fsl_pxp.h"
+	"FreeRTOS.h"
+	"semphr.h"
+
+1603781054 source:c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_gpu\lv_gpu_nxp_vglite.c
+	"../lv_conf_internal.h"
+	"lvgl.h"
+	"lv_gpu_nxp_vglite.h"
+	"../lv_misc/lv_log.h"
+	"fsl_cache.h"
+	"vg_lite.h"
+
+1603781052 c:\users\danny\documents\lv_sim_codeblocks_win\lvgl\src\lv_conf_kconfig.h
+
+1603798634 c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_utils.h
+	"stdint.h"
+
+1603798637 source:c:\users\danny\documents\lv_sim_codeblocks_win\reflow_oven_utils.c
+	"reflow_oven_utils.h"
 
