@@ -38,14 +38,6 @@
 			<Add option="-Wall" />
 			<Add directory="." />
 		</Compiler>
-		<Unit filename=".github/stale.yml" />
-		<Unit filename=".gitignore" />
-		<Unit filename=".gitmodules" />
-		<Unit filename="LICENSE" />
-		<Unit filename="LittlevGL.depend" />
-		<Unit filename="LittlevGL.layout" />
-		<Unit filename="README.md" />
-		<Unit filename="bin/Debug/LittlevGL.exe" />
 		<Unit filename="images/reflow_oven_icon_bright.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -160,12 +152,15 @@
 		<Unit filename="images/reflow_oven_label_start.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="licence.txt" />
 		<Unit filename="lv_conf.h" />
-		<Unit filename="lv_drivers/.github/stale.yml" />
-		<Unit filename="lv_drivers/.gitignore" />
-		<Unit filename="lv_drivers/LICENSE" />
-		<Unit filename="lv_drivers/README.md" />
+		<Unit filename="lv_drivers/display/GC9A01.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lv_drivers/display/GC9A01.h" />
+		<Unit filename="lv_drivers/display/ILI9341.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lv_drivers/display/ILI9341.h" />
 		<Unit filename="lv_drivers/display/R61581.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -186,7 +181,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lv_drivers/display/UC1610.h" />
-		<Unit filename="lv_drivers/display/display.mk" />
+		<Unit filename="lv_drivers/display/drm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lv_drivers/display/drm.h" />
 		<Unit filename="lv_drivers/display/fbdev.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -195,8 +193,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lv_drivers/display/monitor.h" />
-		<Unit filename="lv_drivers/docs/astyle_c" />
-		<Unit filename="lv_drivers/docs/astyle_h" />
+		<Unit filename="lv_drivers/gtkdrv/gtkdrv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lv_drivers/gtkdrv/gtkdrv.h" />
 		<Unit filename="lv_drivers/indev/AD_touch.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -213,7 +213,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lv_drivers/indev/evdev.h" />
-		<Unit filename="lv_drivers/indev/indev.mk" />
 		<Unit filename="lv_drivers/indev/keyboard.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -230,38 +229,31 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lv_drivers/indev/mousewheel.h" />
-		<Unit filename="lv_drivers/library.json" />
-		<Unit filename="lv_drivers/lv_drivers.mk" />
-		<Unit filename="lv_drivers/lv_drv_conf_templ.h" />
+		<Unit filename="lv_drivers/lv_drv_conf_template.h" />
 		<Unit filename="lv_drivers/win_drv.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lv_drivers/win_drv.h" />
 		<Unit filename="lv_drv_conf.h" />
 		<Unit filename="lv_ex_conf.h" />
-		<Unit filename="lv_examples/.github/stale.yml" />
-		<Unit filename="lv_examples/.gitignore" />
-		<Unit filename="lv_examples/README.md" />
-		<Unit filename="lv_examples/assets/assets.mk" />
 		<Unit filename="lv_examples/assets/img_cogwheel_alpha16.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lv_examples/assets/img_cogwheel_argb.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/assets/img_cogwheel_argb.png" />
 		<Unit filename="lv_examples/assets/img_cogwheel_chroma_keyed.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/assets/img_cogwheel_chroma_keyed.png" />
 		<Unit filename="lv_examples/assets/img_cogwheel_indexed16.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/assets/img_cogwheel_indexed16.png" />
 		<Unit filename="lv_examples/assets/img_cogwheel_rgb.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/assets/img_cogwheel_rgb.png" />
+		<Unit filename="lv_examples/assets/img_hand.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="lv_examples/assets/lv_font_montserrat_12_compr_az.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -271,10 +263,8 @@
 		<Unit filename="lv_examples/assets/lv_font_montserrat_28_compr_az.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/docs/LICENSE.md" />
-		<Unit filename="lv_examples/lv_ex_conf_templ.h" />
+		<Unit filename="lv_examples/lv_ex_conf_template.h" />
 		<Unit filename="lv_examples/lv_examples.h" />
-		<Unit filename="lv_examples/lv_examples.mk" />
 		<Unit filename="lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -301,7 +291,16 @@
 		<Unit filename="lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_wifi.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_btn_bg.c">
+		<Unit filename="lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_btn_bg_1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_btn_bg_2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_btn_bg_3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_btn_bg_4.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_cloud.c">
@@ -362,1358 +361,212 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lv_examples/src/lv_demo_widgets/lv_demo_widgets.h" />
-		<Unit filename="lv_examples/src/lv_demo_widgets/lv_demo_widgets.mk" />
 		<Unit filename="lv_examples/src/lv_ex_get_started/lv_ex_get_started.h" />
 		<Unit filename="lv_examples/src/lv_ex_get_started/lv_ex_get_started_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_get_started/lv_ex_get_started_1.png" />
 		<Unit filename="lv_examples/src/lv_ex_get_started/lv_ex_get_started_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_get_started/lv_ex_get_started_2.png" />
 		<Unit filename="lv_examples/src/lv_ex_get_started/lv_ex_get_started_3.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_get_started/lv_ex_get_started_3.png" />
 		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style.h" />
 		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_1.png" />
 		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_10.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_10.png" />
 		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_11.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_11.png" />
 		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_2.png" />
 		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_3.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_3.png" />
 		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_4.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_4.png" />
 		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_5.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_5.png" />
 		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_6.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_6.png" />
 		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_7.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_7.png" />
 		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_8.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_8.png" />
 		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_9.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_style/lv_ex_style_9.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_arc/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.py" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_bar/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_btn/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.py" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_calendar/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_canvas/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.py" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_chart/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.py" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_2.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_checkbox/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_cont/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_cpicker/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_1.png" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_2.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_dropdown/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.py" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_gauge/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_img/index.rst" />
+		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_2.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.py" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2.png" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3.png" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_blue.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_green.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_imgbtn_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_imgbtn_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_keyboard/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_label/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.py" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.py" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_led/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_line/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_linemeter/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_list/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_msgbox/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.py" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_obj/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_objmask/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_1.png" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_2.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_page/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_roller/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_slider/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.py" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.gif" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_spinbox/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_spinner/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_switch/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_table/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_tabview/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_templ.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_textarea/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.py" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.py" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_tileview/index.rst" />
+		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_3.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.py" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_widgets.h" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_widgets.mk" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_win/index.rst" />
 		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.png" />
-		<Unit filename="lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.py" />
+		<Unit filename="lv_examples/src/lv_examples.h" />
 		<Unit filename="lv_settings.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lv_settings.h" />
-		<Unit filename="lvgl1/.editorconfig" />
-		<Unit filename="lvgl1/.github/FUNDING.yml" />
-		<Unit filename="lvgl1/.github/ISSUE_TEMPLATE/all-other-issues.md" />
-		<Unit filename="lvgl1/.github/ISSUE_TEMPLATE/bug-report.md" />
-		<Unit filename="lvgl1/.github/ISSUE_TEMPLATE/config.yml" />
-		<Unit filename="lvgl1/.github/auto-comment.yml" />
-		<Unit filename="lvgl1/.github/stale.yml" />
-		<Unit filename="lvgl1/.github/workflows/build_micropython.yml" />
-		<Unit filename="lvgl1/.github/workflows/ccpp.yml" />
-		<Unit filename="lvgl1/.github/workflows/merge-to-dev.yml" />
-		<Unit filename="lvgl1/.gitignore" />
-		<Unit filename="lvgl1/.gitmodules" />
-		<Unit filename="lvgl1/CHANGELOG.md" />
-		<Unit filename="lvgl1/LICENCE.txt" />
-		<Unit filename="lvgl1/README.md" />
-		<Unit filename="lvgl1/a.patch" />
-		<Unit filename="lvgl1/docs/CODE_OF_CONDUCT.md" />
-		<Unit filename="lvgl1/docs/CODING_STYLE.md" />
-		<Unit filename="lvgl1/docs/CONTRIBUTING.md" />
-		<Unit filename="lvgl1/docs/ROADMAP.md" />
-		<Unit filename="lvgl1/examples/arduino/ESP32_TFT_eSPI/ESP32_TFT_eSPI.ino" />
-		<Unit filename="lvgl1/examples/arduino/ESP32_TFT_eSPI/README.md" />
-		<Unit filename="lvgl1/examples/arduino/README.md" />
-		<Unit filename="lvgl1/examples/porting/lv_port_disp_template.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/examples/porting/lv_port_disp_template.h" />
-		<Unit filename="lvgl1/examples/porting/lv_port_fs_template.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/examples/porting/lv_port_fs_template.h" />
-		<Unit filename="lvgl1/examples/porting/lv_port_indev_template.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/examples/porting/lv_port_indev_template.h" />
-		<Unit filename="lvgl1/library.json" />
-		<Unit filename="lvgl1/library.properties" />
-		<Unit filename="lvgl1/lv_conf_template.h" />
-		<Unit filename="lvgl1/lvgl.h" />
-		<Unit filename="lvgl1/lvgl.mk" />
-		<Unit filename="lvgl1/r.patch" />
-		<Unit filename="lvgl1/scripts/Doxyfile" />
-		<Unit filename="lvgl1/scripts/built_in_font/DejaVuSans.ttf" />
-		<Unit filename="lvgl1/scripts/built_in_font/FontAwesome5-Solid+Brands+Regular.woff" />
-		<Unit filename="lvgl1/scripts/built_in_font/Montserrat-Medium.ttf" />
-		<Unit filename="lvgl1/scripts/built_in_font/SimSun.woff" />
-		<Unit filename="lvgl1/scripts/built_in_font/built_in_font_gen.py" />
-		<Unit filename="lvgl1/scripts/built_in_font/generate_all.py" />
-		<Unit filename="lvgl1/scripts/code-format.cfg" />
-		<Unit filename="lvgl1/scripts/code-format.sh" />
-		<Unit filename="lvgl1/scripts/cppcheck_run.sh" />
-		<Unit filename="lvgl1/scripts/infer_run.sh" />
-		<Unit filename="lvgl1/scripts/lv_conf_checker.py" />
-		<Unit filename="lvgl1/scripts/release.py" />
-		<Unit filename="lvgl1/src/lv_api_map.h" />
-		<Unit filename="lvgl1/src/lv_conf_internal.h" />
-		<Unit filename="lvgl1/src/lv_core/lv_core.mk" />
-		<Unit filename="lvgl1/src/lv_core/lv_disp.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_core/lv_disp.h" />
-		<Unit filename="lvgl1/src/lv_core/lv_group.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_core/lv_group.h" />
-		<Unit filename="lvgl1/src/lv_core/lv_indev.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_core/lv_indev.h" />
-		<Unit filename="lvgl1/src/lv_core/lv_obj.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_core/lv_obj.h" />
-		<Unit filename="lvgl1/src/lv_core/lv_obj_style_dec.h" />
-		<Unit filename="lvgl1/src/lv_core/lv_refr.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_core/lv_refr.h" />
-		<Unit filename="lvgl1/src/lv_core/lv_style.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_core/lv_style.h" />
-		<Unit filename="lvgl1/src/lv_draw/lv_draw.h" />
-		<Unit filename="lvgl1/src/lv_draw/lv_draw.mk" />
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_arc.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_arc.h" />
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_blend.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_blend.h" />
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_img.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_img.h" />
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_label.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_label.h" />
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_line.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_line.h" />
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_mask.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_mask.h" />
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_rect.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_rect.h" />
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_triangle.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_draw/lv_draw_triangle.h" />
-		<Unit filename="lvgl1/src/lv_draw/lv_img_buf.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_draw/lv_img_buf.h" />
-		<Unit filename="lvgl1/src/lv_draw/lv_img_cache.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_draw/lv_img_cache.h" />
-		<Unit filename="lvgl1/src/lv_draw/lv_img_decoder.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_draw/lv_img_decoder.h" />
-		<Unit filename="lvgl1/src/lv_font/lv_font.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font.h" />
-		<Unit filename="lvgl1/src/lv_font/lv_font.mk" />
-		<Unit filename="lvgl1/src/lv_font/lv_font_dejavu_16_persian_hebrew.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_fmt_txt.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_fmt_txt.h" />
-		<Unit filename="lvgl1/src/lv_font/lv_font_loader.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_loader.h" />
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_12.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_12_subpx.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_14.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_16.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_18.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_20.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_22.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_24.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_26.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_28.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_28_compressed.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_30.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_32.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_34.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_36.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_38.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_40.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_42.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_44.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_46.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_montserrat_48.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_simsun_16_cjk.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_font_unscii_8.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_font/lv_symbol_def.h" />
-		<Unit filename="lvgl1/src/lv_gpu/lv_gpu.mk" />
-		<Unit filename="lvgl1/src/lv_gpu/lv_gpu_stm32_dma2d.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_gpu/lv_gpu_stm32_dma2d.h" />
-		<Unit filename="lvgl1/src/lv_hal/lv_hal.h" />
-		<Unit filename="lvgl1/src/lv_hal/lv_hal.mk" />
-		<Unit filename="lvgl1/src/lv_hal/lv_hal_disp.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_hal/lv_hal_disp.h" />
-		<Unit filename="lvgl1/src/lv_hal/lv_hal_indev.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_hal/lv_hal_indev.h" />
-		<Unit filename="lvgl1/src/lv_hal/lv_hal_tick.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_hal/lv_hal_tick.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_anim.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_anim.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_area.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_area.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_async.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_async.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_bidi.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_bidi.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_color.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_color.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_debug.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_debug.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_fs.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_fs.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_gc.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_gc.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_ll.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_ll.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_log.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_log.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_math.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_math.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_mem.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_mem.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_misc.mk" />
-		<Unit filename="lvgl1/src/lv_misc/lv_printf.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_printf.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_task.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_task.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_templ.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_templ.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_txt.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_txt.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_txt_ap.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_txt_ap.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_types.h" />
-		<Unit filename="lvgl1/src/lv_misc/lv_utils.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_misc/lv_utils.h" />
-		<Unit filename="lvgl1/src/lv_themes/lv_theme.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_themes/lv_theme.h" />
-		<Unit filename="lvgl1/src/lv_themes/lv_theme_empty.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_themes/lv_theme_empty.h" />
-		<Unit filename="lvgl1/src/lv_themes/lv_theme_material.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_themes/lv_theme_material.h" />
-		<Unit filename="lvgl1/src/lv_themes/lv_theme_mono.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_themes/lv_theme_mono.h" />
-		<Unit filename="lvgl1/src/lv_themes/lv_theme_template.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_themes/lv_theme_template.h" />
-		<Unit filename="lvgl1/src/lv_themes/lv_themes.mk" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_arc.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_arc.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_bar.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_bar.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_btn.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_btn.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_btnmatrix.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_btnmatrix.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_calendar.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_calendar.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_canvas.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_canvas.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_chart.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_chart.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_checkbox.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_checkbox.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_cont.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_cont.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_cpicker.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_cpicker.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_dropdown.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_dropdown.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_gauge.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_gauge.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_img.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_img.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_imgbtn.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_imgbtn.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_keyboard.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_keyboard.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_label.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_label.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_led.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_led.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_line.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_line.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_linemeter.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_linemeter.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_list.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_list.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_msgbox.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_msgbox.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_objmask.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_objmask.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_objx_templ.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_objx_templ.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_page.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_page.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_roller.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_roller.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_slider.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_slider.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_spinbox.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_spinbox.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_spinner.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_spinner.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_switch.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_switch.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_table.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_table.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_tabview.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_tabview.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_textarea.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_textarea.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_tileview.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_tileview.h" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_widgets.mk" />
-		<Unit filename="lvgl1/src/lv_widgets/lv_win.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/src/lv_widgets/lv_win.h" />
-		<Unit filename="lvgl1/src/lvgl.h" />
-		<Unit filename="lvgl1/tests/Makefile" />
-		<Unit filename="lvgl1/tests/build.py" />
-		<Unit filename="lvgl1/tests/font_1.fnt" />
-		<Unit filename="lvgl1/tests/font_2.fnt" />
-		<Unit filename="lvgl1/tests/font_3.fnt" />
-		<Unit filename="lvgl1/tests/icon.png" />
-		<Unit filename="lvgl1/tests/icon2.png" />
-		<Unit filename="lvgl1/tests/lv_test_assert.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/tests/lv_test_assert.h" />
-		<Unit filename="lvgl1/tests/lv_test_conf.h" />
-		<Unit filename="lvgl1/tests/lv_test_core/lv_test_core.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/tests/lv_test_core/lv_test_core.h" />
-		<Unit filename="lvgl1/tests/lv_test_core/lv_test_font_loader.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/tests/lv_test_core/lv_test_font_loader.h" />
-		<Unit filename="lvgl1/tests/lv_test_core/lv_test_obj.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/tests/lv_test_core/lv_test_obj.h" />
-		<Unit filename="lvgl1/tests/lv_test_core/lv_test_style.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/tests/lv_test_core/lv_test_style.h" />
-		<Unit filename="lvgl1/tests/lv_test_fonts/font_1.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/tests/lv_test_fonts/font_2.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/tests/lv_test_fonts/font_3.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/tests/lv_test_main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/tests/lv_test_ref_imgs/lv_test_img32_label_1.png" />
-		<Unit filename="lvgl1/tests/lv_test_widgets/lv_test_label.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl1/tests/lv_test_widgets/lv_test_label.h" />
-		<Unit filename="lvgl2/.editorconfig" />
-		<Unit filename="lvgl2/.gitignore" />
-		<Unit filename="lvgl2/.gitmodules" />
-		<Unit filename="lvgl2/CHANGELOG.md" />
-		<Unit filename="lvgl2/LICENCE.txt" />
-		<Unit filename="lvgl2/README.md" />
-		<Unit filename="lvgl2/docs/CODE_OF_CONDUCT.md" />
-		<Unit filename="lvgl2/docs/CODING_STYLE.md" />
-		<Unit filename="lvgl2/docs/CONTRIBUTING.md" />
-		<Unit filename="lvgl2/examples/arduino/ESP32_TFT_eSPI/ESP32_TFT_eSPI.ino" />
-		<Unit filename="lvgl2/examples/arduino/ESP32_TFT_eSPI/README.md" />
-		<Unit filename="lvgl2/examples/arduino/README.md" />
-		<Unit filename="lvgl2/examples/porting/lv_port_disp_template.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/examples/porting/lv_port_disp_template.h" />
-		<Unit filename="lvgl2/examples/porting/lv_port_fs_template.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/examples/porting/lv_port_fs_template.h" />
-		<Unit filename="lvgl2/examples/porting/lv_port_indev_template.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/examples/porting/lv_port_indev_template.h" />
-		<Unit filename="lvgl2/library.json" />
-		<Unit filename="lvgl2/lv_conf_template.h" />
-		<Unit filename="lvgl2/lvgl.h" />
-		<Unit filename="lvgl2/lvgl.mk" />
-		<Unit filename="lvgl2/scripts/Doxyfile" />
-		<Unit filename="lvgl2/scripts/built_in_font/DejaVuSans.ttf" />
-		<Unit filename="lvgl2/scripts/built_in_font/FontAwesome5-Solid+Brands+Regular.woff" />
-		<Unit filename="lvgl2/scripts/built_in_font/Montserrat-Medium.ttf" />
-		<Unit filename="lvgl2/scripts/built_in_font/SimSun.woff" />
-		<Unit filename="lvgl2/scripts/built_in_font/built_in_font_gen.py" />
-		<Unit filename="lvgl2/scripts/built_in_font/generate_all.py" />
-		<Unit filename="lvgl2/scripts/code-format.cfg" />
-		<Unit filename="lvgl2/scripts/code-format.sh" />
-		<Unit filename="lvgl2/scripts/cppcheck_run.sh" />
-		<Unit filename="lvgl2/scripts/infer_run.sh" />
-		<Unit filename="lvgl2/scripts/lv_conf_checker.py" />
-		<Unit filename="lvgl2/scripts/release.py" />
-		<Unit filename="lvgl2/src/lv_api_map.h" />
-		<Unit filename="lvgl2/src/lv_conf_internal.h" />
-		<Unit filename="lvgl2/src/lv_core/lv_core.mk" />
-		<Unit filename="lvgl2/src/lv_core/lv_disp.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_core/lv_disp.h" />
-		<Unit filename="lvgl2/src/lv_core/lv_group.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_core/lv_group.h" />
-		<Unit filename="lvgl2/src/lv_core/lv_indev.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_core/lv_indev.h" />
-		<Unit filename="lvgl2/src/lv_core/lv_obj.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_core/lv_obj.h" />
-		<Unit filename="lvgl2/src/lv_core/lv_obj_style_dec.h" />
-		<Unit filename="lvgl2/src/lv_core/lv_refr.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_core/lv_refr.h" />
-		<Unit filename="lvgl2/src/lv_core/lv_style.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_core/lv_style.h" />
-		<Unit filename="lvgl2/src/lv_draw/lv_draw.h" />
-		<Unit filename="lvgl2/src/lv_draw/lv_draw.mk" />
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_arc.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_arc.h" />
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_blend.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_blend.h" />
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_img.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_img.h" />
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_label.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_label.h" />
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_line.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_line.h" />
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_mask.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_mask.h" />
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_rect.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_rect.h" />
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_triangle.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_draw/lv_draw_triangle.h" />
-		<Unit filename="lvgl2/src/lv_draw/lv_img_buf.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_draw/lv_img_buf.h" />
-		<Unit filename="lvgl2/src/lv_draw/lv_img_cache.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_draw/lv_img_cache.h" />
-		<Unit filename="lvgl2/src/lv_draw/lv_img_decoder.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_draw/lv_img_decoder.h" />
-		<Unit filename="lvgl2/src/lv_font/lv_font.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font.h" />
-		<Unit filename="lvgl2/src/lv_font/lv_font.mk" />
-		<Unit filename="lvgl2/src/lv_font/lv_font_dejavu_16_persian_hebrew.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_fmt_txt.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_fmt_txt.h" />
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_10.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_12.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_12_subpx.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_14.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_16.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_18.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_20.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_22.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_24.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_26.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_28.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_28_compressed.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_30.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_32.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_34.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_36.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_38.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_40.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_42.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_44.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_46.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_montserrat_48.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_simsun_16_cjk.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_font_unscii_8.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_font/lv_symbol_def.h" />
-		<Unit filename="lvgl2/src/lv_gpu/lv_gpu.mk" />
-		<Unit filename="lvgl2/src/lv_gpu/lv_gpu_stm32_dma2d.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_gpu/lv_gpu_stm32_dma2d.h" />
-		<Unit filename="lvgl2/src/lv_hal/lv_hal.h" />
-		<Unit filename="lvgl2/src/lv_hal/lv_hal.mk" />
-		<Unit filename="lvgl2/src/lv_hal/lv_hal_disp.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_hal/lv_hal_disp.h" />
-		<Unit filename="lvgl2/src/lv_hal/lv_hal_indev.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_hal/lv_hal_indev.h" />
-		<Unit filename="lvgl2/src/lv_hal/lv_hal_tick.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_hal/lv_hal_tick.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_anim.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_anim.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_area.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_area.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_async.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_async.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_bidi.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_bidi.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_color.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_color.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_debug.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_debug.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_fs.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_fs.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_gc.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_gc.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_ll.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_ll.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_log.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_log.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_math.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_math.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_mem.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_mem.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_misc.mk" />
-		<Unit filename="lvgl2/src/lv_misc/lv_printf.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_printf.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_task.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_task.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_templ.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_templ.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_txt.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_txt.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_txt_ap.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_txt_ap.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_types.h" />
-		<Unit filename="lvgl2/src/lv_misc/lv_utils.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_misc/lv_utils.h" />
-		<Unit filename="lvgl2/src/lv_themes/lv_theme.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_themes/lv_theme.h" />
-		<Unit filename="lvgl2/src/lv_themes/lv_theme_empty.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_themes/lv_theme_empty.h" />
-		<Unit filename="lvgl2/src/lv_themes/lv_theme_material.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_themes/lv_theme_material.h" />
-		<Unit filename="lvgl2/src/lv_themes/lv_theme_mono.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_themes/lv_theme_mono.h" />
-		<Unit filename="lvgl2/src/lv_themes/lv_theme_template.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_themes/lv_theme_template.h" />
-		<Unit filename="lvgl2/src/lv_themes/lv_themes.mk" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_arc.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_arc.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_bar.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_bar.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_btn.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_btn.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_btnmatrix.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_btnmatrix.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_calendar.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_calendar.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_canvas.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_canvas.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_chart.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_chart.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_checkbox.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_checkbox.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_cont.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_cont.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_cpicker.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_cpicker.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_dropdown.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_dropdown.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_gauge.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_gauge.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_img.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_img.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_imgbtn.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_imgbtn.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_keyboard.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_keyboard.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_label.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_label.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_led.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_led.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_line.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_line.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_linemeter.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_linemeter.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_list.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_list.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_msgbox.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_msgbox.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_objmask.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_objmask.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_objx_templ.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_objx_templ.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_page.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_page.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_roller.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_roller.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_slider.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_slider.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_spinbox.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_spinbox.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_spinner.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_spinner.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_switch.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_switch.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_table.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_table.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_tabview.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_tabview.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_textarea.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_textarea.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_tileview.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_tileview.h" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_widgets.mk" />
-		<Unit filename="lvgl2/src/lv_widgets/lv_win.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/src/lv_widgets/lv_win.h" />
-		<Unit filename="lvgl2/src/lvgl.h" />
-		<Unit filename="lvgl2/tests/Makefile" />
-		<Unit filename="lvgl2/tests/build.py" />
-		<Unit filename="lvgl2/tests/icon.png" />
-		<Unit filename="lvgl2/tests/icon2.png" />
-		<Unit filename="lvgl2/tests/lv_test_assert.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/tests/lv_test_assert.h" />
-		<Unit filename="lvgl2/tests/lv_test_conf.h" />
-		<Unit filename="lvgl2/tests/lv_test_core/lv_test_core.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/tests/lv_test_core/lv_test_core.h" />
-		<Unit filename="lvgl2/tests/lv_test_core/lv_test_obj.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/tests/lv_test_core/lv_test_obj.h" />
-		<Unit filename="lvgl2/tests/lv_test_core/lv_test_style.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/tests/lv_test_core/lv_test_style.h" />
-		<Unit filename="lvgl2/tests/lv_test_main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/tests/lv_test_objx/lv_test_cont.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl2/tests/lv_test_objx/lv_test_cont.h" />
-		<Unit filename="lvgl2/tests/lv_test_ref_imgs/lv_test_obj_1_1.png" />
-		<Unit filename="lvgl/.editorconfig" />
-		<Unit filename="lvgl/.github/FUNDING.yml" />
-		<Unit filename="lvgl/.github/ISSUE_TEMPLATE/all-other-issues.md" />
-		<Unit filename="lvgl/.github/ISSUE_TEMPLATE/bug-report.md" />
-		<Unit filename="lvgl/.github/ISSUE_TEMPLATE/config.yml" />
-		<Unit filename="lvgl/.github/auto-comment.yml" />
-		<Unit filename="lvgl/.github/stale.yml" />
-		<Unit filename="lvgl/.github/workflows/build_micropython.yml" />
-		<Unit filename="lvgl/.github/workflows/ccpp.yml" />
-		<Unit filename="lvgl/.github/workflows/merge-to-dev.yml" />
-		<Unit filename="lvgl/.gitignore" />
-		<Unit filename="lvgl/.gitmodules" />
-		<Unit filename="lvgl/CHANGELOG.md" />
-		<Unit filename="lvgl/LICENCE.txt" />
-		<Unit filename="lvgl/README.md" />
-		<Unit filename="lvgl/docs/CODE_OF_CONDUCT.md" />
-		<Unit filename="lvgl/docs/CODING_STYLE.md" />
-		<Unit filename="lvgl/docs/CONTRIBUTING.md" />
-		<Unit filename="lvgl/docs/ROADMAP.md" />
-		<Unit filename="lvgl/examples/LVGL_Arduino.ino" />
 		<Unit filename="lvgl/examples/porting/lv_port_disp_template.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -1726,27 +579,11 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lvgl/examples/porting/lv_port_indev_template.h" />
-		<Unit filename="lvgl/library.json" />
-		<Unit filename="lvgl/library.properties" />
 		<Unit filename="lvgl/lv_conf_template.h" />
 		<Unit filename="lvgl/lvgl.h" />
-		<Unit filename="lvgl/lvgl.mk" />
-		<Unit filename="lvgl/scripts/Doxyfile" />
-		<Unit filename="lvgl/scripts/built_in_font/DejaVuSans.ttf" />
-		<Unit filename="lvgl/scripts/built_in_font/FontAwesome5-Solid+Brands+Regular.woff" />
-		<Unit filename="lvgl/scripts/built_in_font/Montserrat-Medium.ttf" />
-		<Unit filename="lvgl/scripts/built_in_font/SimSun.woff" />
-		<Unit filename="lvgl/scripts/built_in_font/built_in_font_gen.py" />
-		<Unit filename="lvgl/scripts/built_in_font/generate_all.py" />
-		<Unit filename="lvgl/scripts/code-format.cfg" />
-		<Unit filename="lvgl/scripts/code-format.sh" />
-		<Unit filename="lvgl/scripts/cppcheck_run.sh" />
-		<Unit filename="lvgl/scripts/infer_run.sh" />
-		<Unit filename="lvgl/scripts/lv_conf_checker.py" />
-		<Unit filename="lvgl/scripts/release.py" />
 		<Unit filename="lvgl/src/lv_api_map.h" />
 		<Unit filename="lvgl/src/lv_conf_internal.h" />
-		<Unit filename="lvgl/src/lv_core/lv_core.mk" />
+		<Unit filename="lvgl/src/lv_conf_kconfig.h" />
 		<Unit filename="lvgl/src/lv_core/lv_disp.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -1773,7 +610,6 @@
 		</Unit>
 		<Unit filename="lvgl/src/lv_core/lv_style.h" />
 		<Unit filename="lvgl/src/lv_draw/lv_draw.h" />
-		<Unit filename="lvgl/src/lv_draw/lv_draw.mk" />
 		<Unit filename="lvgl/src/lv_draw/lv_draw_arc.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -1822,7 +658,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lvgl/src/lv_font/lv_font.h" />
-		<Unit filename="lvgl/src/lv_font/lv_font.mk" />
 		<Unit filename="lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -1900,20 +735,36 @@
 		<Unit filename="lvgl/src/lv_font/lv_font_montserrat_48.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="lvgl/src/lv_font/lv_font_montserrat_8.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="lvgl/src/lv_font/lv_font_simsun_16_cjk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lvgl/src/lv_font/lv_font_unscii_16.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lvgl/src/lv_font/lv_font_unscii_8.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lvgl/src/lv_font/lv_symbol_def.h" />
-		<Unit filename="lvgl/src/lv_gpu/lv_gpu.mk" />
+		<Unit filename="lvgl/src/lv_gpu/lv_gpu_nxp_pxp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lvgl/src/lv_gpu/lv_gpu_nxp_pxp.h" />
+		<Unit filename="lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lvgl/src/lv_gpu/lv_gpu_nxp_pxp_osa.h" />
+		<Unit filename="lvgl/src/lv_gpu/lv_gpu_nxp_vglite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lvgl/src/lv_gpu/lv_gpu_nxp_vglite.h" />
 		<Unit filename="lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.h" />
 		<Unit filename="lvgl/src/lv_hal/lv_hal.h" />
-		<Unit filename="lvgl/src/lv_hal/lv_hal.mk" />
 		<Unit filename="lvgl/src/lv_hal/lv_hal_disp.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -1974,7 +825,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lvgl/src/lv_misc/lv_mem.h" />
-		<Unit filename="lvgl/src/lv_misc/lv_misc.mk" />
 		<Unit filename="lvgl/src/lv_misc/lv_printf.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -2020,7 +870,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lvgl/src/lv_themes/lv_theme_template.h" />
-		<Unit filename="lvgl/src/lv_themes/lv_themes.mk" />
 		<Unit filename="lvgl/src/lv_widgets/lv_arc.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -2153,19 +1002,11 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lvgl/src/lv_widgets/lv_tileview.h" />
-		<Unit filename="lvgl/src/lv_widgets/lv_widgets.mk" />
 		<Unit filename="lvgl/src/lv_widgets/lv_win.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lvgl/src/lv_widgets/lv_win.h" />
 		<Unit filename="lvgl/src/lvgl.h" />
-		<Unit filename="lvgl/tests/Makefile" />
-		<Unit filename="lvgl/tests/build.py" />
-		<Unit filename="lvgl/tests/font_1.fnt" />
-		<Unit filename="lvgl/tests/font_2.fnt" />
-		<Unit filename="lvgl/tests/font_3.fnt" />
-		<Unit filename="lvgl/tests/icon.png" />
-		<Unit filename="lvgl/tests/icon2.png" />
 		<Unit filename="lvgl/tests/lv_test_assert.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -2199,565 +1040,13 @@
 		<Unit filename="lvgl/tests/lv_test_main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lvgl/tests/lv_test_objx/lv_test_cont.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="lvgl/tests/lv_test_objx/lv_test_cont.h" />
-		<Unit filename="lvgl/tests/lv_test_ref_imgs/lv_test_img32_label_1.png" />
 		<Unit filename="lvgl/tests/lv_test_widgets/lv_test_label.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lvgl/tests/lv_test_widgets/lv_test_label.h" />
-		<Unit filename="lvgl_icon.bmp" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="obj/Debug/images/reflow_oven_icon_bright.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_icon_door.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_icon_eco.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_icon_hue.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_icon_pc.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_icon_profiles.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_icon_settings.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_icon_start.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_icon_tel.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_icon_wifi.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_btn_bg.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_btn_door.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_btn_profiles.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_btn_settings.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_btn_start.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_cloud.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_copy.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_heater_active.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_heater_disabled.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_heater_inactive.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_internet.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_locked.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_mobile.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_no_internet.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_phone.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_print.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_printer2.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_ready.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_scan.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_scan_example.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_setup.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_unlocked.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_usb.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_img_wave.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_label_door.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_label_profiles.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_label_settings.o" />
-		<Unit filename="obj/Debug/images/reflow_oven_label_start.o" />
-		<Unit filename="obj/Debug/lv_drivers/display/R61581.o" />
-		<Unit filename="obj/Debug/lv_drivers/display/SHARP_MIP.o" />
-		<Unit filename="obj/Debug/lv_drivers/display/SSD1963.o" />
-		<Unit filename="obj/Debug/lv_drivers/display/ST7565.o" />
-		<Unit filename="obj/Debug/lv_drivers/display/UC1610.o" />
-		<Unit filename="obj/Debug/lv_drivers/display/fbdev.o" />
-		<Unit filename="obj/Debug/lv_drivers/display/monitor.o" />
-		<Unit filename="obj/Debug/lv_drivers/indev/AD_touch.o" />
-		<Unit filename="obj/Debug/lv_drivers/indev/FT5406EE8.o" />
-		<Unit filename="obj/Debug/lv_drivers/indev/XPT2046.o" />
-		<Unit filename="obj/Debug/lv_drivers/indev/evdev.o" />
-		<Unit filename="obj/Debug/lv_drivers/indev/keyboard.o" />
-		<Unit filename="obj/Debug/lv_drivers/indev/libinput.o" />
-		<Unit filename="obj/Debug/lv_drivers/indev/mouse.o" />
-		<Unit filename="obj/Debug/lv_drivers/indev/mousewheel.o" />
-		<Unit filename="obj/Debug/lv_drivers/win_drv.o" />
-		<Unit filename="obj/Debug/lv_examples/assets/img_cogwheel_alpha16.o" />
-		<Unit filename="obj/Debug/lv_examples/assets/img_cogwheel_argb.o" />
-		<Unit filename="obj/Debug/lv_examples/assets/img_cogwheel_chroma_keyed.o" />
-		<Unit filename="obj/Debug/lv_examples/assets/img_cogwheel_indexed16.o" />
-		<Unit filename="obj/Debug/lv_examples/assets/img_cogwheel_rgb.o" />
-		<Unit filename="obj/Debug/lv_examples/assets/lv_font_montserrat_12_compr_az.o" />
-		<Unit filename="obj/Debug/lv_examples/assets/lv_font_montserrat_16_compr_az.o" />
-		<Unit filename="obj/Debug/lv_examples/assets/lv_font_montserrat_28_compr_az.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_bright.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_eco.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_hue.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_pc.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_tel.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_icon_wifi.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_btn_bg.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_cloud.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_copy.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_internet.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_mobile.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_no_internet.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_phone.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_print.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_printer2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_ready.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_scan_example.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_setup.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_usb.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/images/lv_demo_printer_img_wave.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/lv_demo_printer.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_printer/lv_demo_printer_theme.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_stress/lv_demo_stress.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_demo_widgets/lv_demo_widgets.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_get_started/lv_ex_get_started_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_get_started/lv_ex_get_started_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_get_started/lv_ex_get_started_3.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_style/lv_ex_style_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_style/lv_ex_style_10.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_style/lv_ex_style_11.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_style/lv_ex_style_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_style/lv_ex_style_3.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_style/lv_ex_style_4.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_style/lv_ex_style_5.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_style/lv_ex_style_6.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_style/lv_ex_style_7.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_style/lv_ex_style_8.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_style/lv_ex_style_9.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_arc/lv_ex_arc_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_bar/lv_ex_bar_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_btn/lv_ex_btn_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_btnmatrix/lv_ex_btnmatrix_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_calendar/lv_ex_calendar_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_canvas/lv_ex_canvas_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_chart/lv_ex_chart_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_checkbox/lv_ex_checkbox_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_cont/lv_ex_cont_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_cpicker/lv_ex_cpicker_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_dropdown/lv_ex_dropdown_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_gauge/lv_ex_gauge_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_img/lv_ex_img_3.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_blue.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/imgbtn_green.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_imgbtn/lv_ex_imgbtn_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_keyboard/lv_ex_keyboard_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_label/lv_ex_label_3.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_led/lv_ex_led_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_line/lv_ex_line_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_linemeter/lv_ex_linemeter_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_list/lv_ex_list_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_msgbox/lv_ex_msgbox_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_obj/lv_ex_obj_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_objmask/lv_ex_objmask_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_page/lv_ex_page_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_roller/lv_ex_roller_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_slider/lv_ex_slider_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_spinbox/lv_ex_spinbox_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_spinner/lv_ex_spinner_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_switch/lv_ex_switch_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_table/lv_ex_table_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_tabview/lv_ex_tabview_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_templ.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_textarea/lv_ex_textarea_2.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_tileview/lv_ex_tileview_1.o" />
-		<Unit filename="obj/Debug/lv_examples/src/lv_ex_widgets/lv_ex_win/lv_ex_win_1.o" />
-		<Unit filename="obj/Debug/lv_settings.o" />
-		<Unit filename="obj/Debug/lv_settings/lv_settings.o" />
-		<Unit filename="obj/Debug/lvgl1/examples/porting/lv_port_disp_template.o" />
-		<Unit filename="obj/Debug/lvgl1/examples/porting/lv_port_fs_template.o" />
-		<Unit filename="obj/Debug/lvgl1/examples/porting/lv_port_indev_template.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_core/lv_disp.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_core/lv_group.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_core/lv_indev.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_core/lv_obj.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_core/lv_refr.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_core/lv_style.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_draw/lv_draw_arc.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_draw/lv_draw_blend.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_draw/lv_draw_img.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_draw/lv_draw_label.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_draw/lv_draw_line.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_draw/lv_draw_mask.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_draw/lv_draw_rect.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_draw/lv_draw_triangle.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_draw/lv_img_buf.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_draw/lv_img_cache.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_draw/lv_img_decoder.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_dejavu_16_persian_hebrew.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_fmt_txt.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_loader.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_12.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_12_subpx.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_14.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_16.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_18.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_20.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_22.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_24.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_26.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_28.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_28_compressed.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_30.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_32.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_34.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_36.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_38.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_40.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_42.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_44.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_46.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_montserrat_48.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_simsun_16_cjk.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_font/lv_font_unscii_8.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_gpu/lv_gpu_stm32_dma2d.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_hal/lv_hal_disp.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_hal/lv_hal_indev.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_hal/lv_hal_tick.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_anim.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_area.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_async.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_bidi.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_color.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_debug.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_fs.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_gc.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_ll.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_log.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_math.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_mem.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_printf.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_task.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_templ.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_txt.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_txt_ap.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_misc/lv_utils.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_themes/lv_theme.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_themes/lv_theme_empty.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_themes/lv_theme_material.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_themes/lv_theme_mono.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_themes/lv_theme_template.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_arc.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_bar.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_btn.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_btnmatrix.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_calendar.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_canvas.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_chart.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_checkbox.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_cont.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_cpicker.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_dropdown.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_gauge.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_img.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_imgbtn.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_keyboard.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_label.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_led.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_line.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_linemeter.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_list.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_msgbox.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_objmask.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_objx_templ.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_page.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_roller.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_slider.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_spinbox.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_spinner.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_switch.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_table.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_tabview.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_textarea.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_tileview.o" />
-		<Unit filename="obj/Debug/lvgl1/src/lv_widgets/lv_win.o" />
-		<Unit filename="obj/Debug/lvgl1/tests/lv_test_assert.o" />
-		<Unit filename="obj/Debug/lvgl1/tests/lv_test_core/lv_test_core.o" />
-		<Unit filename="obj/Debug/lvgl1/tests/lv_test_core/lv_test_font_loader.o" />
-		<Unit filename="obj/Debug/lvgl1/tests/lv_test_core/lv_test_obj.o" />
-		<Unit filename="obj/Debug/lvgl1/tests/lv_test_core/lv_test_style.o" />
-		<Unit filename="obj/Debug/lvgl1/tests/lv_test_fonts/font_1.o" />
-		<Unit filename="obj/Debug/lvgl1/tests/lv_test_fonts/font_2.o" />
-		<Unit filename="obj/Debug/lvgl1/tests/lv_test_fonts/font_3.o" />
-		<Unit filename="obj/Debug/lvgl1/tests/lv_test_main.o" />
-		<Unit filename="obj/Debug/lvgl1/tests/lv_test_widgets/lv_test_label.o" />
-		<Unit filename="obj/Debug/lvgl2/examples/porting/lv_port_disp_template.o" />
-		<Unit filename="obj/Debug/lvgl2/examples/porting/lv_port_fs_template.o" />
-		<Unit filename="obj/Debug/lvgl2/examples/porting/lv_port_indev_template.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_core/lv_disp.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_core/lv_group.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_core/lv_indev.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_core/lv_obj.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_core/lv_refr.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_core/lv_style.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_draw/lv_draw_arc.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_draw/lv_draw_blend.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_draw/lv_draw_img.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_draw/lv_draw_label.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_draw/lv_draw_line.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_draw/lv_draw_mask.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_draw/lv_draw_rect.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_draw/lv_draw_triangle.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_draw/lv_img_buf.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_draw/lv_img_cache.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_draw/lv_img_decoder.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_dejavu_16_persian_hebrew.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_fmt_txt.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_10.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_12.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_12_subpx.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_14.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_16.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_18.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_20.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_22.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_24.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_26.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_28.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_28_compressed.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_30.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_32.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_34.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_36.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_38.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_40.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_42.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_44.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_46.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_montserrat_48.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_simsun_16_cjk.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_font/lv_font_unscii_8.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_gpu/lv_gpu_stm32_dma2d.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_hal/lv_hal_disp.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_hal/lv_hal_indev.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_hal/lv_hal_tick.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_anim.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_area.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_async.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_bidi.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_color.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_debug.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_fs.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_gc.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_ll.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_log.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_math.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_mem.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_printf.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_task.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_templ.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_txt.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_txt_ap.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_misc/lv_utils.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_themes/lv_theme.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_themes/lv_theme_empty.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_themes/lv_theme_material.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_themes/lv_theme_mono.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_themes/lv_theme_template.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_arc.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_bar.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_btn.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_btnmatrix.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_calendar.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_canvas.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_chart.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_checkbox.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_cont.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_cpicker.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_dropdown.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_gauge.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_img.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_imgbtn.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_keyboard.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_label.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_led.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_line.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_linemeter.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_list.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_msgbox.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_objmask.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_objx_templ.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_page.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_roller.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_slider.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_spinbox.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_spinner.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_switch.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_table.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_tabview.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_textarea.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_tileview.o" />
-		<Unit filename="obj/Debug/lvgl2/src/lv_widgets/lv_win.o" />
-		<Unit filename="obj/Debug/lvgl2/tests/lv_test_assert.o" />
-		<Unit filename="obj/Debug/lvgl2/tests/lv_test_core/lv_test_core.o" />
-		<Unit filename="obj/Debug/lvgl2/tests/lv_test_core/lv_test_obj.o" />
-		<Unit filename="obj/Debug/lvgl2/tests/lv_test_core/lv_test_style.o" />
-		<Unit filename="obj/Debug/lvgl2/tests/lv_test_main.o" />
-		<Unit filename="obj/Debug/lvgl2/tests/lv_test_objx/lv_test_cont.o" />
-		<Unit filename="obj/Debug/lvgl/examples/porting/lv_port_disp_template.o" />
-		<Unit filename="obj/Debug/lvgl/examples/porting/lv_port_fs_template.o" />
-		<Unit filename="obj/Debug/lvgl/examples/porting/lv_port_indev_template.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_core/lv_disp.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_core/lv_group.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_core/lv_indev.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_core/lv_obj.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_core/lv_refr.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_core/lv_style.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_draw/lv_draw_arc.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_draw/lv_draw_blend.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_draw/lv_draw_img.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_draw/lv_draw_label.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_draw/lv_draw_line.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_draw/lv_draw_mask.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_draw/lv_draw_rect.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_draw/lv_draw_triangle.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_draw/lv_img_buf.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_draw/lv_img_cache.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_draw/lv_img_decoder.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_fmt_txt.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_loader.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_10.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_12.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_12_subpx.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_14.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_16.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_18.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_20.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_22.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_24.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_26.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_28.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_28_compressed.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_30.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_32.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_34.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_36.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_38.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_40.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_42.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_44.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_46.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_montserrat_48.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_simsun_16_cjk.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_font/lv_font_unscii_8.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_hal/lv_hal_disp.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_hal/lv_hal_indev.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_hal/lv_hal_tick.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_anim.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_area.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_async.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_bidi.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_color.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_debug.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_fs.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_gc.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_ll.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_log.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_math.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_mem.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_printf.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_task.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_templ.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_txt.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_txt_ap.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_misc/lv_utils.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_themes/lv_theme.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_themes/lv_theme_empty.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_themes/lv_theme_material.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_themes/lv_theme_mono.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_themes/lv_theme_template.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_arc.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_bar.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_btn.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_btnmatrix.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_calendar.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_canvas.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_chart.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_checkbox.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_cont.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_cpicker.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_dropdown.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_gauge.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_img.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_imgbtn.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_keyboard.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_label.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_led.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_line.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_linemeter.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_list.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_msgbox.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_objmask.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_objx_templ.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_page.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_roller.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_slider.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_spinbox.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_spinner.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_switch.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_table.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_tabview.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_textarea.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_tileview.o" />
-		<Unit filename="obj/Debug/lvgl/src/lv_widgets/lv_win.o" />
-		<Unit filename="obj/Debug/lvgl/tests/lv_test_assert.o" />
-		<Unit filename="obj/Debug/lvgl/tests/lv_test_core/lv_test_core.o" />
-		<Unit filename="obj/Debug/lvgl/tests/lv_test_core/lv_test_font_loader.o" />
-		<Unit filename="obj/Debug/lvgl/tests/lv_test_core/lv_test_obj.o" />
-		<Unit filename="obj/Debug/lvgl/tests/lv_test_core/lv_test_style.o" />
-		<Unit filename="obj/Debug/lvgl/tests/lv_test_fonts/font_1.o" />
-		<Unit filename="obj/Debug/lvgl/tests/lv_test_fonts/font_2.o" />
-		<Unit filename="obj/Debug/lvgl/tests/lv_test_fonts/font_3.o" />
-		<Unit filename="obj/Debug/lvgl/tests/lv_test_main.o" />
-		<Unit filename="obj/Debug/lvgl/tests/lv_test_objx/lv_test_cont.o" />
-		<Unit filename="obj/Debug/lvgl/tests/lv_test_widgets/lv_test_label.o" />
-		<Unit filename="obj/Debug/main.o" />
-		<Unit filename="obj/Debug/reflow_oven_pid_control.o" />
-		<Unit filename="obj/Debug/reflow_oven_settings.o" />
-		<Unit filename="obj/Debug/reflow_oven_settings_nvs.o" />
-		<Unit filename="obj/Debug/reflow_oven_theme.o" />
-		<Unit filename="obj/Debug/reflow_oven_ui.o" />
-		<Unit filename="original_images/Labels.ai" />
-		<Unit filename="original_images/baseline_lock_open_white_18dp.png" />
-		<Unit filename="original_images/meeting_room-black-48dp.ai" />
-		<Unit filename="original_images/meeting_room-black-48dp.svg" />
-		<Unit filename="original_images/outline_lock_white_18dp.png" />
-		<Unit filename="original_images/play_arrow-black-48dp-01.png" />
-		<Unit filename="original_images/play_arrow-black-48dp.ai" />
-		<Unit filename="original_images/play_arrow-black-48dp.svg" />
-		<Unit filename="original_images/radiator-active-01.png" />
-		<Unit filename="original_images/radiator-active.svg" />
-		<Unit filename="original_images/radiator-inactive-01.png" />
-		<Unit filename="original_images/radiator-inactive.svg" />
-		<Unit filename="original_images/radiator-off.svg" />
-		<Unit filename="original_images/reflow_oven_icon_door-01.png" />
-		<Unit filename="original_images/reflow_oven_img_btn_bg-01-01.png" />
-		<Unit filename="original_images/reflow_oven_img_btn_bg-01.png" />
-		<Unit filename="original_images/reflow_oven_img_btn_bg.ai" />
-		<Unit filename="original_images/reflow_oven_img_btn_door-01.png" />
-		<Unit filename="original_images/reflow_oven_img_btn_profiles-01.png" />
-		<Unit filename="original_images/reflow_oven_img_btn_settings-01.png" />
-		<Unit filename="original_images/reflow_oven_img_btn_start-01.png" />
-		<Unit filename="original_images/reflow_oven_img_btn_start.ai" />
-		<Unit filename="original_images/reflow_oven_img_heater_disabled-01-01.png" />
-		<Unit filename="original_images/reflow_oven_img_heater_disabled-01.png" />
-		<Unit filename="original_images/reflow_oven_label_door-01-01.png" />
-		<Unit filename="original_images/reflow_oven_label_profiles-01.png" />
-		<Unit filename="original_images/reflow_oven_label_settings-01.png" />
-		<Unit filename="original_images/reflow_oven_label_start-01.png" />
-		<Unit filename="original_images/settings-black-48dp-01.png" />
-		<Unit filename="original_images/settings-black-48dp.svg" />
-		<Unit filename="original_images/waves-black-48dp-01.png" />
-		<Unit filename="original_images/waves-black-48dp.svg" />
 		<Unit filename="reflow_oven_pid_control.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -2775,6 +1064,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="reflow_oven_ui.h" />
+		<Unit filename="reflow_oven_utils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="reflow_oven_utils.h" />
 		<Extensions>
 			<code_completion>
 				<search_path add="E:\Projects\LittlevGL\" />
